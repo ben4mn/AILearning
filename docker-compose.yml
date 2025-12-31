@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: aihistory
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-aihistory_secure_password}
+      POSTGRES_DB: aihistory
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/src/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aihistory"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql://aihistory:${DB_PASSWORD:-aihistory_secure_password}@postgres:5432/aihistory
+      JWT_SECRET: ${JWT_SECRET:-dev_jwt_secret_key}
+      PORT: 3050
+      NODE_ENV: ${NODE_ENV:-development}
+    ports:
+      - "3050:3050"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./content:/app/content:ro
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3051:80"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://localhost:3050
+
+volumes:
+  postgres_data:

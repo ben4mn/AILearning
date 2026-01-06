@@ -102,6 +102,26 @@ CREATE TABLE IF NOT EXISTS user_achievements (
     UNIQUE(user_id, achievement_id)
 );
 
+-- Session Analytics
+CREATE TABLE IF NOT EXISTS user_sessions (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    started_at TIMESTAMP DEFAULT NOW(),
+    last_activity TIMESTAMP DEFAULT NOW(),
+    ended_at TIMESTAMP,
+    pages_visited INT DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS page_views (
+    id SERIAL PRIMARY KEY,
+    session_id INT REFERENCES user_sessions(id) ON DELETE CASCADE,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    page_path VARCHAR(500) NOT NULL,
+    page_title VARCHAR(255),
+    visited_at TIMESTAMP DEFAULT NOW(),
+    time_on_page_seconds INT
+);
+
 -- Create indexes for better query performance
 CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
 CREATE INDEX IF NOT EXISTS idx_topics_slug ON topics(slug);
@@ -109,3 +129,7 @@ CREATE INDEX IF NOT EXISTS idx_topics_linear_order ON topics(linear_order);
 CREATE INDEX IF NOT EXISTS idx_lessons_topic_id ON lessons(topic_id);
 CREATE INDEX IF NOT EXISTS idx_user_progress_user_id ON user_progress(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_quiz_attempts_user_id ON user_quiz_attempts(user_id);
+CREATE INDEX IF NOT EXISTS idx_user_sessions_user_id ON user_sessions(user_id);
+CREATE INDEX IF NOT EXISTS idx_user_sessions_started_at ON user_sessions(started_at);
+CREATE INDEX IF NOT EXISTS idx_page_views_session_id ON page_views(session_id);
+CREATE INDEX IF NOT EXISTS idx_page_views_user_id ON page_views(user_id);

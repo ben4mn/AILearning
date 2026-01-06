@@ -151,4 +151,60 @@ export const progressApi = {
   },
 };
 
+// Analytics API
+export interface SessionResponse {
+  sessionId: number;
+  startedAt?: string;
+  updated?: boolean;
+  ended?: boolean;
+}
+
+export interface PageViewResponse {
+  pageViewId: number;
+  visitedAt: string;
+}
+
+export interface ActiveSession {
+  sessionId: number;
+  startedAt: string;
+  lastActivity: string;
+  pagesVisited: number;
+}
+
+export const analyticsApi = {
+  startSession: async (): Promise<SessionResponse> => {
+    const response = await client.post<ApiResponse<SessionResponse>>('/api/analytics/session/start');
+    return response.data.data;
+  },
+
+  heartbeat: async (sessionId: number, pagePath?: string): Promise<SessionResponse> => {
+    const response = await client.post<ApiResponse<SessionResponse>>('/api/analytics/session/heartbeat', {
+      sessionId,
+      pagePath,
+    });
+    return response.data.data;
+  },
+
+  endSession: async (sessionId: number): Promise<SessionResponse> => {
+    const response = await client.post<ApiResponse<SessionResponse>>('/api/analytics/session/end', {
+      sessionId,
+    });
+    return response.data.data;
+  },
+
+  logPageView: async (sessionId: number, pagePath: string, pageTitle?: string): Promise<PageViewResponse> => {
+    const response = await client.post<ApiResponse<PageViewResponse>>('/api/analytics/pageview', {
+      sessionId,
+      pagePath,
+      pageTitle,
+    });
+    return response.data.data;
+  },
+
+  getActiveSession: async (): Promise<ActiveSession | null> => {
+    const response = await client.get<ApiResponse<ActiveSession | null>>('/api/analytics/session/active');
+    return response.data.data;
+  },
+};
+
 export default client;

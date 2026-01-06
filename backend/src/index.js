@@ -7,6 +7,7 @@ const topicsRoutes = require('./routes/topics.routes');
 const lessonsRoutes = require('./routes/lessons.routes');
 const quizRoutes = require('./routes/quiz.routes');
 const progressRoutes = require('./routes/progress.routes');
+const analyticsRoutes = require('./routes/analytics.routes');
 const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
@@ -52,6 +53,7 @@ app.use('/api/topics', topicsRoutes);
 app.use('/api/lessons', lessonsRoutes);
 app.use('/api/quiz', quizRoutes);
 app.use('/api/progress', progressRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 // 404 handler
 app.use((req, res) => {

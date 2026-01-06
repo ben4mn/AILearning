@@ -1,0 +1,259 @@
+{
+  "era": 5,
+  "title": "Modern AI (2020s)",
+  "description": "The explosion of large language models and their applications, from ChatGPT to AI agents, along with the critical questions of safety and alignment.",
+  "topics": [
+    {
+      "id": "topic-22",
+      "slug": "large-language-models",
+      "title": "Large Language Models",
+      "linearOrder": 22,
+      "description": "Exploring the nature of LLMs, from GPT to Claude, their emergent capabilities, and what they can and cannot do.",
+      "era": 5,
+      "position": { "x": 0, "y": 0 },
+      "lessons": [
+        {
+          "id": "lesson-22-1",
+          "title": "What Are Large Language Models?",
+          "slug": "01-what-are-llms",
+          "order": 1,
+          "file": "modern-ai/large-language-models/01-what-are-llms.md"
+        },
+        {
+          "id": "lesson-22-2",
+          "title": "The GPT Series: OpenAI's Journey",
+          "slug": "02-gpt-series",
+          "order": 2,
+          "file": "modern-ai/large-language-models/02-gpt-series.md"
+        },
+        {
+          "id": "lesson-22-3",
+          "title": "Beyond GPT: The Diverse Landscape of LLMs",
+          "slug": "03-other-llms",
+          "order": 3,
+          "file": "modern-ai/large-language-models/03-other-llms.md"
+        },
+        {
+          "id": "lesson-22-4",
+          "title": "Capabilities and Limitations",
+          "slug": "04-capabilities-and-limitations",
+          "order": 4,
+          "file": "modern-ai/large-language-models/04-capabilities-and-limitations.md"
+        }
+      ],
+      "prerequisites": ["transformers-attention"],
+      "keyFigures": ["Sam Altman", "Dario Amodei", "Mark Zuckerberg"],
+      "keyDates": ["2020: GPT-3", "2022: ChatGPT", "2023: GPT-4, LLaMA, Claude 2"]
+    },
+    {
+      "id": "topic-23",
+      "slug": "tokenization-embeddings",
+      "title": "Tokenization & Embeddings Deep Dive",
+      "linearOrder": 23,
+      "description": "Understanding how text becomes numbers: from tokenization algorithms to the embedding spaces that capture meaning.",
+      "era": 5,
+      "position": { "x": 1, "y": 0 },
+      "lessons": [
+        {
+          "id": "lesson-23-1",
+          "title": "Why Tokenization Matters",
+          "slug": "01-why-tokenization-matters",
+          "order": 1,
+          "file": "modern-ai/tokenization-embeddings/01-why-tokenization-matters.md"
+        },
+        {
+          "id": "lesson-23-2",
+          "title": "Tokenization Algorithms: BPE, WordPiece, and Beyond",
+          "slug": "02-tokenization-algorithms",
+          "order": 2,
+          "file": "modern-ai/tokenization-embeddings/02-tokenization-algorithms.md"
+        },
+        {
+          "id": "lesson-23-3",
+          "title": "Embeddings Deep Dive",
+          "slug": "03-embeddings-deep-dive",
+          "order": 3,
+          "file": "modern-ai/tokenization-embeddings/03-embeddings-deep-dive.md"
+        },
+        {
+          "id": "lesson-23-4",
+          "title": "Practical Implications",
+          "slug": "04-practical-implications",
+          "order": 4,
+          "file": "modern-ai/tokenization-embeddings/04-practical-implications.md"
+        }
+      ],
+      "prerequisites": ["large-language-models"],
+      "keyFigures": ["Tomas Mikolov", "Rico Sennrich"],
+      "keyDates": ["2013: Word2Vec", "2016: BPE for NMT", "2018: SentencePiece"]
+    },
+    {
+      "id": "topic-24",
+      "slug": "prompt-engineering",
+      "title": "Prompt Engineering",
+      "linearOrder": 24,
+      "description": "The art and science of communicating effectively with LLMs, from basic prompts to advanced techniques like chain-of-thought.",
+      "era": 5,
+      "position": { "x": 2, "y": 0 },
+      "lessons": [
+        {
+          "id": "lesson-24-1",
+          "title": "Prompt Basics",
+          "slug": "01-prompt-basics",
+          "order": 1,
+          "file": "modern-ai/prompt-engineering/01-prompt-basics.md"
+        },
+        {
+          "id": "lesson-24-2",
+          "title": "Prompting Techniques: Zero-Shot, Few-Shot, and Chain-of-Thought",
+          "slug": "02-prompting-techniques",
+          "order": 2,
+          "file": "modern-ai/prompt-engineering/02-prompting-techniques.md"
+        },
+        {
+          "id": "lesson-24-3",
+          "title": "System Prompts and Roles",
+          "slug": "03-system-prompts-and-roles",
+          "order": 3,
+          "file": "modern-ai/prompt-engineering/03-system-prompts-and-roles.md"
+        },
+        {
+          "id": "lesson-24-4",
+          "title": "Advanced Prompting Techniques",
+          "slug": "04-advanced-prompting",
+          "order": 4,
+          "file": "modern-ai/prompt-engineering/04-advanced-prompting.md"
+        }
+      ],
+      "prerequisites": ["large-language-models"],
+      "keyFigures": ["Jason Wei", "Jared Kaplan"],
+      "keyDates": ["2020: Few-shot learning (GPT-3)", "2022: Chain-of-thought prompting"]
+    },
+    {
+      "id": "topic-25",
+      "slug": "rag-retrieval",
+      "title": "RAG & Retrieval Systems",
+      "linearOrder": 25,
+      "description": "Combining LLMs with external knowledge through retrieval-augmented generation, vector databases, and semantic search.",
+      "era": 5,
+      "position": { "x": 3, "y": 0 },
+      "lessons": [
+        {
+          "id": "lesson-25-1",
+          "title": "Why Retrieval Matters",
+          "slug": "01-why-retrieval",
+          "order": 1,
+          "file": "modern-ai/rag-retrieval/01-why-retrieval.md"
+        },
+        {
+          "id": "lesson-25-2",
+          "title": "Vector Databases and Embeddings for Search",
+          "slug": "02-vector-databases",
+          "order": 2,
+          "file": "modern-ai/rag-retrieval/02-vector-databases.md"
+        },
+        {
+          "id": "lesson-25-3",
+          "title": "RAG Architecture: The Retrieve-Then-Generate Pipeline",
+          "slug": "03-rag-architecture",
+          "order": 3,
+          "file": "modern-ai/rag-retrieval/03-rag-architecture.md"
+        },
+        {
+          "id": "lesson-25-4",
+          "title": "Advanced RAG Techniques",
+          "slug": "04-advanced-rag",
+          "order": 4,
+          "file": "modern-ai/rag-retrieval/04-advanced-rag.md"
+        }
+      ],
+      "prerequisites": ["tokenization-embeddings", "large-language-models"],
+      "keyFigures": ["Patrick Lewis", "Ethan Perez"],
+      "keyDates": ["2020: RAG paper", "2021: FAISS at scale", "2023: Vector DB explosion"]
+    },
+    {
+      "id": "topic-26",
+      "slug": "ai-agents",
+      "title": "AI Agents & Tool Use",
+      "linearOrder": 26,
+      "description": "LLMs that can plan, use tools, and take actions: from simple tool use to complex multi-agent systems.",
+      "era": 5,
+      "position": { "x": 4, "y": 0 },
+      "lessons": [
+        {
+          "id": "lesson-26-1",
+          "title": "What Are AI Agents?",
+          "slug": "01-what-are-ai-agents",
+          "order": 1,
+          "file": "modern-ai/ai-agents/01-what-are-ai-agents.md"
+        },
+        {
+          "id": "lesson-26-2",
+          "title": "Tool Use: Function Calling, APIs, and Code Execution",
+          "slug": "02-tool-use",
+          "order": 2,
+          "file": "modern-ai/ai-agents/02-tool-use.md"
+        },
+        {
+          "id": "lesson-26-3",
+          "title": "Agent Architectures: ReAct, Plan-and-Execute, and Multi-Agent Systems",
+          "slug": "03-agent-architectures",
+          "order": 3,
+          "file": "modern-ai/ai-agents/03-agent-architectures.md"
+        },
+        {
+          "id": "lesson-26-4",
+          "title": "Current Applications and Limitations",
+          "slug": "04-current-applications",
+          "order": 4,
+          "file": "modern-ai/ai-agents/04-current-applications.md"
+        }
+      ],
+      "prerequisites": ["prompt-engineering", "rag-retrieval"],
+      "keyFigures": ["Shunyu Yao", "Harrison Chase"],
+      "keyDates": ["2022: ReAct paper", "2023: AutoGPT, LangChain", "2024: Claude agents"]
+    },
+    {
+      "id": "topic-27",
+      "slug": "ai-safety-alignment",
+      "title": "AI Safety & Alignment",
+      "linearOrder": 27,
+      "description": "Ensuring AI systems do what we want: from RLHF to constitutional AI, red teaming, and the challenges ahead.",
+      "era": 5,
+      "position": { "x": 5, "y": 0 },
+      "lessons": [
+        {
+          "id": "lesson-27-1",
+          "title": "The Alignment Problem",
+          "slug": "01-the-alignment-problem",
+          "order": 1,
+          "file": "modern-ai/ai-safety-alignment/01-the-alignment-problem.md"
+        },
+        {
+          "id": "lesson-27-2",
+          "title": "RLHF: Reinforcement Learning from Human Feedback",
+          "slug": "02-rlhf-and-training",
+          "order": 2,
+          "file": "modern-ai/ai-safety-alignment/02-rlhf-and-training.md"
+        },
+        {
+          "id": "lesson-27-3",
+          "title": "Safety Techniques: Constitutional AI, Red Teaming, and Guardrails",
+          "slug": "03-safety-techniques",
+          "order": 3,
+          "file": "modern-ai/ai-safety-alignment/03-safety-techniques.md"
+        },
+        {
+          "id": "lesson-27-4",
+          "title": "Future Challenges: Superintelligence, Governance, and Research Frontiers",
+          "slug": "04-future-challenges",
+          "order": 4,
+          "file": "modern-ai/ai-safety-alignment/04-future-challenges.md"
+        }
+      ],
+      "prerequisites": ["large-language-models"],
+      "keyFigures": ["Stuart Russell", "Dario Amodei", "Jan Leike", "Paul Christiano"],
+      "keyDates": ["2022: InstructGPT/RLHF", "2022: Constitutional AI", "2023: AI safety institutes"]
+    }
+  ]
+}

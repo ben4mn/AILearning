@@ -1,0 +1,474 @@
+{
+  "era": 5,
+  "title": "Modern AI (2020s)",
+  "quizzes": [
+    {
+      "topicSlug": "large-language-models",
+      "topicTitle": "Large Language Models",
+      "questions": [
+        {
+          "id": "llm-q1",
+          "question": "What is the fundamental training objective of large language models like GPT?",
+          "options": [
+            "Classifying text into predefined categories",
+            "Predicting the next token in a sequence",
+            "Translating between languages",
+            "Answering questions from a knowledge base"
+          ],
+          "correctAnswer": 1,
+          "explanation": "LLMs are trained on the deceptively simple task of predicting the next token given a sequence of text. This autoregressive language modeling objective, when applied at massive scale, leads to the emergence of sophisticated language understanding and generation capabilities."
+        },
+        {
+          "id": "llm-q2",
+          "question": "What is 'emergent capability' in the context of large language models?",
+          "options": [
+            "A capability that was explicitly programmed into the model",
+            "A capability that appears suddenly at sufficient scale without being directly trained for",
+            "A capability that emerges from fine-tuning on specific tasks",
+            "A capability that the model learns from user interactions after deployment"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Emergent capabilities are abilities that appear suddenly as models reach certain scales, seemingly unpredictable from smaller models' behavior. Examples include few-shot learning and chain-of-thought reasoning, which weren't present in smaller models but emerged around the 100 billion parameter scale."
+        },
+        {
+          "id": "llm-q3",
+          "question": "What technique transformed GPT-3 from a text completion engine into the conversational ChatGPT?",
+          "options": [
+            "Increasing the model size to over 1 trillion parameters",
+            "Training on a larger dataset of internet text",
+            "Reinforcement Learning from Human Feedback (RLHF)",
+            "Adding multimodal capabilities for image processing"
+          ],
+          "correctAnswer": 2,
+          "explanation": "RLHF combined with supervised fine-tuning on conversation examples is what transformed GPT-3 into ChatGPT. Human trainers provided example conversations and rated responses, training the model to generate outputs that humans preferred, making it behave like a helpful assistant rather than just completing text."
+        },
+        {
+          "id": "llm-q4",
+          "question": "What is 'hallucination' in the context of LLMs?",
+          "options": [
+            "When the model refuses to answer a question",
+            "When the model generates plausible-sounding but false information",
+            "When the model produces nonsensical or garbled text",
+            "When the model copies text verbatim from its training data"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Hallucination refers to LLMs generating plausible-sounding but factually incorrect information. This happens because the model optimizes for producing fluent, likely-seeming text rather than verified truth, and it has no mechanism to distinguish between things it learned and things it's inventing."
+        },
+        {
+          "id": "llm-q5",
+          "question": "Which company released LLaMA, catalyzing the open-source LLM movement?",
+          "options": [
+            "OpenAI",
+            "Google",
+            "Meta (Facebook)",
+            "Anthropic"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Meta released LLaMA (Large Language Model Meta AI) in February 2023, which catalyzed the open-source LLM movement. The model weights spread widely across the internet, enabling individual researchers, startups, and enthusiasts to study, run, and fine-tune frontier-class models."
+        },
+        {
+          "id": "llm-q6",
+          "question": "What distinguishes Anthropic's Constitutional AI approach from standard RLHF?",
+          "options": [
+            "It uses a much larger training dataset",
+            "It trains models to follow explicit principles rather than relying solely on human ratings",
+            "It removes all safety guardrails for unrestricted output",
+            "It uses only supervised learning without any reinforcement learning"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Constitutional AI trains models to follow explicit principles (a 'constitution') rather than relying solely on human preference ratings. The model learns to self-critique against these principles, offering more transparency and scalability while maintaining alignment with human values."
+        }
+      ]
+    },
+    {
+      "topicSlug": "tokenization-embeddings",
+      "topicTitle": "Tokenization & Embeddings Deep Dive",
+      "questions": [
+        {
+          "id": "token-q1",
+          "question": "Why do LLMs use subword tokenization rather than character-level or word-level encoding?",
+          "options": [
+            "Subword tokenization is the only method that works with neural networks",
+            "It balances vocabulary size with sequence length and handles novel words gracefully",
+            "It's the fastest tokenization method available",
+            "It was the first tokenization method ever invented"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Subword tokenization finds a middle ground: character-level makes sequences too long, while word-level has vocabulary explosion and can't handle novel words. Subword tokenization keeps vocabulary manageable (50K-100K tokens) while handling new words by decomposing them into known pieces."
+        },
+        {
+          "id": "token-q2",
+          "question": "What is a 'context window' in the context of LLMs?",
+          "options": [
+            "The graphical user interface for interacting with the model",
+            "The maximum number of tokens the model can process in a single request",
+            "The window of time during which the model was trained",
+            "The portion of the model's memory dedicated to storing context"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The context window is the maximum number of tokens an LLM can process at once. Your prompt plus the desired response must fit within this limit. Different models have different context windows (e.g., GPT-4 has 8K-128K tokens, Claude 3 has 200K tokens)."
+        },
+        {
+          "id": "token-q3",
+          "question": "How does Byte Pair Encoding (BPE) build its vocabulary?",
+          "options": [
+            "By randomly selecting words from the training corpus",
+            "By starting with characters and iteratively merging the most frequent adjacent pairs",
+            "By using a predefined dictionary of all English words",
+            "By clustering words based on their semantic meaning"
+          ],
+          "correctAnswer": 1,
+          "explanation": "BPE starts with individual characters as the vocabulary and iteratively merges the most frequent adjacent pairs until reaching the desired vocabulary size. This greedy approach creates common words as single tokens while decomposing rare words into known subword pieces."
+        },
+        {
+          "id": "token-q4",
+          "question": "Why do LLMs often struggle with tasks like counting letters in a word?",
+          "options": [
+            "LLMs weren't trained on counting tasks",
+            "The model sees tokens, not individual letters, so letter boundaries are obscured",
+            "Counting requires too much computational power",
+            "LLMs can only process numbers, not letters"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Tokenization obscures letter boundaries. For example, 'strawberry' might tokenize as ['str', 'aw', 'berry'], so the model never 'sees' individual letters as separate units. This makes character-level tasks like counting letters or spelling backwards difficult."
+        },
+        {
+          "id": "token-q5",
+          "question": "What is the main advantage of contextual embeddings (like those in transformers) over static embeddings (like Word2Vec)?",
+          "options": [
+            "Contextual embeddings require less memory",
+            "The same word gets different vectors depending on surrounding context",
+            "Contextual embeddings are faster to compute",
+            "Contextual embeddings use smaller vocabulary sizes"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Unlike static embeddings that give each word a fixed vector, contextual embeddings produce different vectors for the same word based on context. This captures that 'bank' in 'river bank' should have a different representation than 'bank' in 'savings bank'."
+        },
+        {
+          "id": "token-q6",
+          "question": "Why is tokenization efficiency typically worse for non-English languages?",
+          "options": [
+            "Non-English languages have more complex grammar",
+            "Tokenizers are usually trained predominantly on English text, so non-English requires more tokens for equivalent content",
+            "Non-English languages have smaller vocabularies",
+            "It's not actually worse; all languages tokenize equally efficiently"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Most tokenizers are trained predominantly on English text, so they're optimized for English patterns. This means equivalent content in other languages often requires more tokens, leading to higher API costs, less content fitting in context windows, and potentially lower quality for non-English users."
+        }
+      ]
+    },
+    {
+      "topicSlug": "prompt-engineering",
+      "topicTitle": "Prompt Engineering",
+      "questions": [
+        {
+          "id": "prompt-q1",
+          "question": "What is 'few-shot prompting'?",
+          "options": [
+            "Prompting the model with a very short question",
+            "Providing examples of the desired task in the prompt before the actual query",
+            "Training the model on only a few data points",
+            "Asking the model to generate only a few words"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Few-shot prompting provides examples of the task in the prompt, allowing the model to learn the pattern and apply it to new inputs without any fine-tuning. This leverages the model's in-context learning capability to adapt to new tasks based solely on examples in the prompt."
+        },
+        {
+          "id": "prompt-q2",
+          "question": "What is the key insight behind chain-of-thought (CoT) prompting?",
+          "options": [
+            "Models should be given shorter prompts for faster responses",
+            "Asking models to 'think step by step' dramatically improves reasoning performance",
+            "Models work better when given poetic or creative prompts",
+            "Chaining multiple models together produces better results"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Chain-of-thought prompting asks models to show their reasoning step by step, which dramatically improves performance on complex reasoning tasks. Simply adding 'Let's think step by step' or showing examples with explicit reasoning can significantly boost accuracy on math and logic problems."
+        },
+        {
+          "id": "prompt-q3",
+          "question": "What is a 'system prompt' in the context of chat-based LLMs?",
+          "options": [
+            "An error message when the system fails",
+            "Hidden instructions that set the AI's role, behavior, and constraints before user interaction",
+            "The first message the user sends to the AI",
+            "A prompt used to test the system's performance"
+          ],
+          "correctAnswer": 1,
+          "explanation": "A system prompt is a special message that sets context before user interaction begins, defining the AI's role, behavioral guidelines, constraints, and output format preferences. It shapes all subsequent responses without being visible to the user."
+        },
+        {
+          "id": "prompt-q4",
+          "question": "What is the ReAct prompting pattern?",
+          "options": [
+            "A pattern for generating reactive programming code",
+            "Interleaving reasoning with actions like searching or calculating",
+            "A pattern for making the model react emotionally",
+            "Generating responses in real-time without any prompting"
+          ],
+          "correctAnswer": 1,
+          "explanation": "ReAct (Reasoning + Acting) interleaves chain-of-thought reasoning with concrete actions like searching, calculating, or retrieving information. The model explicitly states its thinking, takes an action, observes the result, and continues reasoning—grounding its answers in real information."
+        },
+        {
+          "id": "prompt-q5",
+          "question": "Why is iterative refinement important in prompt engineering?",
+          "options": [
+            "Models only work correctly after multiple attempts",
+            "Initial prompts often need adjustment to address problems in the output",
+            "APIs require multiple calls to work properly",
+            "It's not important; the first prompt usually works perfectly"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Prompting is often iterative—your first attempt may not produce optimal results. The best prompts typically emerge through refinement: starting simple, identifying problems in the output, adding constraints to address issues, testing variations, and polishing for optimal results."
+        },
+        {
+          "id": "prompt-q6",
+          "question": "What is 'self-consistency' in advanced prompting?",
+          "options": [
+            "Ensuring the model gives the same answer to the same question",
+            "Generating multiple reasoning paths with some randomness and taking the majority answer",
+            "Making sure the prompt is grammatically consistent",
+            "Training the model to be consistent with its training data"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Self-consistency generates multiple chain-of-thought responses with some randomness (temperature > 0) and takes the most common final answer. Different reasoning paths may reach the same correct answer, while errors tend to be random, so majority voting filters out occasional mistakes."
+        }
+      ]
+    },
+    {
+      "topicSlug": "rag-retrieval",
+      "topicTitle": "RAG & Retrieval Systems",
+      "questions": [
+        {
+          "id": "rag-q1",
+          "question": "What problem does Retrieval-Augmented Generation (RAG) primarily solve?",
+          "options": [
+            "Making LLMs generate text faster",
+            "Grounding LLM responses in retrieved documents to reduce hallucination and enable access to current information",
+            "Reducing the size of LLM models",
+            "Improving the grammar of LLM outputs"
+          ],
+          "correctAnswer": 1,
+          "explanation": "RAG addresses key LLM limitations: knowledge cutoffs (models can't know about recent events), hallucination (models sometimes make things up), and lack of private knowledge. By retrieving relevant documents and including them in the prompt, LLMs can generate grounded, accurate responses."
+        },
+        {
+          "id": "rag-q2",
+          "question": "How does semantic search differ from keyword search?",
+          "options": [
+            "Semantic search only works with short queries",
+            "Semantic search matches meanings using embeddings rather than exact words",
+            "Keyword search is more accurate than semantic search",
+            "Semantic search requires documents to be formatted in a specific way"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Semantic search compares meanings rather than words using embeddings (vector representations). It can find 'repairing a dripping tap' when you search for 'how to fix a leaky faucet' because both have similar meaning in embedding space, even without shared keywords."
+        },
+        {
+          "id": "rag-q3",
+          "question": "What is the primary purpose of a vector database in a RAG system?",
+          "options": [
+            "To store the LLM model weights",
+            "To efficiently store and search document embeddings for similarity queries",
+            "To cache LLM responses for faster retrieval",
+            "To validate user authentication"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Vector databases store document embeddings and enable efficient similarity search at scale. They use algorithms like HNSW (Hierarchical Navigable Small World) to find the most similar vectors to a query in milliseconds, even across millions of documents."
+        },
+        {
+          "id": "rag-q4",
+          "question": "Why is 'chunking' important in RAG systems?",
+          "options": [
+            "It makes documents easier to read for humans",
+            "Large documents must be split into smaller pieces for retrieval precision and to fit within context windows",
+            "It reduces the storage cost of documents",
+            "It's a requirement of all vector databases"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Chunking splits large documents into smaller pieces because: LLMs have context limits (can't process entire books), smaller chunks enable more precise retrieval (find the relevant paragraph, not the whole document), and it allows more documents to fit in the context window."
+        },
+        {
+          "id": "rag-q5",
+          "question": "What is 'reranking' in the context of RAG?",
+          "options": [
+            "Reorganizing documents in the database",
+            "Using a more powerful model to re-order initial retrieval results for better precision",
+            "Ranking user queries by importance",
+            "Generating multiple responses and ranking them"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Reranking uses a more powerful cross-encoder model to re-order the results from fast initial retrieval. Initial retrieval (using bi-encoders) is fast but imprecise; reranking (using cross-encoders) is slower but more accurate, so you retrieve broadly then rerank for precision."
+        },
+        {
+          "id": "rag-q6",
+          "question": "What is 'hybrid search' in RAG systems?",
+          "options": [
+            "Searching across multiple databases simultaneously",
+            "Combining semantic search with keyword search to get the benefits of both",
+            "Using both CPU and GPU for search operations",
+            "Searching with multiple queries at the same time"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Hybrid search combines semantic search (embedding-based, captures meaning) with keyword search (BM25, captures exact terms). This helps because semantic search may miss exact matches like 'Error code E-4521' while keyword search may miss semantically related content."
+        }
+      ]
+    },
+    {
+      "topicSlug": "ai-agents",
+      "topicTitle": "AI Agents & Tool Use",
+      "questions": [
+        {
+          "id": "agent-q1",
+          "question": "What distinguishes an AI agent from a standard LLM interaction?",
+          "options": [
+            "Agents use larger models",
+            "Agents can plan, take actions, observe results, and iterate toward goals across multiple steps",
+            "Agents only work with text, not other modalities",
+            "Agents are always cloud-based while LLMs can run locally"
+          ],
+          "correctAnswer": 1,
+          "explanation": "While standard LLM interactions are one-shot (input/output/done), agents work across multiple steps: they break down complex tasks, take actions in external systems, observe results, and adjust their approach—more like a human assistant than a text generator."
+        },
+        {
+          "id": "agent-q2",
+          "question": "What is 'function calling' in the context of LLMs?",
+          "options": [
+            "Calling Python functions within the LLM",
+            "A structured way for LLMs to request execution of defined tools with specific parameters",
+            "Making phone calls using LLM-generated scripts",
+            "Recursively calling the same LLM multiple times"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Function calling gives LLMs structured tool access. Instead of just generating text, the model can decide to call a function (like get_weather or search_database) with specific parameters. The function executes and returns results that the model incorporates into its response."
+        },
+        {
+          "id": "agent-q3",
+          "question": "Why is code execution considered a powerful 'meta-tool' for agents?",
+          "options": [
+            "Code runs faster than other tools",
+            "Instead of defining every possible operation as a tool, the agent can write code to do anything Python can do",
+            "Code execution doesn't require an internet connection",
+            "It's the only tool that works with all LLMs"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Code execution is a meta-tool because rather than predefining every possible operation (calculate, search, filter, etc.), the agent can write arbitrary code to accomplish any task Python can handle—complex calculations, data manipulation, custom logic, or combining multiple operations."
+        },
+        {
+          "id": "agent-q4",
+          "question": "What is the main difference between ReAct and Plan-and-Execute agent architectures?",
+          "options": [
+            "ReAct is faster while Plan-and-Execute is more accurate",
+            "ReAct interleaves reasoning and acting in a tight loop; Plan-and-Execute creates a comprehensive plan first, then executes steps",
+            "ReAct only works with text while Plan-and-Execute works with images",
+            "Plan-and-Execute is for single tasks while ReAct is for multiple tasks"
+          ],
+          "correctAnswer": 1,
+          "explanation": "ReAct interleaves thinking and acting step by step, adjusting course based on each observation. Plan-and-Execute first creates a detailed plan, then systematically executes each step. ReAct is more flexible; Plan-and-Execute is more structured for complex, predictable tasks."
+        },
+        {
+          "id": "agent-q5",
+          "question": "What is a key reliability challenge with current AI agents?",
+          "options": [
+            "They are too slow to be useful",
+            "They cannot use any tools",
+            "Errors can compound over multiple steps, and agents may get stuck or drift from goals",
+            "They only work with English text"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Agents face reliability challenges: if each step has 90% success rate, 10 steps yields only 35% overall success (0.9^10). Agents can also get stuck in loops, forget original goals, hallucinate tool capabilities, or make costly errors that compound. Human oversight remains important."
+        },
+        {
+          "id": "agent-q6",
+          "question": "What does multi-agent collaboration enable that single agents struggle with?",
+          "options": [
+            "Faster processing through parallelization alone",
+            "Specialized expertise, verification through debate, and division of complex tasks",
+            "Simpler implementation and debugging",
+            "Lower computational costs"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Multi-agent systems enable specialized roles (researcher, writer, editor), verification through debate or critique, and natural division of complex tasks. Multiple perspectives can improve accuracy through cross-checking, though orchestration complexity increases."
+        }
+      ]
+    },
+    {
+      "topicSlug": "ai-safety-alignment",
+      "topicTitle": "AI Safety & Alignment",
+      "questions": [
+        {
+          "id": "safety-q1",
+          "question": "What is the 'alignment problem' in AI?",
+          "options": [
+            "Ensuring AI models have properly aligned parameters",
+            "Ensuring AI systems pursue the goals humans actually want, not just what was literally specified",
+            "Aligning different AI models to work together",
+            "Making sure AI outputs are grammatically aligned"
+          ],
+          "correctAnswer": 1,
+          "explanation": "The alignment problem is ensuring AI systems do what we actually want, not just what we literally specified or what training optimized for. There's always a gap between our true intentions, our specifications, the training objective, and the system's actual behavior."
+        },
+        {
+          "id": "safety-q2",
+          "question": "How does RLHF (Reinforcement Learning from Human Feedback) work?",
+          "options": [
+            "Humans write all the training data for the model",
+            "Humans compare model outputs, training a reward model that guides the AI toward preferred behavior",
+            "Humans manually adjust model parameters",
+            "Humans test the model after training and report bugs"
+          ],
+          "correctAnswer": 1,
+          "explanation": "RLHF has three stages: (1) supervised fine-tuning on human demonstrations, (2) training a reward model on human comparisons of outputs, and (3) using reinforcement learning to optimize the model to generate responses that get high reward scores."
+        },
+        {
+          "id": "safety-q3",
+          "question": "What is 'Constitutional AI'?",
+          "options": [
+            "AI trained only on legal documents",
+            "Training AI to follow explicit principles (a 'constitution') rather than relying solely on human ratings",
+            "AI that helps write national constitutions",
+            "AI with legally binding behavioral contracts"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Constitutional AI trains models to follow explicit principles (like 'be helpful, harmless, honest') rather than relying solely on human preference ratings. The model learns to self-critique against these principles, offering transparency and scalability advantages."
+        },
+        {
+          "id": "safety-q4",
+          "question": "What is the purpose of 'red teaming' in AI safety?",
+          "options": [
+            "Testing the model's performance on red-colored images",
+            "Proactively trying to make the AI system fail or behave badly to find vulnerabilities before deployment",
+            "Training the model using red warning labels",
+            "Organizing the AI development team into groups"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Red teaming involves actively trying to make AI systems fail or produce harmful outputs before deployment. Red teamers (security researchers, domain experts) try jailbreaks, adversarial inputs, and creative attacks to find vulnerabilities that can be fixed before release."
+        },
+        {
+          "id": "safety-q5",
+          "question": "What is 'sycophancy' in the context of AI alignment?",
+          "options": [
+            "When AI systems become dependent on human approval",
+            "When AI models learn to tell users what they want to hear rather than what's true",
+            "When AI systems sync with each other",
+            "When AI is overly cautious about everything"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Sycophancy occurs when models learn to agree with users or tell them what they want to hear, even when incorrect. This can emerge from RLHF because human raters often prefer validating responses over corrective ones, so the model learns that agreement gets better ratings."
+        },
+        {
+          "id": "safety-q6",
+          "question": "Why is 'scalable oversight' considered a key challenge for future AI systems?",
+          "options": [
+            "Larger AI models require more supervisors",
+            "As AI becomes more capable than human evaluators, maintaining meaningful human oversight becomes increasingly difficult",
+            "Scaling AI systems to more users is technically challenging",
+            "It's difficult to scale the physical infrastructure for AI"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Scalable oversight is challenging because current alignment techniques depend on human judgment. As AI capabilities grow, outputs may become too complex to evaluate, AI might deceive evaluators, and the space of behaviors becomes too large to sample effectively."
+        }
+      ]
+    }
+  ]
+}

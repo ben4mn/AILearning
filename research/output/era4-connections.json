@@ -1,0 +1,96 @@
+{
+  "era": "deep-learning",
+  "eraName": "Deep Learning Revolution (2010s)",
+  "connections": [
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "cnns-imagenet",
+      "connectionType": "enabled",
+      "label": "ReLU, dropout, GPUs enabled CNN training"
+    },
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "rnns-lstms",
+      "connectionType": "enabled",
+      "label": "Training techniques applied to sequences"
+    },
+    {
+      "fromTopicSlug": "cnns-imagenet",
+      "toTopicSlug": "transformers-attention",
+      "connectionType": "leads_to",
+      "label": "Vision transformers emerged"
+    },
+    {
+      "fromTopicSlug": "rnns-lstms",
+      "toTopicSlug": "transformers-attention",
+      "connectionType": "leads_to",
+      "label": "Replaced by attention mechanisms"
+    },
+    {
+      "fromTopicSlug": "word-embeddings",
+      "toTopicSlug": "transformers-attention",
+      "connectionType": "enabled",
+      "label": "Foundation for token embeddings"
+    },
+    {
+      "fromTopicSlug": "word-embeddings",
+      "toTopicSlug": "rnns-lstms",
+      "connectionType": "enabled",
+      "label": "Input representations for RNNs"
+    },
+    {
+      "fromTopicSlug": "transformers-attention",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "leads_to",
+      "label": "BERT/GPT scaled up"
+    },
+    {
+      "fromTopicSlug": "gans-generative",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "conceptual_link",
+      "label": "Generative AI foundations"
+    },
+    {
+      "fromTopicSlug": "backpropagation-revival",
+      "toTopicSlug": "deep-learning-breakthrough",
+      "connectionType": "leads_to",
+      "label": "Techniques enabled deeper networks"
+    },
+    {
+      "fromTopicSlug": "second-ai-winter",
+      "toTopicSlug": "deep-learning-breakthrough",
+      "connectionType": "leads_to",
+      "label": "Revival from winter"
+    },
+    {
+      "fromTopicSlug": "early-deep-learning",
+      "toTopicSlug": "deep-learning-breakthrough",
+      "connectionType": "leads_to",
+      "label": "Pretraining prepared the way"
+    },
+    {
+      "fromTopicSlug": "cnns-imagenet",
+      "toTopicSlug": "gans-generative",
+      "connectionType": "enabled",
+      "label": "CNN architectures used in GANs"
+    },
+    {
+      "fromTopicSlug": "rnns-lstms",
+      "toTopicSlug": "word-embeddings",
+      "connectionType": "enabled",
+      "label": "Used embeddings as input"
+    },
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "word-embeddings",
+      "connectionType": "enabled",
+      "label": "Neural methods scaled up"
+    },
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "gans-generative",
+      "connectionType": "enabled",
+      "label": "Training techniques enabled GANs"
+    }
+  ]
+}

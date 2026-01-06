@@ -1,82 +1,103 @@
+import { useEffect } from 'react';
 import { useAuthStore } from '@/stores/authStore';
+import { useCurriculumStore } from '@/stores/curriculumStore';
+import { useProgressStore } from '@/stores/progressStore';
+import { ViewToggle, LinearView, MindMap } from '@/components/navigation';
 
 export function Learn() {
-  const { user } = useAuthStore();
+  const { user, isAuthenticated } = useAuthStore();
+  const { viewMode } = useCurriculumStore();
+  const { stats, fetchStats } = useProgressStore();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchStats();
+    }
+  }, [isAuthenticated, fetchStats]);
+
+  const overallProgress = stats
+    ? Math.round((stats.lessonsCompleted / Math.max(stats.totalLessons, 1)) * 100)
+    : 0;
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome back, {user?.displayName || 'Learner'}!
-          </h1>
-          <p className="text-gray-600">
-            Continue your journey through the history of artificial intelligence.
-          </p>
-        </div>
-
-        {/* Placeholder for learning content */}
-        <div className="card">
-          <div className="text-center py-12">
-            <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">
-              Learning Content Coming Soon
-            </h2>
-            <p className="text-gray-600 max-w-md mx-auto">
-              The mind map and linear chapter views will be implemented in Phase 2 and 3.
-              For now, your account is set up and ready to track your progress!
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-1">
+              {isAuthenticated ? `Welcome back, ${user?.displayName || 'Learner'}!` : 'AI History Curriculum'}
+            </h1>
+            <p className="text-gray-600">
+              Explore the evolution of artificial intelligence from the 1940s to today.
             </p>
           </div>
+          <ViewToggle />
         </div>
 
-        {/* Quick Stats Placeholder */}
-        <div className="grid md:grid-cols-3 gap-6 mt-8">
-          <div className="card">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-gray-900">0</p>
-                <p className="text-gray-600 text-sm">Lessons Completed</p>
+        {/* Progress Stats (for authenticated users) */}
+        {isAuthenticated && stats && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{stats.lessonsCompleted}</p>
+                  <p className="text-xs text-gray-500">Lessons Done</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="card">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-gray-900">0%</p>
-                <p className="text-gray-600 text-sm">Overall Progress</p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{overallProgress}%</p>
+                  <p className="text-xs text-gray-500">Progress</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="card">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                </svg>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{stats.quizzesPassed}</p>
+                  <p className="text-xs text-gray-500">Quizzes Passed</p>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl font-bold text-gray-900">0</p>
-                <p className="text-gray-600 text-sm">Achievements</p>
+            </div>
+
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{stats.totalTimeMinutes}</p>
+                  <p className="text-xs text-gray-500">Minutes Spent</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
+
+        {/* Content View */}
+        {viewMode === 'linear' ? <LinearView /> : <MindMap />}
       </div>
     </div>
   );

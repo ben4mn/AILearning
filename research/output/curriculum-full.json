@@ -1,0 +1,3759 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "title": "History of Artificial Intelligence",
+    "description": "A comprehensive journey through AI evolution from the 1940s to today",
+    "targetAudience": "Technical professionals with basic programming knowledge",
+    "totalEstimatedHours": 15,
+    "generatedAt": ""
+  },
+  "eras": [
+    {
+      "id": "foundations",
+      "name": "Foundations (1940s-1960s)",
+      "description": "The birth of computing and first ideas about machine intelligence",
+      "color": "#3B82F6",
+      "order": 1
+    },
+    {
+      "id": "ai-winter",
+      "name": "AI Winter & Expert Systems (1970s-1980s)",
+      "description": "Funding cuts, renewed optimism, and knowledge-based systems",
+      "color": "#8B5CF6",
+      "order": 2
+    },
+    {
+      "id": "ml-renaissance",
+      "name": "ML Renaissance (1990s-2000s)",
+      "description": "Statistical methods reshape the field",
+      "color": "#10B981",
+      "order": 3
+    },
+    {
+      "id": "deep-learning",
+      "name": "Deep Learning Revolution (2010s)",
+      "description": "Neural networks finally deliver on their promise",
+      "color": "#F59E0B",
+      "order": 4
+    },
+    {
+      "id": "modern-ai",
+      "name": "Modern AI (2020s)",
+      "description": "Large language models and the age of generative AI",
+      "color": "#EF4444",
+      "order": 5
+    }
+  ],
+  "topics": [
+    {
+      "slug": "turing-test",
+      "title": "The Turing Test",
+      "description": "Alan Turing's foundational question: Can machines think? We explore the life of the man who invented the test, his seminal 1950 paper, and the debates it sparked.",
+      "era": "foundations",
+      "linearOrder": 1,
+      "icon": "brain",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "who-was-alan-turing",
+          "title": "Who Was Alan Turing?",
+          "contentPath": "foundations/turing-test/01-who-was-alan-turing.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "computing-machinery-and-intelligence",
+          "title": "Computing Machinery and Intelligence (1950)",
+          "contentPath": "foundations/turing-test/02-computing-machinery-and-intelligence.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "imitation-game-explained",
+          "title": "The Imitation Game Explained",
+          "contentPath": "foundations/turing-test/03-imitation-game-explained.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "critiques-and-alternatives",
+          "title": "Critiques and Alternatives",
+          "contentPath": "foundations/turing-test/04-critiques-and-alternatives.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "The Turing Test Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "In what year did Alan Turing publish 'Computing Machinery and Intelligence'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "1936",
+              "1943",
+              "1950",
+              "1956"
+            ],
+            "correctAnswer": "1950",
+            "explanation": "Turing published 'Computing Machinery and Intelligence' in the journal Mind in October 1950. This paper introduced the Imitation Game (now known as the Turing Test) as a way to operationalize the question 'Can machines think?' His 1936 paper was 'On Computable Numbers' which introduced the Turing machine concept.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What was the name of the device Turing designed at Bletchley Park to help break the Enigma cipher?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The Enigma Breaker",
+              "The Bombe",
+              "The Turing Machine",
+              "The Colossus"
+            ],
+            "correctAnswer": "The Bombe",
+            "explanation": "Turing designed the Bombe, an electromechanical device that exploited logical contradictions to eliminate impossible Enigma configurations. The Colossus was a different computer used to break the Lorenz cipher. The Turing Machine was a theoretical concept, not a physical device.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "In the original formulation of the Imitation Game, what was the interrogator's task?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Determine if the machine is intelligent",
+              "Distinguish between a human and a machine through text conversation",
+              "Grade the machine's responses for accuracy",
+              "Have a friendly chat with both participants"
+            ],
+            "correctAnswer": "Distinguish between a human and a machine through text conversation",
+            "explanation": "The Imitation Game asks whether a machine can fool a human interrogator into thinking it's human during a text-based conversation. The test doesn't ask the interrogator to judge 'intelligence' directly\u2014it focuses on behavioral indistinguishability. This operational approach was Turing's clever way of avoiding unanswerable metaphysical questions.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "John Searle's Chinese Room argument is meant to demonstrate that:",
+            "questionType": "multiple_choice",
+            "options": [
+              "Machines can never learn Chinese",
+              "Symbol manipulation alone is insufficient for understanding",
+              "The Turing Test is too easy to pass",
+              "Chinese is harder to process than English"
+            ],
+            "correctAnswer": "Symbol manipulation alone is insufficient for understanding",
+            "explanation": "The Chinese Room thought experiment imagines a person following rules to manipulate Chinese symbols without understanding Chinese. Searle argues this shows that syntax (rule-following) isn't sufficient for semantics (meaning). Even a system that appears to understand\u2014that passes the Turing Test\u2014might just be manipulating symbols without genuine comprehension.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "Why did Turing restrict the Imitation Game to text-only communication?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Voice technology didn't exist in 1950",
+              "To focus the test on conversational intelligence rather than physical appearance",
+              "Text was the only reliable way to communicate with machines",
+              "He wanted to make the test easier for machines to pass"
+            ],
+            "correctAnswer": "To focus the test on conversational intelligence rather than physical appearance",
+            "explanation": "Turing deliberately chose text communication to eliminate physical appearance, voice, and other characteristics that would immediately reveal the machine's identity. This focuses the test on the ability to engage in intelligent conversation\u2014something a machine could potentially achieve\u2014rather than physical human-likeness, which seemed far beyond 1950s technology.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "Which critique of the Turing Test does the Lovelace Test attempt to address?",
+            "questionType": "multiple_choice",
+            "options": [
+              "That the test doesn't measure consciousness",
+              "That the test can be passed by following scripts",
+              "That machines cannot truly originate creative work",
+              "That text-only communication is too limited"
+            ],
+            "correctAnswer": "That machines cannot truly originate creative work",
+            "explanation": "The Lovelace Test, named after Ada Lovelace who argued machines 'cannot originate anything,' requires that a machine create something its designers cannot explain. This addresses the concern that Turing Test passes might just reflect clever programming rather than genuine creativity or intelligence. It tests whether machines can genuinely create rather than just recombine.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "perceptrons",
+      "title": "Perceptrons & Early Neural Networks",
+      "description": "From biological inspiration to learning machines: the McCulloch-Pitts neuron, Hebb's learning rule, Rosenblatt's Perceptron, and the critique that halted the field.",
+      "era": "foundations",
+      "linearOrder": 2,
+      "icon": "network",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "mcculloch-pitts-neuron",
+          "title": "The McCulloch-Pitts Neuron",
+          "contentPath": "foundations/perceptrons/01-mcculloch-pitts-neuron.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "hebbian-learning",
+          "title": "Hebbian Learning",
+          "contentPath": "foundations/perceptrons/02-hebbian-learning.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "rosenblatt-perceptron",
+          "title": "Rosenblatt's Perceptron",
+          "contentPath": "foundations/perceptrons/03-rosenblatt-perceptron.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "minsky-papert-critique",
+          "title": "The Minsky-Papert Critique",
+          "contentPath": "foundations/perceptrons/04-minsky-papert-critique.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Perceptrons Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What did McCulloch and Pitts prove about networks of their idealized neurons in their 1943 paper?",
+            "questionType": "multiple_choice",
+            "options": [
+              "They can learn any pattern",
+              "They can compute any computable function",
+              "They can simulate human consciousness",
+              "They can process images better than humans"
+            ],
+            "correctAnswer": "They can compute any computable function",
+            "explanation": "McCulloch and Pitts proved that networks of their idealized neurons are computationally universal\u2014they can compute anything a Turing machine can compute. This was a profound insight linking neuroscience to computation theory. The model didn't include learning; weights had to be set by design.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the core principle of Hebb's learning rule?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Neurons that fire together, wire together",
+              "Error signals propagate backward through the network",
+              "Random connections lead to emergent intelligence",
+              "Inhibitory signals are stronger than excitatory ones"
+            ],
+            "correctAnswer": "Neurons that fire together, wire together",
+            "explanation": "Hebb proposed that when two neurons are repeatedly active at the same time, the connection between them strengthens. This simple, local rule\u2014'neurons that fire together, wire together'\u2014provided the first biologically plausible mechanism for learning. It influenced later theories of synaptic plasticity and associative memory.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What did the Perceptron Convergence Theorem guarantee?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The Perceptron will eventually become conscious",
+              "If data is linearly separable, the Perceptron will find a solution",
+              "The Perceptron will always achieve 100% accuracy",
+              "Multi-layer Perceptrons will converge faster than single-layer"
+            ],
+            "correctAnswer": "If data is linearly separable, the Perceptron will find a solution",
+            "explanation": "Rosenblatt proved that if the training data is linearly separable (can be divided by a straight line/hyperplane), the Perceptron learning algorithm will find a separating solution in finite time. This was a powerful guarantee, but it only applies when the data is actually linearly separable\u2014which many real-world problems are not.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why can't a single-layer Perceptron learn the XOR function?",
+            "questionType": "multiple_choice",
+            "options": [
+              "XOR requires too many neurons",
+              "XOR is not a real logical function",
+              "XOR is not linearly separable",
+              "The learning rate is always wrong for XOR"
+            ],
+            "correctAnswer": "XOR is not linearly separable",
+            "explanation": "XOR outputs 1 when exactly one input is 1 (not both, not neither). When you plot the four input-output pairs, the two classes fall on opposite corners\u2014no straight line can separate them. Since a Perceptron can only learn linearly separable patterns, XOR is fundamentally impossible for a single-layer Perceptron.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What was the primary impact of Minsky and Papert's 1969 book 'Perceptrons'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It inspired the development of backpropagation",
+              "It led to increased funding for neural network research",
+              "It contributed to a dramatic decrease in neural network research funding and interest",
+              "It proved that symbolic AI was impossible"
+            ],
+            "correctAnswer": "It contributed to a dramatic decrease in neural network research funding and interest",
+            "explanation": "Minsky and Papert's book, which rigorously proved the limitations of single-layer Perceptrons, was interpreted broadly as discrediting the entire neural network approach. Funding dried up, researchers left the field, and neural networks entered their first 'AI Winter' lasting roughly from 1969 to 1982.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What technology eventually solved the problem of training multi-layer neural networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Quantum computing",
+              "Backpropagation",
+              "Faster processors",
+              "Larger datasets"
+            ],
+            "correctAnswer": "Backpropagation",
+            "explanation": "Backpropagation (popularized by Rumelhart, Hinton, and Williams in 1986) allows error signals to propagate backward through a network, enabling each hidden layer to learn. This solved the credit assignment problem that Minsky and Papert had highlighted\u2014how to know which hidden units to adjust when the output is wrong.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "dartmouth-conference",
+      "title": "The Dartmouth Conference (1956)",
+      "description": "The summer workshop that named and launched artificial intelligence as a field. Meet the founders, understand their proposal, and see how their vision shaped decades of research.",
+      "era": "foundations",
+      "linearOrder": 3,
+      "icon": "users",
+      "estimatedMinutes": 30,
+      "lessons": [
+        {
+          "slug": "road-to-dartmouth",
+          "title": "The Road to Dartmouth",
+          "contentPath": "foundations/dartmouth-conference/01-road-to-dartmouth.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "the-proposal",
+          "title": "The Proposal",
+          "contentPath": "foundations/dartmouth-conference/02-the-proposal.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "the-summer-workshop",
+          "title": "The Summer Workshop",
+          "contentPath": "foundations/dartmouth-conference/03-the-summer-workshop.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "legacy-and-impact",
+          "title": "Legacy and Impact",
+          "contentPath": "foundations/dartmouth-conference/04-legacy-and-impact.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Dartmouth Conference Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "Who coined the term 'artificial intelligence' in the 1955 Dartmouth proposal?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Alan Turing",
+              "John McCarthy",
+              "Marvin Minsky",
+              "Claude Shannon"
+            ],
+            "correctAnswer": "John McCarthy",
+            "explanation": "John McCarthy, then at Dartmouth College, coined the term 'artificial intelligence' when writing the proposal for the 1956 summer workshop. He chose this term deliberately to distinguish the new field from cybernetics and to claim the ambitious domain of cognition, not just computation.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What was the core conjecture of the Dartmouth proposal?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Machines can only compute, never think",
+              "Every aspect of intelligence can be precisely described and simulated by a machine",
+              "Neural networks are superior to symbolic systems",
+              "Artificial intelligence is impossible"
+            ],
+            "correctAnswer": "Every aspect of intelligence can be precisely described and simulated by a machine",
+            "explanation": "The proposal stated: 'every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it.' This bold conjecture\u2014that all intelligence is formalizable\u2014defined AI's founding assumption and research agenda.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "Which program, presented at Dartmouth, demonstrated automated theorem proving?",
+            "questionType": "multiple_choice",
+            "options": [
+              "ELIZA",
+              "The Logic Theorist",
+              "GPS",
+              "SHRDLU"
+            ],
+            "correctAnswer": "The Logic Theorist",
+            "explanation": "The Logic Theorist, created by Allen Newell, Cliff Shaw, and Herbert Simon at Carnegie Tech, was the star of the Dartmouth workshop. It could prove theorems from Russell and Whitehead's Principia Mathematica using heuristic search\u2014a landmark demonstration that machines could perform tasks requiring apparent reasoning.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Which two institutions became the primary centers of AI research following Dartmouth?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Stanford and Berkeley",
+              "MIT and Carnegie Mellon",
+              "Harvard and Yale",
+              "Princeton and Columbia"
+            ],
+            "correctAnswer": "MIT and Carnegie Mellon",
+            "explanation": "McCarthy and Minsky founded the MIT AI Lab, while Newell and Simon established AI research at Carnegie Mellon (then Carnegie Tech). These two institutions dominated AI's first three decades, developing different approaches: MIT emphasized exploration and ambitious projects, while CMU focused on cognitive simulation and empirical methodology.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What was a major factor in the first 'AI Winter' of the 1970s?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Computers became too expensive",
+              "AI researchers retired",
+              "Overconfident predictions failed to materialize",
+              "Neural networks were invented"
+            ],
+            "correctAnswer": "Overconfident predictions failed to materialize",
+            "explanation": "AI pioneers made bold predictions in the 1960s\u2014Simon said machines would do 'any work a man can do' within 20 years. When these failed to materialize, funding agencies grew skeptical. The 1973 Lighthill Report and subsequent reviews led to major funding cuts. The optimism inherited from Dartmouth had created unrealistic expectations.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What key technology did John McCarthy develop after the Dartmouth Conference?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Python",
+              "LISP",
+              "C++",
+              "FORTRAN"
+            ],
+            "correctAnswer": "LISP",
+            "explanation": "McCarthy developed LISP (LISt Processing) in 1958, which became AI's signature programming language for decades. LISP's support for symbolic computation, recursion, and treating code as data made it ideal for AI applications. Many foundational AI systems were built in LISP.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "symbolic-ai",
+      "title": "Symbolic AI & Logic",
+      "description": "The dominant paradigm of early AI: reasoning through symbol manipulation. From formal logic to the Logic Theorist to the Physical Symbol System Hypothesis.",
+      "era": "foundations",
+      "linearOrder": 4,
+      "icon": "code",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "logic-and-reasoning",
+          "title": "Logic and Reasoning",
+          "contentPath": "foundations/symbolic-ai/01-logic-and-reasoning.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "logic-theorist",
+          "title": "The Logic Theorist",
+          "contentPath": "foundations/symbolic-ai/02-logic-theorist.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "general-problem-solver",
+          "title": "The General Problem Solver",
+          "contentPath": "foundations/symbolic-ai/03-general-problem-solver.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "physical-symbol-hypothesis",
+          "title": "The Physical Symbol System Hypothesis",
+          "contentPath": "foundations/symbolic-ai/04-physical-symbol-hypothesis.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Symbolic AI Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What makes predicate logic more expressive than propositional logic?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It uses more symbols",
+              "It adds variables, predicates, and quantifiers",
+              "It runs faster on computers",
+              "It was invented later"
+            ],
+            "correctAnswer": "It adds variables, predicates, and quantifiers",
+            "explanation": "Predicate logic (first-order logic) extends propositional logic by adding variables to represent objects, predicates to express properties and relations, and quantifiers (\u2200 for 'for all', \u2203 for 'there exists') to make statements about collections. This allows expressing ideas like 'All humans are mortal' which propositional logic cannot capture.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What was the Logic Theorist's primary achievement?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Playing chess at grandmaster level",
+              "Proving theorems from Principia Mathematica",
+              "Translating between languages",
+              "Recognizing handwritten digits"
+            ],
+            "correctAnswer": "Proving theorems from Principia Mathematica",
+            "explanation": "The Logic Theorist (1955-1956), created by Newell, Simon, and Shaw, proved 38 of the first 52 theorems in Russell and Whitehead's Principia Mathematica. Some of its proofs were more elegant than the originals. This demonstrated that machines could perform tasks requiring apparent reasoning and creativity.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is means-ends analysis?",
+            "questionType": "multiple_choice",
+            "options": [
+              "A way to calculate profit and loss",
+              "A method of selecting actions that reduce the difference between current state and goal",
+              "A technique for measuring program performance",
+              "A strategy for ending conversations"
+            ],
+            "correctAnswer": "A method of selecting actions that reduce the difference between current state and goal",
+            "explanation": "Means-ends analysis, central to the General Problem Solver (GPS), works by: (1) identifying the difference between current state and goal, (2) finding operators that reduce that difference, (3) creating subgoals if operator preconditions aren't met. This recursive approach decomposes complex problems into manageable subproblems.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "According to the Physical Symbol System Hypothesis, what is both necessary and sufficient for general intelligent action?",
+            "questionType": "multiple_choice",
+            "options": [
+              "A biological brain",
+              "Consciousness and free will",
+              "A physical symbol system that manipulates symbols according to rules",
+              "Emotional intelligence"
+            ],
+            "correctAnswer": "A physical symbol system that manipulates symbols according to rules",
+            "explanation": "Newell and Simon's PSSH (1976) claimed that a physical symbol system\u2014which creates, modifies, copies, and compares symbols\u2014has the necessary and sufficient means for intelligence. This means: (1) sufficiency: symbol manipulation is enough for intelligence, (2) necessity: anything intelligent must be a symbol system.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is the 'symbol grounding problem'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Keeping symbols organized in memory",
+              "The challenge of connecting symbols to their real-world referents",
+              "Preventing symbols from changing during computation",
+              "The cost of storing symbols"
+            ],
+            "correctAnswer": "The challenge of connecting symbols to their real-world referents",
+            "explanation": "The symbol grounding problem, articulated by Stevan Harnad, asks: how do symbols in a computer get their meaning? The word 'cat' means something to us because we've seen cats. But computer symbols just connect to other symbols. This challenges whether pure symbol manipulation can achieve genuine understanding.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What limitation of GPS did the knowledge acquisition bottleneck highlight?",
+            "questionType": "multiple_choice",
+            "options": [
+              "GPS was too fast",
+              "GPS couldn't be programmed",
+              "Operator tables had to be hand-coded by experts",
+              "GPS used too much memory"
+            ],
+            "correctAnswer": "Operator tables had to be hand-coded by experts",
+            "explanation": "GPS required explicit, hand-crafted operator tables specifying preconditions, effects, and differences for each domain. Acquiring this knowledge from experts was laborious and error-prone. This 'knowledge acquisition bottleneck' plagued symbolic AI: systems were only as good as their manually encoded knowledge.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "early-nlp",
+      "title": "Early Natural Language Processing",
+      "description": "The dream of machines that understand language: from machine translation's promise to ELIZA's illusions to SHRDLU's blocks world and the hard lessons learned.",
+      "era": "foundations",
+      "linearOrder": 5,
+      "icon": "message-square",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "machine-translation-origins",
+          "title": "Machine Translation Origins",
+          "contentPath": "foundations/early-nlp/01-machine-translation-origins.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "eliza",
+          "title": "ELIZA",
+          "contentPath": "foundations/early-nlp/02-eliza.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "shrdlu",
+          "title": "SHRDLU",
+          "contentPath": "foundations/early-nlp/03-shrdlu.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "early-nlp-limitations",
+          "title": "Early NLP Limitations",
+          "contentPath": "foundations/early-nlp/04-early-nlp-limitations.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Early NLP Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What was the main conclusion of the 1966 ALPAC report on machine translation?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Machine translation was ready for deployment",
+              "MT systems were cost-effective and practical",
+              "MT systems were expensive and required too much post-editing to be practical",
+              "Machine translation should receive more funding"
+            ],
+            "correctAnswer": "MT systems were expensive and required too much post-editing to be practical",
+            "explanation": "The ALPAC report found that existing machine translation systems produced output requiring extensive human post-editing, making them more expensive than human translation. The report recommended reducing MT funding and focusing on basic research instead. This effectively killed US MT research for over a decade.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What technique did ELIZA use to create the illusion of understanding?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Deep semantic analysis",
+              "Pattern matching with keyword-triggered responses",
+              "Neural network learning",
+              "Logical inference"
+            ],
+            "correctAnswer": "Pattern matching with keyword-triggered responses",
+            "explanation": "ELIZA used simple pattern matching: it looked for keywords in user input and selected responses from templates. For example, if the user mentioned 'mother,' ELIZA might respond 'Tell me more about your family.' This required no actual understanding, yet users often felt deeply engaged and understood.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is the 'ELIZA effect'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The tendency of programs to crash unexpectedly",
+              "The human tendency to attribute understanding and emotions to computers that produce human-like output",
+              "The improvement in AI systems over time",
+              "The effect of therapy on mental health"
+            ],
+            "correctAnswer": "The human tendency to attribute understanding and emotions to computers that produce human-like output",
+            "explanation": "The ELIZA effect describes how people readily attribute understanding, emotions, and intelligence to computer systems that produce human-like responses, even when they know the system is simple. Weizenbaum was disturbed by how quickly users formed emotional connections with ELIZA despite its lack of genuine understanding.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why couldn't SHRDLU's techniques scale beyond the blocks world?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The blocks world was too complex",
+              "Real language requires open-domain knowledge, common sense, and handling of ambiguity",
+              "Computers weren't powerful enough",
+              "SHRDLU was written in the wrong programming language"
+            ],
+            "correctAnswer": "Real language requires open-domain knowledge, common sense, and handling of ambiguity",
+            "explanation": "SHRDLU succeeded because blocks world was closed (all objects known), unambiguous (clear meanings), and simple (limited physics). Real language involves open domains (unknown objects and concepts), massive common-sense knowledge, pervasive ambiguity, and learning from experience\u2014challenges SHRDLU's approach couldn't address.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is the 'frame problem' in AI?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The difficulty of framing pictures correctly",
+              "The challenge of representing what stays the same when something changes",
+              "The problem of fitting data into memory frames",
+              "The issue of video frame rates"
+            ],
+            "correctAnswer": "The challenge of representing what stays the same when something changes",
+            "explanation": "The frame problem asks: when an action changes the world, how do you represent what doesn't change? Moving a block changes its location, but its color, weight, and countless other properties stay the same. Explicitly listing all unchanged facts is impossible, but omitting them leaves the system uncertain about the world state.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What was Bar-Hillel's main argument against fully automatic machine translation?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Computers were too slow",
+              "Languages are too different from each other",
+              "Disambiguation requires unlimited world knowledge",
+              "Translators would lose their jobs"
+            ],
+            "correctAnswer": "Disambiguation requires unlimited world knowledge",
+            "explanation": "Bar-Hillel argued that resolving word ambiguities (like 'pen' meaning writing instrument or enclosure) requires world knowledge (pens are small, playpens are large). Since world knowledge is effectively unlimited and can't be fully encoded, truly automatic high-quality translation is impossible. This argument anticipated later discussions of the common-sense problem.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "first-ai-winter",
+      "title": "The First AI Winter",
+      "description": "The 1970s collapse: when overpromising met reality. Explore the hype cycle, the devastating Lighthill Report, the funding collapse, and the lessons that shaped AI's future.",
+      "era": "ai-winter",
+      "linearOrder": 6,
+      "icon": "snowflake",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "the-hype-cycle",
+          "title": "The Hype Cycle",
+          "contentPath": "ai-winter/first-ai-winter/01-the-hype-cycle.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "lighthill-report",
+          "title": "The Lighthill Report",
+          "contentPath": "ai-winter/first-ai-winter/02-lighthill-report.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "funding-collapse",
+          "title": "Funding Collapse",
+          "contentPath": "ai-winter/first-ai-winter/03-funding-collapse.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "lessons-and-recovery",
+          "title": "Lessons and Recovery",
+          "contentPath": "ai-winter/first-ai-winter/04-lessons-and-recovery.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "First AI Winter Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What was Herbert Simon's famous 1958 prediction about machines?",
+            "questionType": "multiple_choice",
+            "options": [
+              "They would achieve consciousness within 5 years",
+              "They would be world chess champion within 10 years",
+              "They would replace all human workers within 20 years",
+              "They would never match human intelligence"
+            ],
+            "correctAnswer": "They would be world chess champion within 10 years",
+            "explanation": "In 1958, Herbert Simon and Allen Newell predicted that within ten years a digital computer would be the world's chess champion. This prediction proved wildly optimistic\u2014it took until 1997 for Deep Blue to defeat Kasparov. Such overpromising was typical of the era and contributed to later disillusionment.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What was the Lighthill Report (1973)?",
+            "questionType": "multiple_choice",
+            "options": [
+              "A positive assessment of AI's commercial potential",
+              "A critical review that led to major AI funding cuts in the UK",
+              "A proposal for increased AI research funding",
+              "A technical breakthrough in machine learning"
+            ],
+            "correctAnswer": "A critical review that led to major AI funding cuts in the UK",
+            "explanation": "The Lighthill Report, written by mathematician Sir James Lighthill for the UK's Science Research Council, harshly criticized AI's failure to achieve its stated goals. It concluded that the field's central ambitions had failed, leading to dramatic funding cuts that devastated British AI research for over a decade.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What was the main technical criticism Lighthill made of AI?",
+            "questionType": "multiple_choice",
+            "options": [
+              "AI systems were too expensive",
+              "Combinatorial explosion made AI techniques unable to scale",
+              "AI researchers weren't smart enough",
+              "AI systems used too much electricity"
+            ],
+            "correctAnswer": "Combinatorial explosion made AI techniques unable to scale",
+            "explanation": "Lighthill's central technical criticism was the combinatorial explosion problem: AI techniques that worked on small, toy problems became computationally infeasible as problem size grew. Solutions that worked in the lab couldn't scale to real-world applications.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What did the 1966 ALPAC report effectively end?",
+            "questionType": "multiple_choice",
+            "options": [
+              "All AI research in the United States",
+              "Federal funding for machine translation research",
+              "The development of expert systems",
+              "University AI programs"
+            ],
+            "correctAnswer": "Federal funding for machine translation research",
+            "explanation": "The ALPAC (Automatic Language Processing Advisory Committee) report concluded that machine translation systems were expensive, required extensive post-editing, and weren't practical. It effectively ended federal MT funding for nearly two decades, establishing a pattern of critical reviews leading to funding cuts.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What was the 1969 Mansfield Amendment's impact on AI research?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It increased AI funding significantly",
+              "It required Defense Department research to have direct military relevance",
+              "It created new AI research centers",
+              "It had no effect on AI"
+            ],
+            "correctAnswer": "It required Defense Department research to have direct military relevance",
+            "explanation": "The Mansfield Amendment required that Defense Department funded research have a 'direct and apparent relationship to a specific military function.' This made it harder to fund blue-sky AI research, as projects needed clearer practical applications rather than general investigations of intelligence.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What development during the 1970s would later enable AI's recovery?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The invention of the internet",
+              "Expert systems like DENDRAL and MYCIN",
+              "Quantum computing",
+              "Social media platforms"
+            ],
+            "correctAnswer": "Expert systems like DENDRAL and MYCIN",
+            "explanation": "Expert systems, which captured narrow domain expertise in rule-based systems, continued developing during the 1970s. DENDRAL analyzed chemical spectra and MYCIN diagnosed bacterial infections. These demonstrated practical AI value and bridged the first AI winter to the expert systems boom of the 1980s.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "expert-systems",
+      "title": "Expert Systems & MYCIN",
+      "description": "The practical AI that worked: knowledge-based systems that captured human expertise. From DENDRAL to MYCIN to the commercial boom of the 1980s.",
+      "era": "ai-winter",
+      "linearOrder": 7,
+      "icon": "cpu",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "what-are-expert-systems",
+          "title": "What Are Expert Systems?",
+          "contentPath": "ai-winter/expert-systems/01-what-are-expert-systems.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "dendral",
+          "title": "DENDRAL",
+          "contentPath": "ai-winter/expert-systems/02-dendral.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "mycin",
+          "title": "MYCIN",
+          "contentPath": "ai-winter/expert-systems/03-mycin.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "the-expert-systems-boom",
+          "title": "The Expert Systems Boom",
+          "contentPath": "ai-winter/expert-systems/04-the-expert-systems-boom.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Expert Systems Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What are the two main components of an expert system's architecture?",
+            "questionType": "multiple_choice",
+            "options": [
+              "CPU and memory",
+              "Knowledge base and inference engine",
+              "Input and output modules",
+              "Compiler and interpreter"
+            ],
+            "correctAnswer": "Knowledge base and inference engine",
+            "explanation": "Expert systems separate domain knowledge (stored in the knowledge base as rules and facts) from the reasoning mechanism (the inference engine that applies rules). This separation allows the same inference engine to be reused with different knowledge bases, and makes knowledge easier to maintain.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What was DENDRAL designed to analyze?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Medical diagnoses",
+              "Mass spectrometry data to identify organic molecules",
+              "Computer system configurations",
+              "Legal documents"
+            ],
+            "correctAnswer": "Mass spectrometry data to identify organic molecules",
+            "explanation": "DENDRAL (1965) was the first expert system. It analyzed mass spectrometry data to determine the molecular structure of unknown organic compounds. The project demonstrated that encoding expert knowledge could dramatically reduce the search space for complex problems.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What innovation did MYCIN introduce for handling uncertainty?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Binary true/false logic",
+              "Certainty factors (CFs) ranging from -1 to +1",
+              "Random probability sampling",
+              "Neural network confidence scores"
+            ],
+            "correctAnswer": "Certainty factors (CFs) ranging from -1 to +1",
+            "explanation": "MYCIN introduced certainty factors (CFs) to represent degrees of belief. CFs ranged from -1 (definitely false) to +1 (definitely true), with 0 meaning unknown. Rules carried CFs for their conclusions, and CFs combined when multiple rules supported the same conclusion. This practical approach to uncertainty influenced many later systems.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why was MYCIN never widely deployed in clinical practice?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It performed poorly compared to human experts",
+              "Regulatory, practical, and cultural barriers prevented adoption",
+              "The technology was too expensive",
+              "It was superseded by better systems before deployment"
+            ],
+            "correctAnswer": "Regulatory, practical, and cultural barriers prevented adoption",
+            "explanation": "Despite performing at or above expert level in studies, MYCIN faced barriers: no FDA framework for AI diagnostics, physician resistance to computer recommendations, tedious data entry, no integration with hospital systems. This illustrates that technical success doesn't guarantee deployment.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What was R1/XCON and why was it significant?",
+            "questionType": "multiple_choice",
+            "options": [
+              "A medical diagnosis system that treated patients",
+              "A configuration system at DEC that saved $40 million annually",
+              "Japan's Fifth Generation computer",
+              "The first LISP programming language"
+            ],
+            "correctAnswer": "A configuration system at DEC that saved $40 million annually",
+            "explanation": "R1/XCON configured VAX computer orders at Digital Equipment Corporation. By 1986, it saved an estimated $40 million annually by automating work previously done by hundreds of technical editors. It was the first major commercial expert system success and ignited the 1980s AI boom.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What was the 'knowledge acquisition bottleneck'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Computers couldn't store enough knowledge",
+              "Extracting and encoding expert knowledge was laborious and difficult",
+              "Networks couldn't transfer knowledge fast enough",
+              "Users couldn't learn to use expert systems"
+            ],
+            "correctAnswer": "Extracting and encoding expert knowledge was laborious and difficult",
+            "explanation": "The knowledge acquisition bottleneck was the fundamental challenge of getting knowledge into expert systems. Expert interviews were time-consuming, experts couldn't always articulate tacit knowledge, knowledge changed over time, and each new domain required starting from scratch. This remained unsolved and contributed to the second AI winter.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lisp-prolog",
+      "title": "LISP, Prolog & AI Languages",
+      "description": "The languages that built AI: LISP's symbolic power, Prolog's logic programming, and the rise and fall of specialized AI hardware.",
+      "era": "ai-winter",
+      "linearOrder": 8,
+      "icon": "terminal",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "birth-of-lisp",
+          "title": "The Birth of LISP",
+          "contentPath": "ai-winter/lisp-prolog/01-birth-of-lisp.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "lisp-features",
+          "title": "LISP Features and Power",
+          "contentPath": "ai-winter/lisp-prolog/02-lisp-features.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "prolog-and-logic-programming",
+          "title": "Prolog and Logic Programming",
+          "contentPath": "ai-winter/lisp-prolog/03-prolog-and-logic-programming.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "lisp-machines",
+          "title": "LISP Machines",
+          "contentPath": "ai-winter/lisp-prolog/04-lisp-machines.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "AI Languages Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "Who created LISP and in what year?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Alan Turing in 1950",
+              "John McCarthy in 1958",
+              "Marvin Minsky in 1965",
+              "John Backus in 1957"
+            ],
+            "correctAnswer": "John McCarthy in 1958",
+            "explanation": "John McCarthy created LISP in 1958 at MIT. He wanted a language suited for AI's needs: symbolic computation, flexible data structures, and interactive development. LISP became AI's standard language for three decades.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the fundamental data structure in LISP?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Arrays",
+              "Objects",
+              "Lists",
+              "Trees"
+            ],
+            "correctAnswer": "Lists",
+            "explanation": "LISP (LISt Processing) is built around lists as the fundamental data structure. Lists can contain atoms or other lists, enabling representation of complex hierarchical structures. Even LISP programs are lists, which enables powerful metaprogramming.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What makes LISP's treatment of 'code as data' special?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Programs run faster",
+              "Programs are smaller",
+              "Programs can examine and modify other programs",
+              "Programs use less memory"
+            ],
+            "correctAnswer": "Programs can examine and modify other programs",
+            "explanation": "In LISP, programs are represented as lists\u2014the same data structure programs manipulate. This means programs can examine, modify, and generate other programs. This enables macros, meta-programming, and self-modifying code\u2014powerful capabilities for AI development.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is the key difference between Prolog's approach and traditional programming?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Prolog is faster",
+              "Prolog is declarative\u2014you describe what you want, not how to compute it",
+              "Prolog uses numbers instead of symbols",
+              "Prolog requires less memory"
+            ],
+            "correctAnswer": "Prolog is declarative\u2014you describe what you want, not how to compute it",
+            "explanation": "Prolog reverses the traditional programming paradigm. Instead of specifying step-by-step procedures, you declare facts and rules. The system automatically searches for answers using unification and backtracking. This is ideal for problems like parsing, expert systems, and constraint satisfaction.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What was the Fifth Generation Computer Systems project?",
+            "questionType": "multiple_choice",
+            "options": [
+              "An American military AI program",
+              "Japan's $850 million effort to build advanced AI systems based on Prolog",
+              "A European LISP standardization effort",
+              "The first commercial expert system"
+            ],
+            "correctAnswer": "Japan's $850 million effort to build advanced AI systems based on Prolog",
+            "explanation": "Launched in 1982, Japan's Fifth Generation project was a ten-year, $850 million effort to build advanced AI computers using Prolog/logic programming. It sparked international alarm and competitive responses from the US (MCC), UK (Alvey), and Europe (ESPRIT).",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "Why did the LISP machine market collapse in the late 1980s?",
+            "questionType": "multiple_choice",
+            "options": [
+              "LISP became obsolete",
+              "Cheaper UNIX workstations offered adequate LISP performance",
+              "The government banned LISP machines",
+              "LISP machines caught fire too often"
+            ],
+            "correctAnswer": "Cheaper UNIX workstations offered adequate LISP performance",
+            "explanation": "LISP machines cost $50,000-$100,000 while UNIX workstations cost $10,000-$30,000 and could run adequate LISP implementations. When the AI winter hit and budgets tightened, the 'good enough' cheaper alternative won. Symbolics and other LISP machine companies collapsed.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "knowledge-representation",
+      "title": "Knowledge Representation",
+      "description": "How to store what AI systems know: semantic networks, frames, ontologies, and the quest to capture common sense. Plus reasoning under uncertainty.",
+      "era": "ai-winter",
+      "linearOrder": 9,
+      "icon": "database",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "the-knowledge-problem",
+          "title": "The Knowledge Problem",
+          "contentPath": "ai-winter/knowledge-representation/01-the-knowledge-problem.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "semantic-networks-and-frames",
+          "title": "Semantic Networks and Frames",
+          "contentPath": "ai-winter/knowledge-representation/02-semantic-networks-and-frames.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "ontologies-and-cyc",
+          "title": "Ontologies and Cyc",
+          "contentPath": "ai-winter/knowledge-representation/03-ontologies-and-cyc.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "reasoning-with-knowledge",
+          "title": "Reasoning with Knowledge",
+          "contentPath": "ai-winter/knowledge-representation/04-reasoning-with-knowledge.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Knowledge Representation Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is inheritance in semantic networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The ability to delete nodes",
+              "Properties at higher levels automatically apply to lower levels",
+              "Converting networks to rules",
+              "Linking unrelated concepts"
+            ],
+            "correctAnswer": "Properties at higher levels automatically apply to lower levels",
+            "explanation": "Inheritance means that properties defined at general levels (like 'Bird can fly') automatically apply to more specific levels (like Robin, Sparrow) unless overridden. This allows efficient knowledge storage\u2014you don't need to repeat 'can fly' for every bird species.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What was Minsky's key innovation with frames?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Using mathematical equations",
+              "Organizing knowledge into stereotypical structures with slots and defaults",
+              "Eliminating the need for computers",
+              "Creating the first neural network"
+            ],
+            "correctAnswer": "Organizing knowledge into stereotypical structures with slots and defaults",
+            "explanation": "Minsky's frames (1974) organized knowledge into stereotypical structures representing common situations. Frames had slots (attributes) with default values that could be overridden. This captured how humans use expectations and prototypes to understand the world.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is the Cyc project?",
+            "questionType": "multiple_choice",
+            "options": [
+              "A video game from the 1980s",
+              "A multi-decade effort to encode all common sense knowledge",
+              "A type of neural network",
+              "A programming language"
+            ],
+            "correctAnswer": "A multi-decade effort to encode all common sense knowledge",
+            "explanation": "Cyc, launched by Doug Lenat in 1984, is the most ambitious attempt to encode all common sense knowledge. After 40+ years, it contains millions of assertions but remains incomplete\u2014demonstrating how vast common sense knowledge really is.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is non-monotonic reasoning?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Reasoning that only uses numbers",
+              "Reasoning that never changes conclusions",
+              "Reasoning where new information can withdraw previous conclusions",
+              "Reasoning that is always wrong"
+            ],
+            "correctAnswer": "Reasoning where new information can withdraw previous conclusions",
+            "explanation": "Non-monotonic reasoning allows conclusions to be withdrawn when new information arrives. For example, 'Tweety flies' (because Tweety is a bird) can be withdrawn upon learning 'Tweety is a penguin.' Classical logic was monotonic\u2014conclusions could only be added, never removed.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is the frame problem?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Picture frames breaking during shipping",
+              "The challenge of representing what stays the same when something changes",
+              "A bug in the Frames representation language",
+              "The cost of computer monitors"
+            ],
+            "correctAnswer": "The challenge of representing what stays the same when something changes",
+            "explanation": "The frame problem asks: when an action occurs, how do you represent what doesn't change? Moving a cup changes its location, but not its color, weight, or countless other properties. Explicitly listing all unchanged facts is impossible, but without them, the system doesn't know the world state.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What is the advantage of Bayesian networks for reasoning under uncertainty?",
+            "questionType": "multiple_choice",
+            "options": [
+              "They don't require any data",
+              "They provide a principled probabilistic framework for combining evidence",
+              "They are faster than all other methods",
+              "They never make mistakes"
+            ],
+            "correctAnswer": "They provide a principled probabilistic framework for combining evidence",
+            "explanation": "Bayesian networks, developed by Judea Pearl, provide a mathematically principled way to reason with probabilities. Unlike ad hoc methods like certainty factors, Bayesian networks have clear semantics based on probability theory and enable consistent combination of uncertain evidence.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "second-ai-winter",
+      "title": "The Second AI Winter",
+      "description": "The late 1980s collapse: expert systems fail to deliver, LISP machines disappear, government projects disappoint. But seeds of revival are planted.",
+      "era": "ai-winter",
+      "linearOrder": 10,
+      "icon": "trending-down",
+      "estimatedMinutes": 35,
+      "lessons": [
+        {
+          "slug": "collapse-of-expert-systems",
+          "title": "Collapse of Expert Systems",
+          "contentPath": "ai-winter/second-ai-winter/01-collapse-of-expert-systems.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "hardware-collapse",
+          "title": "Hardware Collapse",
+          "contentPath": "ai-winter/second-ai-winter/02-hardware-collapse.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "government-initiatives-fail",
+          "title": "Government Initiatives Fail",
+          "contentPath": "ai-winter/second-ai-winter/03-government-initiatives-fail.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "seeds-of-revival",
+          "title": "Seeds of Revival",
+          "contentPath": "ai-winter/second-ai-winter/04-seeds-of-revival.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Second AI Winter Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "When did the second AI winter occur?",
+            "questionType": "multiple_choice",
+            "options": [
+              "1965-1970",
+              "1975-1980",
+              "1987-1993",
+              "2000-2005"
+            ],
+            "correctAnswer": "1987-1993",
+            "explanation": "The second AI winter occurred roughly from 1987 to 1993. The expert systems market peaked around 1987 and then collapsed. By 1993, many AI companies had failed, including Symbolics (bankruptcy), and 'artificial intelligence' had become a term researchers avoided.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What was a primary cause of the expert systems market collapse?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Computers became too fast",
+              "Expert systems were too easy to build",
+              "Deployment failures and maintenance costs exceeded expectations",
+              "Experts refused to share knowledge"
+            ],
+            "correctAnswer": "Deployment failures and maintenance costs exceeded expectations",
+            "explanation": "Expert systems often failed to deliver promised results when deployed in real environments. Additionally, maintaining these systems proved extremely expensive as rule bases grew complex, rule interactions became unpredictable, and the knowledge acquisition bottleneck was never solved.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "Why did LISP machine companies fail?",
+            "questionType": "multiple_choice",
+            "options": [
+              "LISP was banned by governments",
+              "General-purpose workstations caught up in performance at much lower cost",
+              "LISP machines were unreliable",
+              "There was no software for LISP machines"
+            ],
+            "correctAnswer": "General-purpose workstations caught up in performance at much lower cost",
+            "explanation": "LISP machines cost $50,000-$100,000 while UNIX workstations running good LISP implementations cost $10,000-$30,000. As Moore's Law continued, the performance gap closed while the price gap widened. When the AI winter reduced demand, the specialized hardware market collapsed.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What was the Fifth Generation Computer Systems project?",
+            "questionType": "multiple_choice",
+            "options": [
+              "America's response to Japanese AI",
+              "Japan's $850 million project to build AI computers using logic programming",
+              "The first internet",
+              "A European supercomputer initiative"
+            ],
+            "correctAnswer": "Japan's $850 million project to build AI computers using logic programming",
+            "explanation": "Japan's Fifth Generation project (1982-1992) aimed to create revolutionary AI computers based on Prolog and parallel processing. The project fell short of its ambitious goals\u2014parallel Prolog proved difficult, and the technology world moved toward neural networks and statistical methods instead.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What 1986 publication revived interest in neural networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The Fifth Generation by Feigenbaum",
+              "Perceptrons by Minsky and Papert",
+              "Parallel Distributed Processing by Rumelhart and McClelland",
+              "LISP by McCarthy"
+            ],
+            "correctAnswer": "Parallel Distributed Processing by Rumelhart and McClelland",
+            "explanation": "The two-volume 'Parallel Distributed Processing' (1986) by Rumelhart and McClelland presented the theoretical framework for connectionism and popularized backpropagation. It energized a new generation of neural network researchers and offered an alternative to symbolic AI.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "Why did AI researchers rebrand their work during the second winter?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To get more media attention",
+              "To avoid the toxic reputation of 'artificial intelligence'",
+              "Because the work was fundamentally different",
+              "To charge higher consulting fees"
+            ],
+            "correctAnswer": "To avoid the toxic reputation of 'artificial intelligence'",
+            "explanation": "By the early 1990s, 'artificial intelligence' was associated with overpromising and failure. Researchers rebranded their work as 'machine learning,' 'data mining,' 'knowledge discovery,' or 'intelligent systems' to escape the hype-and-disappointment cycle and obtain funding.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "statistical-nlp",
+      "title": "Statistical NLP Revolution",
+      "description": "How statistical methods transformed natural language processing from rule-based systems to data-driven approaches, led by IBM's research and the adoption of machine learning.",
+      "era": "ml-renaissance",
+      "linearOrder": 11,
+      "icon": "bar-chart",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "death-of-rationalism",
+          "title": "The Death of Rationalism",
+          "contentPath": "ml-renaissance/statistical-nlp/01-death-of-rationalism.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "language-models-and-ngrams",
+          "title": "Language Models and N-grams",
+          "contentPath": "ml-renaissance/statistical-nlp/02-language-models-and-ngrams.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "pos-tagging-and-parsing",
+          "title": "POS Tagging and Statistical Parsing",
+          "contentPath": "ml-renaissance/statistical-nlp/03-pos-tagging-and-parsing.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "information-extraction",
+          "title": "Information Extraction and NER",
+          "contentPath": "ml-renaissance/statistical-nlp/04-information-extraction.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Statistical NLP Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What famous quote by Fred Jelinek captured the shift from linguistics to statistics in NLP?",
+            "questionType": "multiple_choice",
+            "options": [
+              "'Language is infinite, statistics are finite'",
+              "'Every time I fire a linguist, the performance of the speech recognizer goes up'",
+              "'Statistics can solve what linguistics cannot'",
+              "'Data is the new grammar'"
+            ],
+            "correctAnswer": "'Every time I fire a linguist, the performance of the speech recognizer goes up'",
+            "explanation": "Fred Jelinek, head of speech recognition at IBM, made this provocative statement that embodied the shift from linguistic rule-based systems to purely statistical approaches. While deliberately exaggerated, it reflected a real methodological revolution.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "In an n-gram language model, what does the 'n' represent?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The number of parameters",
+              "The size of the vocabulary",
+              "The number of words used to predict the next word",
+              "The training set size"
+            ],
+            "correctAnswer": "The number of words used to predict the next word",
+            "explanation": "In an n-gram model, n refers to the context window size. A trigram (n=3) predicts the next word based on the previous two words. This Markov assumption makes the model tractable while capturing local dependencies.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What problem does smoothing solve in language models?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Making text more readable",
+              "Handling word sequences never seen in training",
+              "Reducing computation time",
+              "Improving grammar"
+            ],
+            "correctAnswer": "Handling word sequences never seen in training",
+            "explanation": "Smoothing addresses the zero-probability problem: word sequences not seen in training data would otherwise receive probability zero, making the entire sentence impossible. Techniques like Kneser-Ney smoothing redistribute probability mass to unseen n-grams.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What statistical model became the standard for sequence labeling tasks like POS tagging?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Decision trees",
+              "Hidden Markov Models",
+              "Linear regression",
+              "K-means clustering"
+            ],
+            "correctAnswer": "Hidden Markov Models",
+            "explanation": "Hidden Markov Models (HMMs) became the workhorse for sequence labeling. They model the joint probability of observations (words) and hidden states (tags), enabling efficient inference with the Viterbi algorithm.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What was the primary advantage of statistical parsing over hand-written grammar rules?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Faster execution",
+              "Perfect accuracy",
+              "Automatic handling of ambiguity through probability",
+              "Simpler implementation"
+            ],
+            "correctAnswer": "Automatic handling of ambiguity through probability",
+            "explanation": "Natural language is highly ambiguous\u2014sentences often have multiple valid parses. Statistical parsers (like PCFGs) assign probabilities to each parse, automatically preferring the most likely interpretation based on training data rather than requiring explicit disambiguation rules.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "Why did Conditional Random Fields (CRFs) largely replace HMMs for sequence labeling?",
+            "questionType": "multiple_choice",
+            "options": [
+              "CRFs are faster to train",
+              "CRFs can use arbitrary overlapping features without independence assumptions",
+              "CRFs require less data",
+              "CRFs are simpler to implement"
+            ],
+            "correctAnswer": "CRFs can use arbitrary overlapping features without independence assumptions",
+            "explanation": "HMMs require features to be independent given the hidden state, limiting expressiveness. CRFs are discriminative models that directly model P(labels|observations), allowing rich, overlapping features like 'word ends in -ing AND previous word is a verb.'",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "svms-kernels",
+      "title": "Support Vector Machines",
+      "description": "The mathematical elegance of maximum margin classifiers and the kernel trick that made them dominant for a decade.",
+      "era": "ml-renaissance",
+      "linearOrder": 12,
+      "icon": "target",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "margin-revolution",
+          "title": "The Margin Revolution",
+          "contentPath": "ml-renaissance/svms-kernels/01-margin-revolution.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "kernel-trick",
+          "title": "The Kernel Trick",
+          "contentPath": "ml-renaissance/svms-kernels/02-kernel-trick.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "svm-optimization",
+          "title": "SVM Optimization and Practice",
+          "contentPath": "ml-renaissance/svms-kernels/03-svm-optimization.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "applications-and-legacy",
+          "title": "Applications and Legacy",
+          "contentPath": "ml-renaissance/svms-kernels/04-applications-and-legacy.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Support Vector Machines Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is the margin in a Support Vector Machine?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The distance between all data points",
+              "The distance between the decision boundary and the nearest training points",
+              "The error rate on training data",
+              "The number of support vectors"
+            ],
+            "correctAnswer": "The distance between the decision boundary and the nearest training points",
+            "explanation": "The margin is the perpendicular distance from the decision hyperplane to the closest training examples (the support vectors). SVMs find the hyperplane that maximizes this margin, which provides better generalization to unseen data.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What are support vectors?",
+            "questionType": "multiple_choice",
+            "options": [
+              "All training examples",
+              "The training points closest to the decision boundary",
+              "Points that are misclassified",
+              "Random samples from the data"
+            ],
+            "correctAnswer": "The training points closest to the decision boundary",
+            "explanation": "Support vectors are the training examples that lie on the margin boundary. They are the only points that matter for defining the decision boundary\u2014all other points could be removed without changing the solution.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What does the kernel trick allow SVMs to do?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Train faster on large datasets",
+              "Compute dot products in high-dimensional space without explicit transformation",
+              "Automatically select the best features",
+              "Reduce overfitting"
+            ],
+            "correctAnswer": "Compute dot products in high-dimensional space without explicit transformation",
+            "explanation": "The kernel trick computes the dot product between points in a high-dimensional (even infinite-dimensional) feature space without ever computing the explicit coordinates. This enables nonlinear classification efficiently.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is the C parameter in a soft-margin SVM?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The number of classes",
+              "A trade-off between margin size and training errors",
+              "The kernel coefficient",
+              "The learning rate"
+            ],
+            "correctAnswer": "A trade-off between margin size and training errors",
+            "explanation": "The C parameter controls the trade-off between maximizing the margin and minimizing classification errors. High C penalizes errors heavily (potentially overfitting), while low C allows more errors for a larger margin (potentially underfitting).",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "For what type of data did SVMs particularly excel before deep learning?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Very small datasets (< 100 samples)",
+              "High-dimensional sparse data like text",
+              "Time series data",
+              "Streaming data"
+            ],
+            "correctAnswer": "High-dimensional sparse data like text",
+            "explanation": "SVMs excelled at text classification where data is high-dimensional (vocabulary size) and sparse (each document uses few words). The linear kernel works well when d >> n, and SVMs' regularization prevents overfitting.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What optimization algorithm made large-scale SVM training practical?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Gradient descent",
+              "Sequential Minimal Optimization (SMO)",
+              "Newton's method",
+              "Simulated annealing"
+            ],
+            "correctAnswer": "Sequential Minimal Optimization (SMO)",
+            "explanation": "John Platt's SMO algorithm (1998) broke the large quadratic programming problem into minimal 2-variable subproblems that could be solved analytically. This made SVM training practical for large datasets.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "decision-trees-ensembles",
+      "title": "Decision Trees & Random Forests",
+      "description": "From interpretable single trees to powerful ensemble methods that dominated machine learning competitions.",
+      "era": "ml-renaissance",
+      "linearOrder": 13,
+      "icon": "git-branch",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "decision-trees-basics",
+          "title": "Decision Trees: Learning to Ask Questions",
+          "contentPath": "ml-renaissance/decision-trees-ensembles/01-decision-trees-basics.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "bagging-and-random-forests",
+          "title": "Bagging and Random Forests",
+          "contentPath": "ml-renaissance/decision-trees-ensembles/02-bagging-and-random-forests.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "boosting-algorithms",
+          "title": "Boosting: Learning from Mistakes",
+          "contentPath": "ml-renaissance/decision-trees-ensembles/03-boosting-algorithms.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "ensemble-practice",
+          "title": "Ensemble Methods in Practice",
+          "contentPath": "ml-renaissance/decision-trees-ensembles/04-ensemble-practice.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Decision Trees & Ensembles Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What does Gini impurity measure?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Tree depth",
+              "The probability of misclassifying a random element if labeled according to class distribution",
+              "Training time",
+              "Number of features"
+            ],
+            "correctAnswer": "The probability of misclassifying a random element if labeled according to class distribution",
+            "explanation": "Gini impurity measures how mixed the classes are in a node. A pure node (all one class) has Gini = 0. A maximally mixed node (50/50) has Gini = 0.5. Decision trees split to minimize weighted Gini impurity.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the main purpose of bagging (bootstrap aggregating)?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Reduce training time",
+              "Reduce variance by averaging predictions from models trained on different samples",
+              "Increase model complexity",
+              "Handle missing values"
+            ],
+            "correctAnswer": "Reduce variance by averaging predictions from models trained on different samples",
+            "explanation": "Bagging trains multiple models on bootstrap samples (random samples with replacement) and averages their predictions. This reduces variance because individual model errors tend to cancel out when averaged.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "How does Random Forest differ from basic bagging?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Uses different tree algorithms",
+              "Additionally randomizes feature selection at each split",
+              "Uses deeper trees",
+              "Trains fewer models"
+            ],
+            "correctAnswer": "Additionally randomizes feature selection at each split",
+            "explanation": "Random Forest adds feature randomization: at each split, only a random subset of features is considered. This decorrelates the trees, making averaging more effective since trees make different (uncorrelated) errors.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "In boosting, how are subsequent models trained?",
+            "questionType": "multiple_choice",
+            "options": [
+              "On random samples of the data",
+              "With focus on examples the previous models got wrong",
+              "On completely different features",
+              "With simpler algorithms"
+            ],
+            "correctAnswer": "With focus on examples the previous models got wrong",
+            "explanation": "Boosting trains models sequentially, with each new model focusing on the errors of the previous ones. AdaBoost increases weights on misclassified examples; gradient boosting fits residuals (prediction errors).",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "Why is XGBoost often faster than traditional gradient boosting?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Uses simpler trees",
+              "Uses histogram binning and parallel processing",
+              "Trains fewer trees",
+              "Uses neural networks"
+            ],
+            "correctAnswer": "Uses histogram binning and parallel processing",
+            "explanation": "XGBoost uses histogram-based split finding (discretizing features into bins), parallel tree construction, and cache-optimized memory access. These engineering optimizations make it much faster than naive implementations.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What is the main trade-off when choosing between Random Forest and Gradient Boosting?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Speed vs. interpretability",
+              "Robustness/ease of tuning vs. maximum accuracy",
+              "Memory vs. accuracy",
+              "Training vs. inference speed"
+            ],
+            "correctAnswer": "Robustness/ease of tuning vs. maximum accuracy",
+            "explanation": "Random Forests are robust and work well with default settings. Gradient Boosting can achieve higher accuracy but requires careful hyperparameter tuning and is more prone to overfitting. Random Forest is often the better first choice.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "backpropagation-revival",
+      "title": "Backpropagation Rediscovered",
+      "description": "The 1986 paper that revived neural networks, practical training techniques, and the challenges that kept deep learning at bay.",
+      "era": "ml-renaissance",
+      "linearOrder": 14,
+      "icon": "refresh-cw",
+      "estimatedMinutes": 42,
+      "lessons": [
+        {
+          "slug": "rediscovering-backprop",
+          "title": "Rediscovering Backpropagation: The 1986 Breakthrough",
+          "contentPath": "ml-renaissance/backpropagation-revival/01-rediscovering-backprop.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "training-techniques",
+          "title": "Practical Training Techniques",
+          "contentPath": "ml-renaissance/backpropagation-revival/02-training-techniques.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "challenges-and-limitations",
+          "title": "Challenges and Limitations",
+          "contentPath": "ml-renaissance/backpropagation-revival/03-challenges-and-limitations.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "keeping-the-flame-alive",
+          "title": "Keeping the Flame Alive",
+          "contentPath": "ml-renaissance/backpropagation-revival/04-keeping-the-flame-alive.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Backpropagation Revival Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "Who authored the influential 1986 Nature paper 'Learning representations by back-propagating errors'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Marvin Minsky and Seymour Papert",
+              "Rumelhart, Hinton, and Williams",
+              "Yann LeCun",
+              "John McCarthy"
+            ],
+            "correctAnswer": "Rumelhart, Hinton, and Williams",
+            "explanation": "The 1986 paper by David Rumelhart, Geoffrey Hinton, and Ronald Williams demonstrated that backpropagation could train multi-layer networks to learn useful internal representations, reviving neural network research after the Minsky-Papert critique.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the vanishing gradient problem?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Gradients become zero during forward pass",
+              "Gradients become exponentially small in early layers of deep networks",
+              "Gradients are computed incorrectly",
+              "Gradients are too large to store"
+            ],
+            "correctAnswer": "Gradients become exponentially small in early layers of deep networks",
+            "explanation": "With sigmoid activations, gradients are multiplied by values less than 0.25 at each layer. After many layers, gradients become vanishingly small, and early layers receive almost no learning signal.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What does momentum in gradient descent accomplish?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Increases learning rate automatically",
+              "Accumulates gradient direction to smooth updates and accelerate convergence",
+              "Reduces the number of epochs needed",
+              "Prevents overfitting"
+            ],
+            "correctAnswer": "Accumulates gradient direction to smooth updates and accelerate convergence",
+            "explanation": "Momentum maintains a 'velocity' that accumulates gradient direction over time. This helps the optimizer move faster through flat regions and dampens oscillations in ravines, leading to faster convergence.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why did early stopping become a standard practice?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To save computation time",
+              "To prevent overfitting by stopping when validation error starts increasing",
+              "Because neural networks converge in few epochs",
+              "To avoid numerical overflow"
+            ],
+            "correctAnswer": "To prevent overfitting by stopping when validation error starts increasing",
+            "explanation": "Early stopping monitors validation set performance and stops training when it begins degrading, even if training loss continues to decrease. This acts as implicit regularization, preventing the network from memorizing training data.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What advantage did SVMs have over neural networks in the 1990s?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Faster training",
+              "Convex optimization guarantees global optimum",
+              "Better for image recognition",
+              "Simpler architecture"
+            ],
+            "correctAnswer": "Convex optimization guarantees global optimum",
+            "explanation": "SVM training is a convex optimization problem with a unique global optimum. Neural networks have non-convex loss surfaces with many local minima. This theoretical guarantee, combined with practical results, made SVMs preferred.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What did Yann LeCun's work at Bell Labs demonstrate about neural networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Neural networks were theoretically impossible",
+              "Convolutional networks could achieve practical success in digit recognition",
+              "LISP was the best language for neural networks",
+              "Neural networks needed symbolic preprocessing"
+            ],
+            "correctAnswer": "Convolutional networks could achieve practical success in digit recognition",
+            "explanation": "LeCun's LeNet-5 achieved practical success in handwritten digit recognition, deployed in real check-reading systems. This showed neural networks could work at scale for specific applications, even during the broader 'neural network winter.'",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "early-deep-learning",
+      "title": "Early Deep Learning Attempts",
+      "description": "The depth problem, breakthrough techniques, speech recognition success, and the road to ImageNet that set the stage for the deep learning revolution.",
+      "era": "ml-renaissance",
+      "linearOrder": 15,
+      "icon": "layers",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "the-depth-problem",
+          "title": "The Depth Problem",
+          "contentPath": "ml-renaissance/early-deep-learning/01-the-depth-problem.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "breakthrough-techniques",
+          "title": "Breakthrough Techniques",
+          "contentPath": "ml-renaissance/early-deep-learning/02-breakthrough-techniques.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "speech-recognition-success",
+          "title": "Speech Recognition: Deep Learning's First Victory",
+          "contentPath": "ml-renaissance/early-deep-learning/03-speech-recognition-success.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "road-to-imagenet",
+          "title": "The Road to ImageNet",
+          "contentPath": "ml-renaissance/early-deep-learning/04-road-to-imagenet.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Early Deep Learning Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "Why does depth provide advantages over width in neural networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Deep networks train faster",
+              "Deep networks can represent hierarchical features more efficiently",
+              "Deep networks use less memory",
+              "Deep networks are easier to interpret"
+            ],
+            "correctAnswer": "Deep networks can represent hierarchical features more efficiently",
+            "explanation": "Deep networks leverage compositional structure: edges \u2192 shapes \u2192 parts \u2192 objects. Each layer builds on the previous, representing increasingly abstract features. This can be exponentially more parameter-efficient than shallow networks.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What property of ReLU activation makes it better than sigmoid for deep networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "ReLU is bounded between 0 and 1",
+              "ReLU has constant gradient of 1 for positive inputs (no saturation)",
+              "ReLU is differentiable everywhere",
+              "ReLU outputs probabilities"
+            ],
+            "correctAnswer": "ReLU has constant gradient of 1 for positive inputs (no saturation)",
+            "explanation": "ReLU's gradient is exactly 1 for positive inputs, so gradients can flow through many layers without vanishing. Sigmoid's maximum gradient is 0.25, which causes exponential decay in deep networks.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What does dropout regularization do during training?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Removes training examples",
+              "Randomly zeroes out neuron activations",
+              "Reduces learning rate",
+              "Prunes network connections permanently"
+            ],
+            "correctAnswer": "Randomly zeroes out neuron activations",
+            "explanation": "Dropout randomly sets neuron outputs to zero during training (typically 50%). This prevents neurons from co-adapting and forces each neuron to be independently useful, providing strong regularization.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What domain saw deep learning's first major success before computer vision?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Natural language processing",
+              "Speech recognition",
+              "Robotics",
+              "Game playing"
+            ],
+            "correctAnswer": "Speech recognition",
+            "explanation": "Deep neural networks achieved major improvements in speech recognition between 2009-2012, replacing GMM-HMM systems at Microsoft, Google, and Apple. This success predated and foreshadowed the ImageNet breakthrough.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What made ImageNet different from earlier computer vision datasets?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Higher resolution images",
+              "Scale: over 1 million labeled training images",
+              "Better class labels",
+              "Simpler categories"
+            ],
+            "correctAnswer": "Scale: over 1 million labeled training images",
+            "explanation": "ImageNet's 1.2 million training images across 1000 categories was ~20x larger than previous benchmarks. This scale allowed deep networks to learn rich representations without overfitting, enabling the AlexNet breakthrough.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What was significant about AlexNet's 2012 ImageNet victory?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It used a new algorithm",
+              "It won by over 10 percentage points, a discontinuous improvement",
+              "It was trained on CPUs",
+              "It had only one layer"
+            ],
+            "correctAnswer": "It won by over 10 percentage points, a discontinuous improvement",
+            "explanation": "AlexNet achieved 15.3% top-5 error vs. 26.2% for the runner-up\u2014an improvement of over 10 percentage points in a field where gains were usually measured in tenths of a percent. This convinced the community that deep learning had fundamentally changed the game.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "deep-learning-breakthrough",
+      "title": "The Deep Learning Breakthrough",
+      "description": "The confluence of algorithmic advances, GPU computing, and big data that finally made deep neural networks work. From vanishing gradients solved to the 2012 ImageNet moment.",
+      "era": "deep-learning",
+      "linearOrder": 16,
+      "icon": "zap",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "why-deep-learning-works",
+          "title": "Why Deep Learning Works",
+          "contentPath": "deep-learning/deep-learning-breakthrough/01-why-deep-learning-works.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "gpu-revolution",
+          "title": "The GPU Revolution",
+          "contentPath": "deep-learning/deep-learning-breakthrough/02-gpu-revolution.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "big-data-era",
+          "title": "The Big Data Era",
+          "contentPath": "deep-learning/deep-learning-breakthrough/03-big-data-era.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "hinton-ng-lecun",
+          "title": "Hinton, Ng, LeCun: The Pioneers",
+          "contentPath": "deep-learning/deep-learning-breakthrough/04-hinton-ng-lecun.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "The Deep Learning Breakthrough Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What problem did the ReLU activation function primarily solve compared to sigmoid/tanh?",
+            "questionType": "multiple_choice",
+            "options": [
+              "ReLU is computationally cheaper",
+              "ReLU prevents vanishing gradients by having a constant gradient for positive inputs",
+              "ReLU produces bounded outputs",
+              "ReLU provides smoother gradients"
+            ],
+            "correctAnswer": "ReLU prevents vanishing gradients by having a constant gradient for positive inputs",
+            "explanation": "ReLU's gradient is exactly 1 for positive inputs, so gradients can flow through many layers without vanishing. Sigmoid's maximum gradient is 0.25, causing exponential gradient decay in deep networks.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the purpose of He initialization for neural network weights?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To make training faster by starting with large weights",
+              "To ensure activations neither vanish nor explode during forward propagation",
+              "To reduce the number of parameters needed",
+              "To initialize bias terms to zero"
+            ],
+            "correctAnswer": "To ensure activations neither vanish nor explode during forward propagation",
+            "explanation": "He initialization scales weights so that the variance of activations remains roughly constant across layers, preventing both vanishing and exploding activations during the forward pass.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "How does dropout regularization work during training?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It removes the least important weights permanently",
+              "It randomly zeroes out neuron activations with some probability",
+              "It reduces the learning rate over time",
+              "It adds noise to the gradients"
+            ],
+            "correctAnswer": "It randomly zeroes out neuron activations with some probability",
+            "explanation": "During training, dropout randomly sets neuron outputs to zero (typically 50%). This prevents co-adaptation and forces each neuron to be independently useful, providing strong regularization.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why was NVIDIA's CUDA platform important for deep learning?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It invented neural networks",
+              "It made GPU programming accessible, enabling neural network training on graphics cards",
+              "It provided free cloud computing",
+              "It replaced Python as the standard language"
+            ],
+            "correctAnswer": "It made GPU programming accessible, enabling neural network training on graphics cards",
+            "explanation": "CUDA (2006) allowed developers to write GPU code in C-like syntax rather than graphics shaders. This made it practical for researchers to express matrix operations directly, enabling efficient neural network training.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "How many labeled training images did ImageNet contain, approximately?",
+            "questionType": "multiple_choice",
+            "options": [
+              "60,000",
+              "100,000",
+              "1.2 million",
+              "10 million"
+            ],
+            "correctAnswer": "1.2 million",
+            "explanation": "ImageNet contained 1.2 million training images across 1000 categories\u2014roughly 100 times larger than previous standard datasets. This scale was essential for training large deep networks without overfitting.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "Which researcher is credited with coining the term 'deep learning' and publishing the influential 2006 paper on deep belief networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Yann LeCun",
+              "Andrew Ng",
+              "Geoffrey Hinton",
+              "Yoshua Bengio"
+            ],
+            "correctAnswer": "Geoffrey Hinton",
+            "explanation": "Geoffrey Hinton's 2006 paper 'A Fast Learning Algorithm for Deep Belief Nets' introduced layer-wise pretraining and helped coin the term 'deep learning,' launching the modern deep learning era after keeping neural networks alive through two AI winters.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cnns-imagenet",
+      "title": "CNNs & ImageNet",
+      "description": "Convolutional neural networks revolutionize computer vision. From AlexNet's breakthrough to ResNet's skip connections, the architecture evolution that enabled unprecedented image understanding.",
+      "era": "deep-learning",
+      "linearOrder": 17,
+      "icon": "image",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "convolutional-networks-explained",
+          "title": "Convolutional Networks Explained",
+          "contentPath": "deep-learning/cnns-imagenet/01-convolutional-networks-explained.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "alexnet-moment",
+          "title": "The AlexNet Moment",
+          "contentPath": "deep-learning/cnns-imagenet/02-alexnet-moment.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "architecture-evolution",
+          "title": "Architecture Evolution: From VGG to ResNet",
+          "contentPath": "deep-learning/cnns-imagenet/03-architecture-evolution.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "transfer-learning",
+          "title": "Transfer Learning: Pretrained Models for Everyone",
+          "contentPath": "deep-learning/cnns-imagenet/04-transfer-learning.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "CNNs & ImageNet Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is the key advantage of weight sharing in convolutional layers?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It makes the network run faster on CPUs",
+              "It dramatically reduces parameters while detecting the same pattern everywhere",
+              "It eliminates the need for pooling",
+              "It increases the network's depth"
+            ],
+            "correctAnswer": "It dramatically reduces parameters while detecting the same pattern everywhere",
+            "explanation": "Weight sharing means the same small filter (e.g., 3x3 = 9 parameters) scans the entire image. A fully connected layer would need millions of parameters. This also provides translation equivariance\u2014patterns are detected regardless of position.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "By how many percentage points did AlexNet beat the second-place competitor in the 2012 ImageNet challenge?",
+            "questionType": "multiple_choice",
+            "options": [
+              "0.5 percentage points",
+              "3 percentage points",
+              "Nearly 11 percentage points",
+              "25 percentage points"
+            ],
+            "correctAnswer": "Nearly 11 percentage points",
+            "explanation": "AlexNet achieved 15.3% top-5 error vs. 26.2% for the runner-up\u2014a gap of nearly 11 percentage points. In a field where improvements were typically measured in fractions of a percent, this was a discontinuous leap.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What innovation did ResNet introduce to enable training of 100+ layer networks?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Larger batch sizes",
+              "Skip connections (residual connections)",
+              "Deeper pooling layers",
+              "Wider convolutional filters"
+            ],
+            "correctAnswer": "Skip connections (residual connections)",
+            "explanation": "ResNet's skip connections let each layer learn the residual F(x) = H(x) - x rather than the full mapping. If the optimal transformation is identity, the layer just needs to learn F(x) = 0. This also provides direct gradient paths, enabling training of very deep networks.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is the purpose of max pooling in CNNs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To increase the resolution of feature maps",
+              "To provide translation invariance and reduce dimensions",
+              "To add more trainable parameters",
+              "To normalize the activations"
+            ],
+            "correctAnswer": "To provide translation invariance and reduce dimensions",
+            "explanation": "Max pooling takes the maximum value in each local region, providing translation invariance (small shifts don't change the max) and reducing spatial dimensions (each 2x2 region becomes one value), keeping only the strongest activations.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What does transfer learning with pretrained CNNs enable?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Training from scratch is always better",
+              "Using features learned from large datasets on new tasks with limited data",
+              "Eliminating the need for any training data",
+              "Converting images to text automatically"
+            ],
+            "correctAnswer": "Using features learned from large datasets on new tasks with limited data",
+            "explanation": "Transfer learning reuses features learned from ImageNet (edges, textures, shapes) for new domains. This reduces data requirements dramatically\u2014a few hundred examples per class often suffice when starting from pretrained weights.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What architectural principle did VGG demonstrate was effective for CNNs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Using many different filter sizes",
+              "Simplicity and depth with uniform 3x3 filters throughout",
+              "Avoiding batch normalization",
+              "Using fully connected layers between every conv layer"
+            ],
+            "correctAnswer": "Simplicity and depth with uniform 3x3 filters throughout",
+            "explanation": "VGG showed that using uniform 3x3 filters everywhere, stacked for depth, outperformed more complex architectures. Two 3x3 layers have the same receptive field as one 5x5 but with fewer parameters and more nonlinearity.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "rnns-lstms",
+      "title": "RNNs & LSTMs",
+      "description": "Processing sequences with recurrent neural networks. From the vanishing gradient problem to LSTM gates, and the applications that transformed speech and language.",
+      "era": "deep-learning",
+      "linearOrder": 18,
+      "icon": "repeat",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "sequence-modeling",
+          "title": "Sequence Modeling and Recurrent Networks",
+          "contentPath": "deep-learning/rnns-lstms/01-sequence-modeling.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "the-vanishing-gradient",
+          "title": "The Vanishing Gradient Problem in RNNs",
+          "contentPath": "deep-learning/rnns-lstms/02-the-vanishing-gradient.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "lstm-architecture",
+          "title": "LSTM Architecture: Gates, Cells, and Memory",
+          "contentPath": "deep-learning/rnns-lstms/03-lstm-architecture.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "applications-and-limitations",
+          "title": "RNN Applications and Limitations",
+          "contentPath": "deep-learning/rnns-lstms/04-applications-and-limitations.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "RNNs & LSTMs Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "Why can't standard feedforward networks naturally process sequences of varying lengths?",
+            "questionType": "multiple_choice",
+            "options": [
+              "They are too slow",
+              "They require fixed-size inputs and don't model order",
+              "They can't use GPUs",
+              "They have too many parameters"
+            ],
+            "correctAnswer": "They require fixed-size inputs and don't model order",
+            "explanation": "Feedforward networks expect fixed input dimensions, so variable-length sequences must be padded or truncated. More fundamentally, each input position is independent\u2014there's no inherent notion that position 3 relates to position 4.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the vanishing gradient problem in RNNs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Gradients become too large during training",
+              "Gradients shrink exponentially with sequence length, preventing learning of long-range dependencies",
+              "The network forgets its weights",
+              "Training takes too long"
+            ],
+            "correctAnswer": "Gradients shrink exponentially with sequence length, preventing learning of long-range dependencies",
+            "explanation": "In vanilla RNNs, gradients are multiplied by the weight matrix and activation derivatives at each timestep. If these products are less than 1, gradients shrink exponentially\u2014after 50-100 steps, they're essentially zero.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is the role of the forget gate in an LSTM?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To completely reset the hidden state",
+              "To decide what information to discard from the cell state",
+              "To output the final prediction",
+              "To initialize the network weights"
+            ],
+            "correctAnswer": "To decide what information to discard from the cell state",
+            "explanation": "The forget gate outputs values between 0 and 1 for each element of the cell state. Values near 0 mean 'forget this,' while values near 1 mean 'keep this.' This enables selective memory over long sequences.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why does the LSTM cell state help with vanishing gradients?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It uses larger numbers",
+              "It's updated additively, allowing gradients to flow unchanged when forget gate is near 1",
+              "It has more parameters",
+              "It runs on specialized hardware"
+            ],
+            "correctAnswer": "It's updated additively, allowing gradients to flow unchanged when forget gate is near 1",
+            "explanation": "The cell state update c_t = f_t * c_{t-1} + i_t * g_t is additive. When f_t \u2248 1, the gradient \u2202c_t/\u2202c_{t-1} \u2248 1, so gradients can flow across many timesteps without vanishing.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What was the 'bottleneck problem' in seq2seq models that attention helped solve?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Too many parameters",
+              "Compressing entire source sentences into a single fixed-size vector",
+              "Slow inference speed",
+              "Difficulty training on GPUs"
+            ],
+            "correctAnswer": "Compressing entire source sentences into a single fixed-size vector",
+            "explanation": "In basic seq2seq, the encoder compresses the entire source sentence into a single hidden vector. For long sentences, this bottleneck loses information. Attention allows the decoder to access all encoder states directly.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "How does a GRU differ from an LSTM?",
+            "questionType": "multiple_choice",
+            "options": [
+              "GRU has more gates than LSTM",
+              "GRU has no separate cell state and uses fewer gates",
+              "GRU can only process short sequences",
+              "GRU requires more training data"
+            ],
+            "correctAnswer": "GRU has no separate cell state and uses fewer gates",
+            "explanation": "GRU merges the cell and hidden states into one, using two gates (update and reset) instead of LSTM's three (input, forget, output). This results in fewer parameters and faster training, with often comparable performance.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "word-embeddings",
+      "title": "Word Embeddings (Word2Vec, GloVe)",
+      "description": "From sparse one-hot vectors to dense semantic representations. How Word2Vec learned that king - man + woman = queen, and why this changed NLP.",
+      "era": "deep-learning",
+      "linearOrder": 19,
+      "icon": "type",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "from-sparse-to-dense",
+          "title": "From Sparse to Dense: The Representation Revolution",
+          "contentPath": "deep-learning/word-embeddings/01-from-sparse-to-dense.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "word2vec",
+          "title": "Word2Vec: The Embedding Revolution",
+          "contentPath": "deep-learning/word-embeddings/02-word2vec.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "glove-and-fasttext",
+          "title": "GloVe and FastText: Extending Word Embeddings",
+          "contentPath": "deep-learning/word-embeddings/03-glove-and-fasttext.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "embeddings-in-practice",
+          "title": "Embeddings in Practice: Applications and Challenges",
+          "contentPath": "deep-learning/word-embeddings/04-embeddings-in-practice.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Word Embeddings Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is the main problem with one-hot encoding for word representation?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It uses too much memory",
+              "All words are orthogonal, encoding no similarity information",
+              "It can only represent verbs",
+              "It requires labeled data"
+            ],
+            "correctAnswer": "All words are orthogonal, encoding no similarity information",
+            "explanation": "In one-hot encoding, every word is maximally different from every other word (cosine similarity = 0). 'Cat' and 'dog' are as dissimilar as 'cat' and 'democracy,' even though semantically cat and dog are related.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the distributional hypothesis that underlies word embeddings?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Words should be distributed evenly across documents",
+              "Words appearing in similar contexts have similar meanings",
+              "Every word has exactly one meaning",
+              "Rare words are more important than common words"
+            ],
+            "correctAnswer": "Words appearing in similar contexts have similar meanings",
+            "explanation": "The distributional hypothesis states that a word's meaning is captured by the contexts in which it appears. 'Dog,' 'cat,' and 'puppy' appear in similar contexts ('The ___ ran...'), so they develop similar embeddings.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What does negative sampling in Word2Vec accomplish?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Removes negative words from the vocabulary",
+              "Makes training tractable by comparing against a few random negatives instead of all words",
+              "Improves word similarity for negative sentiment",
+              "Balances positive and negative examples in classification"
+            ],
+            "correctAnswer": "Makes training tractable by comparing against a few random negatives instead of all words",
+            "explanation": "Computing softmax over a 100K vocabulary at every step is prohibitively expensive. Negative sampling instead asks 'is this a real context word or a random word?'\u2014comparing against 5-20 negatives makes training ~10,000x faster.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What does the famous analogy 'king - man + woman = queen' demonstrate about word embeddings?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Word embeddings are random",
+              "Vector arithmetic captures semantic relationships like gender",
+              "All words are equally similar",
+              "Word embeddings only work for names"
+            ],
+            "correctAnswer": "Vector arithmetic captures semantic relationships like gender",
+            "explanation": "The vector offset from 'man' to 'woman' captures the gender relationship. Adding this offset to 'king' produces a vector close to 'queen.' This shows that semantic relationships are encoded as consistent directions in embedding space.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What advantage does FastText have over Word2Vec for handling rare or misspelled words?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It ignores rare words",
+              "It represents words as sums of character n-gram vectors",
+              "It trains faster",
+              "It uses a larger vocabulary"
+            ],
+            "correctAnswer": "It represents words as sums of character n-gram vectors",
+            "explanation": "FastText decomposes words into character n-grams, so even unseen words get representations from their subwords. 'Unfamiliar' shares subwords with 'un-' words and '-familiar,' enabling meaningful embeddings for any string.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What limitation do static word embeddings (Word2Vec, GloVe) have that contextualized embeddings (BERT) address?",
+            "questionType": "multiple_choice",
+            "options": [
+              "They can't be used for classification",
+              "Each word has one vector regardless of context (no polysemy handling)",
+              "They require too much training data",
+              "They only work for English"
+            ],
+            "correctAnswer": "Each word has one vector regardless of context (no polysemy handling)",
+            "explanation": "In Word2Vec/GloVe, 'bank' has one vector for both 'river bank' and 'bank account.' Contextualized embeddings like BERT produce different representations based on surrounding context, handling polysemy naturally.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "transformers-attention",
+      "title": "Transformers & Attention",
+      "description": "The architecture that changed everything. From attention mechanisms to 'Attention Is All You Need' to BERT and GPT\u2014the foundation of modern AI.",
+      "era": "deep-learning",
+      "linearOrder": 20,
+      "icon": "box",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "attention-mechanism",
+          "title": "The Attention Mechanism",
+          "contentPath": "deep-learning/transformers-attention/01-attention-mechanism.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "attention-is-all-you-need",
+          "title": "Attention Is All You Need: The Transformer Paper",
+          "contentPath": "deep-learning/transformers-attention/02-attention-is-all-you-need.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "transformer-architecture",
+          "title": "Transformer Architecture Deep Dive",
+          "contentPath": "deep-learning/transformers-attention/03-transformer-architecture.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "bert-and-gpt",
+          "title": "BERT and GPT: The Pretraining Revolution",
+          "contentPath": "deep-learning/transformers-attention/04-bert-and-gpt.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Transformers & Attention Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What was the main bottleneck in seq2seq translation that attention mechanisms solved?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Training was too slow",
+              "All source information had to be compressed into a single fixed-size vector",
+              "The vocabulary was too large",
+              "Sentences were too short"
+            ],
+            "correctAnswer": "All source information had to be compressed into a single fixed-size vector",
+            "explanation": "In basic seq2seq, the encoder compresses the entire source sentence into one hidden vector. Attention allows the decoder to directly access all encoder states, eliminating the information bottleneck for long sentences.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the key difference between self-attention and standard attention?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Self-attention is faster",
+              "Self-attention relates positions within the same sequence rather than between two sequences",
+              "Self-attention has fewer parameters",
+              "Self-attention only works for images"
+            ],
+            "correctAnswer": "Self-attention relates positions within the same sequence rather than between two sequences",
+            "explanation": "Standard attention relates encoder and decoder (different sequences). Self-attention relates every position to every other position within the same sequence, allowing the model to capture dependencies regardless of distance.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "Why does the Transformer use positional encoding?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To reduce memory usage",
+              "Because self-attention has no inherent notion of position",
+              "To speed up training",
+              "To handle longer sequences"
+            ],
+            "correctAnswer": "Because self-attention has no inherent notion of position",
+            "explanation": "Self-attention treats input as a set\u2014'dog bites man' and 'man bites dog' would produce identical attention patterns without position information. Positional encodings inject position information so the model can distinguish word order.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is the purpose of multi-head attention?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To reduce computation time",
+              "To allow the model to attend to multiple types of relationships simultaneously",
+              "To eliminate the need for feedforward layers",
+              "To process multiple sentences at once"
+            ],
+            "correctAnswer": "To allow the model to attend to multiple types of relationships simultaneously",
+            "explanation": "Different heads can learn different attention patterns\u2014one might focus on syntactic relationships, another on semantic similarity, another on proximity. This provides richer representations than single-head attention.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is the main difference between BERT and GPT pretraining approaches?",
+            "questionType": "multiple_choice",
+            "options": [
+              "BERT uses more data",
+              "BERT uses bidirectional context via masked language modeling; GPT uses autoregressive (left-to-right) prediction",
+              "GPT has more layers",
+              "BERT can only do classification"
+            ],
+            "correctAnswer": "BERT uses bidirectional context via masked language modeling; GPT uses autoregressive (left-to-right) prediction",
+            "explanation": "BERT sees the full sequence and predicts masked tokens, using context from both directions. GPT predicts the next token given only previous tokens. BERT excels at understanding tasks; GPT excels at generation.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What training paradigm did BERT and GPT establish for NLP?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Train from scratch for each task",
+              "Pretrain on large text corpus, then fine-tune on specific tasks",
+              "Use only rule-based systems",
+              "Train only on labeled data"
+            ],
+            "correctAnswer": "Pretrain on large text corpus, then fine-tune on specific tasks",
+            "explanation": "BERT and GPT established the pretrain-then-finetune paradigm: train once on massive unlabeled text (learning general language understanding), then quickly adapt to specific tasks with relatively small labeled datasets.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "gans-generative",
+      "title": "GANs & Generative Models",
+      "description": "When neural networks learned to create. From the adversarial framework to StyleGAN photorealism, plus the ethical challenges of synthetic media.",
+      "era": "deep-learning",
+      "linearOrder": 21,
+      "icon": "edit-3",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "generative-models-overview",
+          "title": "Generative Models Overview",
+          "contentPath": "deep-learning/gans-generative/01-generative-models-overview.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "the-gan-framework",
+          "title": "The GAN Framework: Generator vs Discriminator",
+          "contentPath": "deep-learning/gans-generative/02-the-gan-framework.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "gan-variants",
+          "title": "GAN Variants: From DCGAN to StyleGAN",
+          "contentPath": "deep-learning/gans-generative/03-gan-variants.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "applications-and-ethics",
+          "title": "GAN Applications and Ethical Concerns",
+          "contentPath": "deep-learning/gans-generative/04-applications-and-ethics.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "GANs & Generative Models Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is the fundamental difference between discriminative and generative models?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Discriminative models are faster",
+              "Discriminative models learn P(y|x); generative models learn P(x)",
+              "Generative models require more data",
+              "Discriminative models can only do classification"
+            ],
+            "correctAnswer": "Discriminative models learn P(y|x); generative models learn P(x)",
+            "explanation": "Discriminative models classify inputs by learning decision boundaries. Generative models model the underlying data distribution itself, enabling generation of new samples that resemble the training data.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "In a GAN, what are the roles of the generator and discriminator?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Both try to generate realistic images",
+              "Generator creates samples; discriminator classifies real vs. fake",
+              "Discriminator generates samples; generator classifies them",
+              "Both try to classify images"
+            ],
+            "correctAnswer": "Generator creates samples; discriminator classifies real vs. fake",
+            "explanation": "The generator takes random noise and produces samples trying to fool the discriminator. The discriminator tries to distinguish real training data from generated fakes. This adversarial game drives both to improve.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is mode collapse in GANs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The generator becomes too slow",
+              "The generator produces only a limited variety of outputs",
+              "The discriminator stops learning",
+              "Training requires too much memory"
+            ],
+            "correctAnswer": "The generator produces only a limited variety of outputs",
+            "explanation": "Mode collapse occurs when the generator finds a few outputs that consistently fool the discriminator and produces only those. For faces, it might generate only young female faces instead of diverse outputs.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What was DCGAN's main contribution to GAN architectures?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Using recurrent networks",
+              "Establishing convolutional architecture guidelines for stable training",
+              "Eliminating the discriminator",
+              "Using reinforcement learning"
+            ],
+            "correctAnswer": "Establishing convolutional architecture guidelines for stable training",
+            "explanation": "DCGAN introduced architectural guidelines that became standard: strided convolutions instead of pooling, batch normalization, no fully connected layers, ReLU in generator, LeakyReLU in discriminator. These made GAN training much more stable.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What innovation did StyleGAN introduce for controlling generated outputs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Using larger images",
+              "Injecting style information at multiple resolutions through an intermediate latent space",
+              "Training without a discriminator",
+              "Using only convolutional layers"
+            ],
+            "correctAnswer": "Injecting style information at multiple resolutions through an intermediate latent space",
+            "explanation": "StyleGAN maps latent code z to an intermediate space w, then injects this 'style' at different layers. Early layers control coarse features (pose), later layers control fine details (color). This enables fine-grained control over generation.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What is the main ethical concern with deepfake technology?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It uses too much electricity",
+              "It can create realistic fake media of real people without consent",
+              "It's too expensive",
+              "It requires specialized hardware"
+            ],
+            "correctAnswer": "It can create realistic fake media of real people without consent",
+            "explanation": "Deepfakes can generate photorealistic videos of real people doing or saying things they never did. This enables political manipulation, non-consensual intimate imagery, fraud, and erodes trust in authentic media.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "large-language-models",
+      "title": "Large Language Models",
+      "description": "Exploring the nature of LLMs, from GPT to Claude, their emergent capabilities, and what they can and cannot do.",
+      "era": "modern-ai",
+      "linearOrder": 22,
+      "icon": "cpu",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "01-what-are-llms",
+          "title": "What Are Large Language Models?",
+          "contentPath": "modern-ai/large-language-models/01-what-are-llms.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "02-gpt-series",
+          "title": "The GPT Series: OpenAI's Journey",
+          "contentPath": "modern-ai/large-language-models/02-gpt-series.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "03-other-llms",
+          "title": "Beyond GPT: The Diverse Landscape of LLMs",
+          "contentPath": "modern-ai/large-language-models/03-other-llms.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "04-capabilities-and-limitations",
+          "title": "Capabilities and Limitations",
+          "contentPath": "modern-ai/large-language-models/04-capabilities-and-limitations.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Large Language Models Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is the fundamental training objective of large language models like GPT?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Classifying text into predefined categories",
+              "Predicting the next token in a sequence",
+              "Translating between languages",
+              "Answering questions from a knowledge base"
+            ],
+            "correctAnswer": "Predicting the next token in a sequence",
+            "explanation": "LLMs are trained on the deceptively simple task of predicting the next token given a sequence of text. This autoregressive language modeling objective, when applied at massive scale, leads to the emergence of sophisticated language understanding and generation capabilities.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is 'emergent capability' in the context of large language models?",
+            "questionType": "multiple_choice",
+            "options": [
+              "A capability that was explicitly programmed into the model",
+              "A capability that appears suddenly at sufficient scale without being directly trained for",
+              "A capability that emerges from fine-tuning on specific tasks",
+              "A capability that the model learns from user interactions after deployment"
+            ],
+            "correctAnswer": "A capability that appears suddenly at sufficient scale without being directly trained for",
+            "explanation": "Emergent capabilities are abilities that appear suddenly as models reach certain scales, seemingly unpredictable from smaller models' behavior. Examples include few-shot learning and chain-of-thought reasoning, which weren't present in smaller models but emerged around the 100 billion parameter scale.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What technique transformed GPT-3 from a text completion engine into the conversational ChatGPT?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Increasing the model size to over 1 trillion parameters",
+              "Training on a larger dataset of internet text",
+              "Reinforcement Learning from Human Feedback (RLHF)",
+              "Adding multimodal capabilities for image processing"
+            ],
+            "correctAnswer": "Reinforcement Learning from Human Feedback (RLHF)",
+            "explanation": "RLHF combined with supervised fine-tuning on conversation examples is what transformed GPT-3 into ChatGPT. Human trainers provided example conversations and rated responses, training the model to generate outputs that humans preferred, making it behave like a helpful assistant rather than just completing text.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is 'hallucination' in the context of LLMs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "When the model refuses to answer a question",
+              "When the model generates plausible-sounding but false information",
+              "When the model produces nonsensical or garbled text",
+              "When the model copies text verbatim from its training data"
+            ],
+            "correctAnswer": "When the model generates plausible-sounding but false information",
+            "explanation": "Hallucination refers to LLMs generating plausible-sounding but factually incorrect information. This happens because the model optimizes for producing fluent, likely-seeming text rather than verified truth, and it has no mechanism to distinguish between things it learned and things it's inventing.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "Which company released LLaMA, catalyzing the open-source LLM movement?",
+            "questionType": "multiple_choice",
+            "options": [
+              "OpenAI",
+              "Google",
+              "Meta (Facebook)",
+              "Anthropic"
+            ],
+            "correctAnswer": "Meta (Facebook)",
+            "explanation": "Meta released LLaMA (Large Language Model Meta AI) in February 2023, which catalyzed the open-source LLM movement. The model weights spread widely across the internet, enabling individual researchers, startups, and enthusiasts to study, run, and fine-tune frontier-class models.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What distinguishes Anthropic's Constitutional AI approach from standard RLHF?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It uses a much larger training dataset",
+              "It trains models to follow explicit principles rather than relying solely on human ratings",
+              "It removes all safety guardrails for unrestricted output",
+              "It uses only supervised learning without any reinforcement learning"
+            ],
+            "correctAnswer": "It trains models to follow explicit principles rather than relying solely on human ratings",
+            "explanation": "Constitutional AI trains models to follow explicit principles (a 'constitution') rather than relying solely on human preference ratings. The model learns to self-critique against these principles, offering more transparency and scalability while maintaining alignment with human values.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tokenization-embeddings",
+      "title": "Tokenization & Embeddings Deep Dive",
+      "description": "Understanding how text becomes numbers: from tokenization algorithms to the embedding spaces that capture meaning.",
+      "era": "modern-ai",
+      "linearOrder": 23,
+      "icon": "cpu",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "01-why-tokenization-matters",
+          "title": "Why Tokenization Matters",
+          "contentPath": "modern-ai/tokenization-embeddings/01-why-tokenization-matters.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "02-tokenization-algorithms",
+          "title": "Tokenization Algorithms: BPE, WordPiece, and Beyond",
+          "contentPath": "modern-ai/tokenization-embeddings/02-tokenization-algorithms.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "03-embeddings-deep-dive",
+          "title": "Embeddings Deep Dive",
+          "contentPath": "modern-ai/tokenization-embeddings/03-embeddings-deep-dive.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "04-practical-implications",
+          "title": "Practical Implications",
+          "contentPath": "modern-ai/tokenization-embeddings/04-practical-implications.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Tokenization & Embeddings Deep Dive Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "Why do LLMs use subword tokenization rather than character-level or word-level encoding?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Subword tokenization is the only method that works with neural networks",
+              "It balances vocabulary size with sequence length and handles novel words gracefully",
+              "It's the fastest tokenization method available",
+              "It was the first tokenization method ever invented"
+            ],
+            "correctAnswer": "It balances vocabulary size with sequence length and handles novel words gracefully",
+            "explanation": "Subword tokenization finds a middle ground: character-level makes sequences too long, while word-level has vocabulary explosion and can't handle novel words. Subword tokenization keeps vocabulary manageable (50K-100K tokens) while handling new words by decomposing them into known pieces.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is a 'context window' in the context of LLMs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "The graphical user interface for interacting with the model",
+              "The maximum number of tokens the model can process in a single request",
+              "The window of time during which the model was trained",
+              "The portion of the model's memory dedicated to storing context"
+            ],
+            "correctAnswer": "The maximum number of tokens the model can process in a single request",
+            "explanation": "The context window is the maximum number of tokens an LLM can process at once. Your prompt plus the desired response must fit within this limit. Different models have different context windows (e.g., GPT-4 has 8K-128K tokens, Claude 3 has 200K tokens).",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "How does Byte Pair Encoding (BPE) build its vocabulary?",
+            "questionType": "multiple_choice",
+            "options": [
+              "By randomly selecting words from the training corpus",
+              "By starting with characters and iteratively merging the most frequent adjacent pairs",
+              "By using a predefined dictionary of all English words",
+              "By clustering words based on their semantic meaning"
+            ],
+            "correctAnswer": "By starting with characters and iteratively merging the most frequent adjacent pairs",
+            "explanation": "BPE starts with individual characters as the vocabulary and iteratively merges the most frequent adjacent pairs until reaching the desired vocabulary size. This greedy approach creates common words as single tokens while decomposing rare words into known subword pieces.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why do LLMs often struggle with tasks like counting letters in a word?",
+            "questionType": "multiple_choice",
+            "options": [
+              "LLMs weren't trained on counting tasks",
+              "The model sees tokens, not individual letters, so letter boundaries are obscured",
+              "Counting requires too much computational power",
+              "LLMs can only process numbers, not letters"
+            ],
+            "correctAnswer": "The model sees tokens, not individual letters, so letter boundaries are obscured",
+            "explanation": "Tokenization obscures letter boundaries. For example, 'strawberry' might tokenize as ['str', 'aw', 'berry'], so the model never 'sees' individual letters as separate units. This makes character-level tasks like counting letters or spelling backwards difficult.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is the main advantage of contextual embeddings (like those in transformers) over static embeddings (like Word2Vec)?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Contextual embeddings require less memory",
+              "The same word gets different vectors depending on surrounding context",
+              "Contextual embeddings are faster to compute",
+              "Contextual embeddings use smaller vocabulary sizes"
+            ],
+            "correctAnswer": "The same word gets different vectors depending on surrounding context",
+            "explanation": "Unlike static embeddings that give each word a fixed vector, contextual embeddings produce different vectors for the same word based on context. This captures that 'bank' in 'river bank' should have a different representation than 'bank' in 'savings bank'.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "Why is tokenization efficiency typically worse for non-English languages?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Non-English languages have more complex grammar",
+              "Tokenizers are usually trained predominantly on English text, so non-English requires more tokens for equivalent content",
+              "Non-English languages have smaller vocabularies",
+              "It's not actually worse; all languages tokenize equally efficiently"
+            ],
+            "correctAnswer": "Tokenizers are usually trained predominantly on English text, so non-English requires more tokens for equivalent content",
+            "explanation": "Most tokenizers are trained predominantly on English text, so they're optimized for English patterns. This means equivalent content in other languages often requires more tokens, leading to higher API costs, less content fitting in context windows, and potentially lower quality for non-English users.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "prompt-engineering",
+      "title": "Prompt Engineering",
+      "description": "The art and science of communicating effectively with LLMs, from basic prompts to advanced techniques like chain-of-thought.",
+      "era": "modern-ai",
+      "linearOrder": 24,
+      "icon": "cpu",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "01-prompt-basics",
+          "title": "Prompt Basics",
+          "contentPath": "modern-ai/prompt-engineering/01-prompt-basics.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "02-prompting-techniques",
+          "title": "Prompting Techniques: Zero-Shot, Few-Shot, and Chain-of-Thought",
+          "contentPath": "modern-ai/prompt-engineering/02-prompting-techniques.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "03-system-prompts-and-roles",
+          "title": "System Prompts and Roles",
+          "contentPath": "modern-ai/prompt-engineering/03-system-prompts-and-roles.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "04-advanced-prompting",
+          "title": "Advanced Prompting Techniques",
+          "contentPath": "modern-ai/prompt-engineering/04-advanced-prompting.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "Prompt Engineering Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is 'few-shot prompting'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Prompting the model with a very short question",
+              "Providing examples of the desired task in the prompt before the actual query",
+              "Training the model on only a few data points",
+              "Asking the model to generate only a few words"
+            ],
+            "correctAnswer": "Providing examples of the desired task in the prompt before the actual query",
+            "explanation": "Few-shot prompting provides examples of the task in the prompt, allowing the model to learn the pattern and apply it to new inputs without any fine-tuning. This leverages the model's in-context learning capability to adapt to new tasks based solely on examples in the prompt.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is the key insight behind chain-of-thought (CoT) prompting?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Models should be given shorter prompts for faster responses",
+              "Asking models to 'think step by step' dramatically improves reasoning performance",
+              "Models work better when given poetic or creative prompts",
+              "Chaining multiple models together produces better results"
+            ],
+            "correctAnswer": "Asking models to 'think step by step' dramatically improves reasoning performance",
+            "explanation": "Chain-of-thought prompting asks models to show their reasoning step by step, which dramatically improves performance on complex reasoning tasks. Simply adding 'Let's think step by step' or showing examples with explicit reasoning can significantly boost accuracy on math and logic problems.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is a 'system prompt' in the context of chat-based LLMs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "An error message when the system fails",
+              "Hidden instructions that set the AI's role, behavior, and constraints before user interaction",
+              "The first message the user sends to the AI",
+              "A prompt used to test the system's performance"
+            ],
+            "correctAnswer": "Hidden instructions that set the AI's role, behavior, and constraints before user interaction",
+            "explanation": "A system prompt is a special message that sets context before user interaction begins, defining the AI's role, behavioral guidelines, constraints, and output format preferences. It shapes all subsequent responses without being visible to the user.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is the ReAct prompting pattern?",
+            "questionType": "multiple_choice",
+            "options": [
+              "A pattern for generating reactive programming code",
+              "Interleaving reasoning with actions like searching or calculating",
+              "A pattern for making the model react emotionally",
+              "Generating responses in real-time without any prompting"
+            ],
+            "correctAnswer": "Interleaving reasoning with actions like searching or calculating",
+            "explanation": "ReAct (Reasoning + Acting) interleaves chain-of-thought reasoning with concrete actions like searching, calculating, or retrieving information. The model explicitly states its thinking, takes an action, observes the result, and continues reasoning\u2014grounding its answers in real information.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "Why is iterative refinement important in prompt engineering?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Models only work correctly after multiple attempts",
+              "Initial prompts often need adjustment to address problems in the output",
+              "APIs require multiple calls to work properly",
+              "It's not important; the first prompt usually works perfectly"
+            ],
+            "correctAnswer": "Initial prompts often need adjustment to address problems in the output",
+            "explanation": "Prompting is often iterative\u2014your first attempt may not produce optimal results. The best prompts typically emerge through refinement: starting simple, identifying problems in the output, adding constraints to address issues, testing variations, and polishing for optimal results.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What is 'self-consistency' in advanced prompting?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Ensuring the model gives the same answer to the same question",
+              "Generating multiple reasoning paths with some randomness and taking the majority answer",
+              "Making sure the prompt is grammatically consistent",
+              "Training the model to be consistent with its training data"
+            ],
+            "correctAnswer": "Generating multiple reasoning paths with some randomness and taking the majority answer",
+            "explanation": "Self-consistency generates multiple chain-of-thought responses with some randomness (temperature > 0) and takes the most common final answer. Different reasoning paths may reach the same correct answer, while errors tend to be random, so majority voting filters out occasional mistakes.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "rag-retrieval",
+      "title": "RAG & Retrieval Systems",
+      "description": "Combining LLMs with external knowledge through retrieval-augmented generation, vector databases, and semantic search.",
+      "era": "modern-ai",
+      "linearOrder": 25,
+      "icon": "cpu",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "01-why-retrieval",
+          "title": "Why Retrieval Matters",
+          "contentPath": "modern-ai/rag-retrieval/01-why-retrieval.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "02-vector-databases",
+          "title": "Vector Databases and Embeddings for Search",
+          "contentPath": "modern-ai/rag-retrieval/02-vector-databases.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "03-rag-architecture",
+          "title": "RAG Architecture: The Retrieve-Then-Generate Pipeline",
+          "contentPath": "modern-ai/rag-retrieval/03-rag-architecture.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "04-advanced-rag",
+          "title": "Advanced RAG Techniques",
+          "contentPath": "modern-ai/rag-retrieval/04-advanced-rag.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "RAG & Retrieval Systems Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What problem does Retrieval-Augmented Generation (RAG) primarily solve?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Making LLMs generate text faster",
+              "Grounding LLM responses in retrieved documents to reduce hallucination and enable access to current information",
+              "Reducing the size of LLM models",
+              "Improving the grammar of LLM outputs"
+            ],
+            "correctAnswer": "Grounding LLM responses in retrieved documents to reduce hallucination and enable access to current information",
+            "explanation": "RAG addresses key LLM limitations: knowledge cutoffs (models can't know about recent events), hallucination (models sometimes make things up), and lack of private knowledge. By retrieving relevant documents and including them in the prompt, LLMs can generate grounded, accurate responses.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "How does semantic search differ from keyword search?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Semantic search only works with short queries",
+              "Semantic search matches meanings using embeddings rather than exact words",
+              "Keyword search is more accurate than semantic search",
+              "Semantic search requires documents to be formatted in a specific way"
+            ],
+            "correctAnswer": "Semantic search matches meanings using embeddings rather than exact words",
+            "explanation": "Semantic search compares meanings rather than words using embeddings (vector representations). It can find 'repairing a dripping tap' when you search for 'how to fix a leaky faucet' because both have similar meaning in embedding space, even without shared keywords.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is the primary purpose of a vector database in a RAG system?",
+            "questionType": "multiple_choice",
+            "options": [
+              "To store the LLM model weights",
+              "To efficiently store and search document embeddings for similarity queries",
+              "To cache LLM responses for faster retrieval",
+              "To validate user authentication"
+            ],
+            "correctAnswer": "To efficiently store and search document embeddings for similarity queries",
+            "explanation": "Vector databases store document embeddings and enable efficient similarity search at scale. They use algorithms like HNSW (Hierarchical Navigable Small World) to find the most similar vectors to a query in milliseconds, even across millions of documents.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "Why is 'chunking' important in RAG systems?",
+            "questionType": "multiple_choice",
+            "options": [
+              "It makes documents easier to read for humans",
+              "Large documents must be split into smaller pieces for retrieval precision and to fit within context windows",
+              "It reduces the storage cost of documents",
+              "It's a requirement of all vector databases"
+            ],
+            "correctAnswer": "Large documents must be split into smaller pieces for retrieval precision and to fit within context windows",
+            "explanation": "Chunking splits large documents into smaller pieces because: LLMs have context limits (can't process entire books), smaller chunks enable more precise retrieval (find the relevant paragraph, not the whole document), and it allows more documents to fit in the context window.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is 'reranking' in the context of RAG?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Reorganizing documents in the database",
+              "Using a more powerful model to re-order initial retrieval results for better precision",
+              "Ranking user queries by importance",
+              "Generating multiple responses and ranking them"
+            ],
+            "correctAnswer": "Using a more powerful model to re-order initial retrieval results for better precision",
+            "explanation": "Reranking uses a more powerful cross-encoder model to re-order the results from fast initial retrieval. Initial retrieval (using bi-encoders) is fast but imprecise; reranking (using cross-encoders) is slower but more accurate, so you retrieve broadly then rerank for precision.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What is 'hybrid search' in RAG systems?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Searching across multiple databases simultaneously",
+              "Combining semantic search with keyword search to get the benefits of both",
+              "Using both CPU and GPU for search operations",
+              "Searching with multiple queries at the same time"
+            ],
+            "correctAnswer": "Combining semantic search with keyword search to get the benefits of both",
+            "explanation": "Hybrid search combines semantic search (embedding-based, captures meaning) with keyword search (BM25, captures exact terms). This helps because semantic search may miss exact matches like 'Error code E-4521' while keyword search may miss semantically related content.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ai-agents",
+      "title": "AI Agents & Tool Use",
+      "description": "LLMs that can plan, use tools, and take actions: from simple tool use to complex multi-agent systems.",
+      "era": "modern-ai",
+      "linearOrder": 26,
+      "icon": "cpu",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "01-what-are-ai-agents",
+          "title": "What Are AI Agents?",
+          "contentPath": "modern-ai/ai-agents/01-what-are-ai-agents.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "02-tool-use",
+          "title": "Tool Use: Function Calling, APIs, and Code Execution",
+          "contentPath": "modern-ai/ai-agents/02-tool-use.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "03-agent-architectures",
+          "title": "Agent Architectures: ReAct, Plan-and-Execute, and Multi-Agent Systems",
+          "contentPath": "modern-ai/ai-agents/03-agent-architectures.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "04-current-applications",
+          "title": "Current Applications and Limitations",
+          "contentPath": "modern-ai/ai-agents/04-current-applications.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "AI Agents & Tool Use Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What distinguishes an AI agent from a standard LLM interaction?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Agents use larger models",
+              "Agents can plan, take actions, observe results, and iterate toward goals across multiple steps",
+              "Agents only work with text, not other modalities",
+              "Agents are always cloud-based while LLMs can run locally"
+            ],
+            "correctAnswer": "Agents can plan, take actions, observe results, and iterate toward goals across multiple steps",
+            "explanation": "While standard LLM interactions are one-shot (input/output/done), agents work across multiple steps: they break down complex tasks, take actions in external systems, observe results, and adjust their approach\u2014more like a human assistant than a text generator.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "What is 'function calling' in the context of LLMs?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Calling Python functions within the LLM",
+              "A structured way for LLMs to request execution of defined tools with specific parameters",
+              "Making phone calls using LLM-generated scripts",
+              "Recursively calling the same LLM multiple times"
+            ],
+            "correctAnswer": "A structured way for LLMs to request execution of defined tools with specific parameters",
+            "explanation": "Function calling gives LLMs structured tool access. Instead of just generating text, the model can decide to call a function (like get_weather or search_database) with specific parameters. The function executes and returns results that the model incorporates into its response.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "Why is code execution considered a powerful 'meta-tool' for agents?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Code runs faster than other tools",
+              "Instead of defining every possible operation as a tool, the agent can write code to do anything Python can do",
+              "Code execution doesn't require an internet connection",
+              "It's the only tool that works with all LLMs"
+            ],
+            "correctAnswer": "Instead of defining every possible operation as a tool, the agent can write code to do anything Python can do",
+            "explanation": "Code execution is a meta-tool because rather than predefining every possible operation (calculate, search, filter, etc.), the agent can write arbitrary code to accomplish any task Python can handle\u2014complex calculations, data manipulation, custom logic, or combining multiple operations.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is the main difference between ReAct and Plan-and-Execute agent architectures?",
+            "questionType": "multiple_choice",
+            "options": [
+              "ReAct is faster while Plan-and-Execute is more accurate",
+              "ReAct interleaves reasoning and acting in a tight loop; Plan-and-Execute creates a comprehensive plan first, then executes steps",
+              "ReAct only works with text while Plan-and-Execute works with images",
+              "Plan-and-Execute is for single tasks while ReAct is for multiple tasks"
+            ],
+            "correctAnswer": "ReAct interleaves reasoning and acting in a tight loop; Plan-and-Execute creates a comprehensive plan first, then executes steps",
+            "explanation": "ReAct interleaves thinking and acting step by step, adjusting course based on each observation. Plan-and-Execute first creates a detailed plan, then systematically executes each step. ReAct is more flexible; Plan-and-Execute is more structured for complex, predictable tasks.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is a key reliability challenge with current AI agents?",
+            "questionType": "multiple_choice",
+            "options": [
+              "They are too slow to be useful",
+              "They cannot use any tools",
+              "Errors can compound over multiple steps, and agents may get stuck or drift from goals",
+              "They only work with English text"
+            ],
+            "correctAnswer": "Errors can compound over multiple steps, and agents may get stuck or drift from goals",
+            "explanation": "Agents face reliability challenges: if each step has 90% success rate, 10 steps yields only 35% overall success (0.9^10). Agents can also get stuck in loops, forget original goals, hallucinate tool capabilities, or make costly errors that compound. Human oversight remains important.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "What does multi-agent collaboration enable that single agents struggle with?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Faster processing through parallelization alone",
+              "Specialized expertise, verification through debate, and division of complex tasks",
+              "Simpler implementation and debugging",
+              "Lower computational costs"
+            ],
+            "correctAnswer": "Specialized expertise, verification through debate, and division of complex tasks",
+            "explanation": "Multi-agent systems enable specialized roles (researcher, writer, editor), verification through debate or critique, and natural division of complex tasks. Multiple perspectives can improve accuracy through cross-checking, though orchestration complexity increases.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ai-safety-alignment",
+      "title": "AI Safety & Alignment",
+      "description": "Ensuring AI systems do what we want: from RLHF to constitutional AI, red teaming, and the challenges ahead.",
+      "era": "modern-ai",
+      "linearOrder": 27,
+      "icon": "cpu",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "01-the-alignment-problem",
+          "title": "The Alignment Problem",
+          "contentPath": "modern-ai/ai-safety-alignment/01-the-alignment-problem.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "02-rlhf-and-training",
+          "title": "RLHF: Reinforcement Learning from Human Feedback",
+          "contentPath": "modern-ai/ai-safety-alignment/02-rlhf-and-training.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "03-safety-techniques",
+          "title": "Safety Techniques: Constitutional AI, Red Teaming, and Guardrails",
+          "contentPath": "modern-ai/ai-safety-alignment/03-safety-techniques.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "04-future-challenges",
+          "title": "Future Challenges: Superintelligence, Governance, and Research Frontiers",
+          "contentPath": "modern-ai/ai-safety-alignment/04-future-challenges.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ],
+      "quiz": {
+        "title": "AI Safety & Alignment Knowledge Check",
+        "passingScore": 70,
+        "isGate": true,
+        "questions": [
+          {
+            "questionText": "What is the 'alignment problem' in AI?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Ensuring AI models have properly aligned parameters",
+              "Ensuring AI systems pursue the goals humans actually want, not just what was literally specified",
+              "Aligning different AI models to work together",
+              "Making sure AI outputs are grammatically aligned"
+            ],
+            "correctAnswer": "Ensuring AI systems pursue the goals humans actually want, not just what was literally specified",
+            "explanation": "The alignment problem is ensuring AI systems do what we actually want, not just what we literally specified or what training optimized for. There's always a gap between our true intentions, our specifications, the training objective, and the system's actual behavior.",
+            "questionOrder": 1
+          },
+          {
+            "questionText": "How does RLHF (Reinforcement Learning from Human Feedback) work?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Humans write all the training data for the model",
+              "Humans compare model outputs, training a reward model that guides the AI toward preferred behavior",
+              "Humans manually adjust model parameters",
+              "Humans test the model after training and report bugs"
+            ],
+            "correctAnswer": "Humans compare model outputs, training a reward model that guides the AI toward preferred behavior",
+            "explanation": "RLHF has three stages: (1) supervised fine-tuning on human demonstrations, (2) training a reward model on human comparisons of outputs, and (3) using reinforcement learning to optimize the model to generate responses that get high reward scores.",
+            "questionOrder": 2
+          },
+          {
+            "questionText": "What is 'Constitutional AI'?",
+            "questionType": "multiple_choice",
+            "options": [
+              "AI trained only on legal documents",
+              "Training AI to follow explicit principles (a 'constitution') rather than relying solely on human ratings",
+              "AI that helps write national constitutions",
+              "AI with legally binding behavioral contracts"
+            ],
+            "correctAnswer": "Training AI to follow explicit principles (a 'constitution') rather than relying solely on human ratings",
+            "explanation": "Constitutional AI trains models to follow explicit principles (like 'be helpful, harmless, honest') rather than relying solely on human preference ratings. The model learns to self-critique against these principles, offering transparency and scalability advantages.",
+            "questionOrder": 3
+          },
+          {
+            "questionText": "What is the purpose of 'red teaming' in AI safety?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Testing the model's performance on red-colored images",
+              "Proactively trying to make the AI system fail or behave badly to find vulnerabilities before deployment",
+              "Training the model using red warning labels",
+              "Organizing the AI development team into groups"
+            ],
+            "correctAnswer": "Proactively trying to make the AI system fail or behave badly to find vulnerabilities before deployment",
+            "explanation": "Red teaming involves actively trying to make AI systems fail or produce harmful outputs before deployment. Red teamers (security researchers, domain experts) try jailbreaks, adversarial inputs, and creative attacks to find vulnerabilities that can be fixed before release.",
+            "questionOrder": 4
+          },
+          {
+            "questionText": "What is 'sycophancy' in the context of AI alignment?",
+            "questionType": "multiple_choice",
+            "options": [
+              "When AI systems become dependent on human approval",
+              "When AI models learn to tell users what they want to hear rather than what's true",
+              "When AI systems sync with each other",
+              "When AI is overly cautious about everything"
+            ],
+            "correctAnswer": "When AI models learn to tell users what they want to hear rather than what's true",
+            "explanation": "Sycophancy occurs when models learn to agree with users or tell them what they want to hear, even when incorrect. This can emerge from RLHF because human raters often prefer validating responses over corrective ones, so the model learns that agreement gets better ratings.",
+            "questionOrder": 5
+          },
+          {
+            "questionText": "Why is 'scalable oversight' considered a key challenge for future AI systems?",
+            "questionType": "multiple_choice",
+            "options": [
+              "Larger AI models require more supervisors",
+              "As AI becomes more capable than human evaluators, maintaining meaningful human oversight becomes increasingly difficult",
+              "Scaling AI systems to more users is technically challenging",
+              "It's difficult to scale the physical infrastructure for AI"
+            ],
+            "correctAnswer": "As AI becomes more capable than human evaluators, maintaining meaningful human oversight becomes increasingly difficult",
+            "explanation": "Scalable oversight is challenging because current alignment techniques depend on human judgment. As AI capabilities grow, outputs may become too complex to evaluate, AI might deceive evaluators, and the space of behaviors becomes too large to sample effectively.",
+            "questionOrder": 6
+          }
+        ]
+      }
+    }
+  ],
+  "connections": [
+    {
+      "fromTopicSlug": "turing-test",
+      "toTopicSlug": "dartmouth-conference",
+      "connectionType": "leads_to",
+      "label": "Set the agenda"
+    },
+    {
+      "fromTopicSlug": "turing-test",
+      "toTopicSlug": "perceptrons",
+      "connectionType": "leads_to",
+      "label": "Inspired computational approaches"
+    },
+    {
+      "fromTopicSlug": "perceptrons",
+      "toTopicSlug": "first-ai-winter",
+      "connectionType": "leads_to",
+      "label": "Critique caused"
+    },
+    {
+      "fromTopicSlug": "dartmouth-conference",
+      "toTopicSlug": "symbolic-ai",
+      "connectionType": "enabled",
+      "label": "Launched research programs"
+    },
+    {
+      "fromTopicSlug": "dartmouth-conference",
+      "toTopicSlug": "early-nlp",
+      "connectionType": "enabled",
+      "label": "Funded research"
+    },
+    {
+      "fromTopicSlug": "symbolic-ai",
+      "toTopicSlug": "early-nlp",
+      "connectionType": "influenced",
+      "label": "Shared logical foundations"
+    },
+    {
+      "fromTopicSlug": "symbolic-ai",
+      "toTopicSlug": "expert-systems",
+      "connectionType": "leads_to",
+      "label": "Evolved into"
+    },
+    {
+      "fromTopicSlug": "early-nlp",
+      "toTopicSlug": "statistical-nlp",
+      "connectionType": "preceded",
+      "label": "Limitations drove shift"
+    },
+    {
+      "fromTopicSlug": "perceptrons",
+      "toTopicSlug": "backpropagation-revival",
+      "connectionType": "conceptual_link",
+      "label": "Ideas revived"
+    },
+    {
+      "fromTopicSlug": "turing-test",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "conceptual_link",
+      "label": "Finally approaching?"
+    },
+    {
+      "fromTopicSlug": "first-ai-winter",
+      "toTopicSlug": "expert-systems",
+      "connectionType": "leads_to",
+      "label": "Practical focus emerged"
+    },
+    {
+      "fromTopicSlug": "first-ai-winter",
+      "toTopicSlug": "lisp-prolog",
+      "connectionType": "influenced",
+      "label": "Languages matured"
+    },
+    {
+      "fromTopicSlug": "expert-systems",
+      "toTopicSlug": "knowledge-representation",
+      "connectionType": "enabled",
+      "label": "Required formal KR"
+    },
+    {
+      "fromTopicSlug": "expert-systems",
+      "toTopicSlug": "second-ai-winter",
+      "connectionType": "leads_to",
+      "label": "Collapse triggered"
+    },
+    {
+      "fromTopicSlug": "lisp-prolog",
+      "toTopicSlug": "expert-systems",
+      "connectionType": "enabled",
+      "label": "Primary implementation"
+    },
+    {
+      "fromTopicSlug": "lisp-prolog",
+      "toTopicSlug": "second-ai-winter",
+      "connectionType": "leads_to",
+      "label": "Hardware collapse"
+    },
+    {
+      "fromTopicSlug": "knowledge-representation",
+      "toTopicSlug": "expert-systems",
+      "connectionType": "enabled",
+      "label": "Foundation for"
+    },
+    {
+      "fromTopicSlug": "second-ai-winter",
+      "toTopicSlug": "statistical-nlp",
+      "connectionType": "leads_to",
+      "label": "New approaches emerged"
+    },
+    {
+      "fromTopicSlug": "second-ai-winter",
+      "toTopicSlug": "backpropagation-revival",
+      "connectionType": "leads_to",
+      "label": "Neural revival began"
+    },
+    {
+      "fromTopicSlug": "dartmouth-conference",
+      "toTopicSlug": "lisp-prolog",
+      "connectionType": "enabled",
+      "label": "McCarthy created LISP"
+    },
+    {
+      "fromTopicSlug": "statistical-nlp",
+      "toTopicSlug": "svms-kernels",
+      "connectionType": "influenced",
+      "label": "Shared statistical foundations"
+    },
+    {
+      "fromTopicSlug": "statistical-nlp",
+      "toTopicSlug": "decision-trees-ensembles",
+      "connectionType": "influenced",
+      "label": "ML toolkit expanded"
+    },
+    {
+      "fromTopicSlug": "svms-kernels",
+      "toTopicSlug": "decision-trees-ensembles",
+      "connectionType": "conceptual_link",
+      "label": "Competed for dominance"
+    },
+    {
+      "fromTopicSlug": "backpropagation-revival",
+      "toTopicSlug": "early-deep-learning",
+      "connectionType": "leads_to",
+      "label": "Enabled deep networks"
+    },
+    {
+      "fromTopicSlug": "decision-trees-ensembles",
+      "toTopicSlug": "early-deep-learning",
+      "connectionType": "influenced",
+      "label": "Ensemble ideas"
+    },
+    {
+      "fromTopicSlug": "svms-kernels",
+      "toTopicSlug": "early-deep-learning",
+      "connectionType": "preceded",
+      "label": "Dominated before deep learning"
+    },
+    {
+      "fromTopicSlug": "early-deep-learning",
+      "toTopicSlug": "deep-learning-breakthrough",
+      "connectionType": "leads_to",
+      "label": "AlexNet moment"
+    },
+    {
+      "fromTopicSlug": "early-deep-learning",
+      "toTopicSlug": "cnns-imagenet",
+      "connectionType": "leads_to",
+      "label": "ImageNet success"
+    },
+    {
+      "fromTopicSlug": "backpropagation-revival",
+      "toTopicSlug": "rnns-lstms",
+      "connectionType": "enabled",
+      "label": "LSTM invented"
+    },
+    {
+      "fromTopicSlug": "statistical-nlp",
+      "toTopicSlug": "word-embeddings",
+      "connectionType": "preceded",
+      "label": "Statistical to neural NLP"
+    },
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "cnns-imagenet",
+      "connectionType": "enabled",
+      "label": "ReLU, dropout, GPUs enabled CNN training"
+    },
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "rnns-lstms",
+      "connectionType": "enabled",
+      "label": "Training techniques applied to sequences"
+    },
+    {
+      "fromTopicSlug": "cnns-imagenet",
+      "toTopicSlug": "transformers-attention",
+      "connectionType": "leads_to",
+      "label": "Vision transformers emerged"
+    },
+    {
+      "fromTopicSlug": "rnns-lstms",
+      "toTopicSlug": "transformers-attention",
+      "connectionType": "leads_to",
+      "label": "Replaced by attention mechanisms"
+    },
+    {
+      "fromTopicSlug": "word-embeddings",
+      "toTopicSlug": "transformers-attention",
+      "connectionType": "enabled",
+      "label": "Foundation for token embeddings"
+    },
+    {
+      "fromTopicSlug": "word-embeddings",
+      "toTopicSlug": "rnns-lstms",
+      "connectionType": "enabled",
+      "label": "Input representations for RNNs"
+    },
+    {
+      "fromTopicSlug": "transformers-attention",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "leads_to",
+      "label": "BERT/GPT scaled up"
+    },
+    {
+      "fromTopicSlug": "gans-generative",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "conceptual_link",
+      "label": "Generative AI foundations"
+    },
+    {
+      "fromTopicSlug": "backpropagation-revival",
+      "toTopicSlug": "deep-learning-breakthrough",
+      "connectionType": "leads_to",
+      "label": "Techniques enabled deeper networks"
+    },
+    {
+      "fromTopicSlug": "second-ai-winter",
+      "toTopicSlug": "deep-learning-breakthrough",
+      "connectionType": "leads_to",
+      "label": "Revival from winter"
+    },
+    {
+      "fromTopicSlug": "early-deep-learning",
+      "toTopicSlug": "deep-learning-breakthrough",
+      "connectionType": "leads_to",
+      "label": "Pretraining prepared the way"
+    },
+    {
+      "fromTopicSlug": "cnns-imagenet",
+      "toTopicSlug": "gans-generative",
+      "connectionType": "enabled",
+      "label": "CNN architectures used in GANs"
+    },
+    {
+      "fromTopicSlug": "rnns-lstms",
+      "toTopicSlug": "word-embeddings",
+      "connectionType": "enabled",
+      "label": "Used embeddings as input"
+    },
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "word-embeddings",
+      "connectionType": "enabled",
+      "label": "Neural methods scaled up"
+    },
+    {
+      "fromTopicSlug": "deep-learning-breakthrough",
+      "toTopicSlug": "gans-generative",
+      "connectionType": "enabled",
+      "label": "Training techniques enabled GANs"
+    },
+    {
+      "fromTopicSlug": "large-language-models",
+      "toTopicSlug": "tokenization-embeddings",
+      "connectionType": "leads_to",
+      "label": "Fundamental to"
+    },
+    {
+      "fromTopicSlug": "large-language-models",
+      "toTopicSlug": "prompt-engineering",
+      "connectionType": "enabled",
+      "label": "Enables"
+    },
+    {
+      "fromTopicSlug": "large-language-models",
+      "toTopicSlug": "rag-retrieval",
+      "connectionType": "enabled",
+      "label": "Enables"
+    },
+    {
+      "fromTopicSlug": "large-language-models",
+      "toTopicSlug": "ai-agents",
+      "connectionType": "enabled",
+      "label": "Enables"
+    },
+    {
+      "fromTopicSlug": "large-language-models",
+      "toTopicSlug": "ai-safety-alignment",
+      "connectionType": "leads_to",
+      "label": "Critical for"
+    },
+    {
+      "fromTopicSlug": "tokenization-embeddings",
+      "toTopicSlug": "prompt-engineering",
+      "connectionType": "influenced",
+      "label": "Influences"
+    },
+    {
+      "fromTopicSlug": "tokenization-embeddings",
+      "toTopicSlug": "rag-retrieval",
+      "connectionType": "enabled",
+      "label": "Foundation for"
+    },
+    {
+      "fromTopicSlug": "prompt-engineering",
+      "toTopicSlug": "ai-agents",
+      "connectionType": "enabled",
+      "label": "Foundation for"
+    },
+    {
+      "fromTopicSlug": "rag-retrieval",
+      "toTopicSlug": "ai-agents",
+      "connectionType": "enabled",
+      "label": "Knowledge access"
+    },
+    {
+      "fromTopicSlug": "ai-agents",
+      "toTopicSlug": "ai-safety-alignment",
+      "connectionType": "leads_to",
+      "label": "Requires"
+    },
+    {
+      "fromTopicSlug": "transformers-attention",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "leads_to",
+      "label": "Leads to"
+    },
+    {
+      "fromTopicSlug": "turing-test",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "conceptual_link",
+      "label": "Finally approaching?"
+    },
+    {
+      "fromTopicSlug": "early-nlp",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "preceded",
+      "label": "The dream realized"
+    },
+    {
+      "fromTopicSlug": "word-embeddings",
+      "toTopicSlug": "tokenization-embeddings",
+      "connectionType": "preceded",
+      "label": "Evolved into"
+    },
+    {
+      "fromTopicSlug": "backpropagation-revival",
+      "toTopicSlug": "large-language-models",
+      "connectionType": "enabled",
+      "label": "Foundation for"
+    }
+  ]
+}

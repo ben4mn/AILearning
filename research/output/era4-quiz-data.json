@@ -1,0 +1,522 @@
+{
+  "era": "deep-learning",
+  "eraName": "Deep Learning Revolution (2010s)",
+  "quizzes": [
+    {
+      "topicSlug": "deep-learning-breakthrough",
+      "title": "The Deep Learning Breakthrough Knowledge Check",
+      "passingScore": 70,
+      "isGate": true,
+      "questions": [
+        {
+          "questionText": "What problem did the ReLU activation function primarily solve compared to sigmoid/tanh?",
+          "questionType": "multiple_choice",
+          "options": [
+            "ReLU is computationally cheaper",
+            "ReLU prevents vanishing gradients by having a constant gradient for positive inputs",
+            "ReLU produces bounded outputs",
+            "ReLU provides smoother gradients"
+          ],
+          "correctAnswer": "ReLU prevents vanishing gradients by having a constant gradient for positive inputs",
+          "explanation": "ReLU's gradient is exactly 1 for positive inputs, so gradients can flow through many layers without vanishing. Sigmoid's maximum gradient is 0.25, causing exponential gradient decay in deep networks.",
+          "questionOrder": 1
+        },
+        {
+          "questionText": "What is the purpose of He initialization for neural network weights?",
+          "questionType": "multiple_choice",
+          "options": [
+            "To make training faster by starting with large weights",
+            "To ensure activations neither vanish nor explode during forward propagation",
+            "To reduce the number of parameters needed",
+            "To initialize bias terms to zero"
+          ],
+          "correctAnswer": "To ensure activations neither vanish nor explode during forward propagation",
+          "explanation": "He initialization scales weights so that the variance of activations remains roughly constant across layers, preventing both vanishing and exploding activations during the forward pass.",
+          "questionOrder": 2
+        },
+        {
+          "questionText": "How does dropout regularization work during training?",
+          "questionType": "multiple_choice",
+          "options": [
+            "It removes the least important weights permanently",
+            "It randomly zeroes out neuron activations with some probability",
+            "It reduces the learning rate over time",
+            "It adds noise to the gradients"
+          ],
+          "correctAnswer": "It randomly zeroes out neuron activations with some probability",
+          "explanation": "During training, dropout randomly sets neuron outputs to zero (typically 50%). This prevents co-adaptation and forces each neuron to be independently useful, providing strong regularization.",
+          "questionOrder": 3
+        },
+        {
+          "questionText": "Why was NVIDIA's CUDA platform important for deep learning?",
+          "questionType": "multiple_choice",
+          "options": [
+            "It invented neural networks",
+            "It made GPU programming accessible, enabling neural network training on graphics cards",
+            "It provided free cloud computing",
+            "It replaced Python as the standard language"
+          ],
+          "correctAnswer": "It made GPU programming accessible, enabling neural network training on graphics cards",
+          "explanation": "CUDA (2006) allowed developers to write GPU code in C-like syntax rather than graphics shaders. This made it practical for researchers to express matrix operations directly, enabling efficient neural network training.",
+          "questionOrder": 4
+        },
+        {
+          "questionText": "How many labeled training images did ImageNet contain, approximately?",
+          "questionType": "multiple_choice",
+          "options": [
+            "60,000",
+            "100,000",
+            "1.2 million",
+            "10 million"
+          ],
+          "correctAnswer": "1.2 million",
+          "explanation": "ImageNet contained 1.2 million training images across 1000 categories—roughly 100 times larger than previous standard datasets. This scale was essential for training large deep networks without overfitting.",
+          "questionOrder": 5
+        },
+        {
+          "questionText": "Which researcher is credited with coining the term 'deep learning' and publishing the influential 2006 paper on deep belief networks?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Yann LeCun",
+            "Andrew Ng",
+            "Geoffrey Hinton",
+            "Yoshua Bengio"
+          ],
+          "correctAnswer": "Geoffrey Hinton",
+          "explanation": "Geoffrey Hinton's 2006 paper 'A Fast Learning Algorithm for Deep Belief Nets' introduced layer-wise pretraining and helped coin the term 'deep learning,' launching the modern deep learning era after keeping neural networks alive through two AI winters.",
+          "questionOrder": 6
+        }
+      ]
+    },
+    {
+      "topicSlug": "cnns-imagenet",
+      "title": "CNNs & ImageNet Knowledge Check",
+      "passingScore": 70,
+      "isGate": true,
+      "questions": [
+        {
+          "questionText": "What is the key advantage of weight sharing in convolutional layers?",
+          "questionType": "multiple_choice",
+          "options": [
+            "It makes the network run faster on CPUs",
+            "It dramatically reduces parameters while detecting the same pattern everywhere",
+            "It eliminates the need for pooling",
+            "It increases the network's depth"
+          ],
+          "correctAnswer": "It dramatically reduces parameters while detecting the same pattern everywhere",
+          "explanation": "Weight sharing means the same small filter (e.g., 3x3 = 9 parameters) scans the entire image. A fully connected layer would need millions of parameters. This also provides translation equivariance—patterns are detected regardless of position.",
+          "questionOrder": 1
+        },
+        {
+          "questionText": "By how many percentage points did AlexNet beat the second-place competitor in the 2012 ImageNet challenge?",
+          "questionType": "multiple_choice",
+          "options": [
+            "0.5 percentage points",
+            "3 percentage points",
+            "Nearly 11 percentage points",
+            "25 percentage points"
+          ],
+          "correctAnswer": "Nearly 11 percentage points",
+          "explanation": "AlexNet achieved 15.3% top-5 error vs. 26.2% for the runner-up—a gap of nearly 11 percentage points. In a field where improvements were typically measured in fractions of a percent, this was a discontinuous leap.",
+          "questionOrder": 2
+        },
+        {
+          "questionText": "What innovation did ResNet introduce to enable training of 100+ layer networks?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Larger batch sizes",
+            "Skip connections (residual connections)",
+            "Deeper pooling layers",
+            "Wider convolutional filters"
+          ],
+          "correctAnswer": "Skip connections (residual connections)",
+          "explanation": "ResNet's skip connections let each layer learn the residual F(x) = H(x) - x rather than the full mapping. If the optimal transformation is identity, the layer just needs to learn F(x) = 0. This also provides direct gradient paths, enabling training of very deep networks.",
+          "questionOrder": 3
+        },
+        {
+          "questionText": "What is the purpose of max pooling in CNNs?",
+          "questionType": "multiple_choice",
+          "options": [
+            "To increase the resolution of feature maps",
+            "To provide translation invariance and reduce dimensions",
+            "To add more trainable parameters",
+            "To normalize the activations"
+          ],
+          "correctAnswer": "To provide translation invariance and reduce dimensions",
+          "explanation": "Max pooling takes the maximum value in each local region, providing translation invariance (small shifts don't change the max) and reducing spatial dimensions (each 2x2 region becomes one value), keeping only the strongest activations.",
+          "questionOrder": 4
+        },
+        {
+          "questionText": "What does transfer learning with pretrained CNNs enable?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Training from scratch is always better",
+            "Using features learned from large datasets on new tasks with limited data",
+            "Eliminating the need for any training data",
+            "Converting images to text automatically"
+          ],
+          "correctAnswer": "Using features learned from large datasets on new tasks with limited data",
+          "explanation": "Transfer learning reuses features learned from ImageNet (edges, textures, shapes) for new domains. This reduces data requirements dramatically—a few hundred examples per class often suffice when starting from pretrained weights.",
+          "questionOrder": 5
+        },
+        {
+          "questionText": "What architectural principle did VGG demonstrate was effective for CNNs?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Using many different filter sizes",
+            "Simplicity and depth with uniform 3x3 filters throughout",
+            "Avoiding batch normalization",
+            "Using fully connected layers between every conv layer"
+          ],
+          "correctAnswer": "Simplicity and depth with uniform 3x3 filters throughout",
+          "explanation": "VGG showed that using uniform 3x3 filters everywhere, stacked for depth, outperformed more complex architectures. Two 3x3 layers have the same receptive field as one 5x5 but with fewer parameters and more nonlinearity.",
+          "questionOrder": 6
+        }
+      ]
+    },
+    {
+      "topicSlug": "rnns-lstms",
+      "title": "RNNs & LSTMs Knowledge Check",
+      "passingScore": 70,
+      "isGate": true,
+      "questions": [
+        {
+          "questionText": "Why can't standard feedforward networks naturally process sequences of varying lengths?",
+          "questionType": "multiple_choice",
+          "options": [
+            "They are too slow",
+            "They require fixed-size inputs and don't model order",
+            "They can't use GPUs",
+            "They have too many parameters"
+          ],
+          "correctAnswer": "They require fixed-size inputs and don't model order",
+          "explanation": "Feedforward networks expect fixed input dimensions, so variable-length sequences must be padded or truncated. More fundamentally, each input position is independent—there's no inherent notion that position 3 relates to position 4.",
+          "questionOrder": 1
+        },
+        {
+          "questionText": "What is the vanishing gradient problem in RNNs?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Gradients become too large during training",
+            "Gradients shrink exponentially with sequence length, preventing learning of long-range dependencies",
+            "The network forgets its weights",
+            "Training takes too long"
+          ],
+          "correctAnswer": "Gradients shrink exponentially with sequence length, preventing learning of long-range dependencies",
+          "explanation": "In vanilla RNNs, gradients are multiplied by the weight matrix and activation derivatives at each timestep. If these products are less than 1, gradients shrink exponentially—after 50-100 steps, they're essentially zero.",
+          "questionOrder": 2
+        },
+        {
+          "questionText": "What is the role of the forget gate in an LSTM?",
+          "questionType": "multiple_choice",
+          "options": [
+            "To completely reset the hidden state",
+            "To decide what information to discard from the cell state",
+            "To output the final prediction",
+            "To initialize the network weights"
+          ],
+          "correctAnswer": "To decide what information to discard from the cell state",
+          "explanation": "The forget gate outputs values between 0 and 1 for each element of the cell state. Values near 0 mean 'forget this,' while values near 1 mean 'keep this.' This enables selective memory over long sequences.",
+          "questionOrder": 3
+        },
+        {
+          "questionText": "Why does the LSTM cell state help with vanishing gradients?",
+          "questionType": "multiple_choice",
+          "options": [
+            "It uses larger numbers",
+            "It's updated additively, allowing gradients to flow unchanged when forget gate is near 1",
+            "It has more parameters",
+            "It runs on specialized hardware"
+          ],
+          "correctAnswer": "It's updated additively, allowing gradients to flow unchanged when forget gate is near 1",
+          "explanation": "The cell state update c_t = f_t * c_{t-1} + i_t * g_t is additive. When f_t ≈ 1, the gradient ∂c_t/∂c_{t-1} ≈ 1, so gradients can flow across many timesteps without vanishing.",
+          "questionOrder": 4
+        },
+        {
+          "questionText": "What was the 'bottleneck problem' in seq2seq models that attention helped solve?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Too many parameters",
+            "Compressing entire source sentences into a single fixed-size vector",
+            "Slow inference speed",
+            "Difficulty training on GPUs"
+          ],
+          "correctAnswer": "Compressing entire source sentences into a single fixed-size vector",
+          "explanation": "In basic seq2seq, the encoder compresses the entire source sentence into a single hidden vector. For long sentences, this bottleneck loses information. Attention allows the decoder to access all encoder states directly.",
+          "questionOrder": 5
+        },
+        {
+          "questionText": "How does a GRU differ from an LSTM?",
+          "questionType": "multiple_choice",
+          "options": [
+            "GRU has more gates than LSTM",
+            "GRU has no separate cell state and uses fewer gates",
+            "GRU can only process short sequences",
+            "GRU requires more training data"
+          ],
+          "correctAnswer": "GRU has no separate cell state and uses fewer gates",
+          "explanation": "GRU merges the cell and hidden states into one, using two gates (update and reset) instead of LSTM's three (input, forget, output). This results in fewer parameters and faster training, with often comparable performance.",
+          "questionOrder": 6
+        }
+      ]
+    },
+    {
+      "topicSlug": "word-embeddings",
+      "title": "Word Embeddings Knowledge Check",
+      "passingScore": 70,
+      "isGate": true,
+      "questions": [
+        {
+          "questionText": "What is the main problem with one-hot encoding for word representation?",
+          "questionType": "multiple_choice",
+          "options": [
+            "It uses too much memory",
+            "All words are orthogonal, encoding no similarity information",
+            "It can only represent verbs",
+            "It requires labeled data"
+          ],
+          "correctAnswer": "All words are orthogonal, encoding no similarity information",
+          "explanation": "In one-hot encoding, every word is maximally different from every other word (cosine similarity = 0). 'Cat' and 'dog' are as dissimilar as 'cat' and 'democracy,' even though semantically cat and dog are related.",
+          "questionOrder": 1
+        },
+        {
+          "questionText": "What is the distributional hypothesis that underlies word embeddings?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Words should be distributed evenly across documents",
+            "Words appearing in similar contexts have similar meanings",
+            "Every word has exactly one meaning",
+            "Rare words are more important than common words"
+          ],
+          "correctAnswer": "Words appearing in similar contexts have similar meanings",
+          "explanation": "The distributional hypothesis states that a word's meaning is captured by the contexts in which it appears. 'Dog,' 'cat,' and 'puppy' appear in similar contexts ('The ___ ran...'), so they develop similar embeddings.",
+          "questionOrder": 2
+        },
+        {
+          "questionText": "What does negative sampling in Word2Vec accomplish?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Removes negative words from the vocabulary",
+            "Makes training tractable by comparing against a few random negatives instead of all words",
+            "Improves word similarity for negative sentiment",
+            "Balances positive and negative examples in classification"
+          ],
+          "correctAnswer": "Makes training tractable by comparing against a few random negatives instead of all words",
+          "explanation": "Computing softmax over a 100K vocabulary at every step is prohibitively expensive. Negative sampling instead asks 'is this a real context word or a random word?'—comparing against 5-20 negatives makes training ~10,000x faster.",
+          "questionOrder": 3
+        },
+        {
+          "questionText": "What does the famous analogy 'king - man + woman = queen' demonstrate about word embeddings?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Word embeddings are random",
+            "Vector arithmetic captures semantic relationships like gender",
+            "All words are equally similar",
+            "Word embeddings only work for names"
+          ],
+          "correctAnswer": "Vector arithmetic captures semantic relationships like gender",
+          "explanation": "The vector offset from 'man' to 'woman' captures the gender relationship. Adding this offset to 'king' produces a vector close to 'queen.' This shows that semantic relationships are encoded as consistent directions in embedding space.",
+          "questionOrder": 4
+        },
+        {
+          "questionText": "What advantage does FastText have over Word2Vec for handling rare or misspelled words?",
+          "questionType": "multiple_choice",
+          "options": [
+            "It ignores rare words",
+            "It represents words as sums of character n-gram vectors",
+            "It trains faster",
+            "It uses a larger vocabulary"
+          ],
+          "correctAnswer": "It represents words as sums of character n-gram vectors",
+          "explanation": "FastText decomposes words into character n-grams, so even unseen words get representations from their subwords. 'Unfamiliar' shares subwords with 'un-' words and '-familiar,' enabling meaningful embeddings for any string.",
+          "questionOrder": 5
+        },
+        {
+          "questionText": "What limitation do static word embeddings (Word2Vec, GloVe) have that contextualized embeddings (BERT) address?",
+          "questionType": "multiple_choice",
+          "options": [
+            "They can't be used for classification",
+            "Each word has one vector regardless of context (no polysemy handling)",
+            "They require too much training data",
+            "They only work for English"
+          ],
+          "correctAnswer": "Each word has one vector regardless of context (no polysemy handling)",
+          "explanation": "In Word2Vec/GloVe, 'bank' has one vector for both 'river bank' and 'bank account.' Contextualized embeddings like BERT produce different representations based on surrounding context, handling polysemy naturally.",
+          "questionOrder": 6
+        }
+      ]
+    },
+    {
+      "topicSlug": "transformers-attention",
+      "title": "Transformers & Attention Knowledge Check",
+      "passingScore": 70,
+      "isGate": true,
+      "questions": [
+        {
+          "questionText": "What was the main bottleneck in seq2seq translation that attention mechanisms solved?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Training was too slow",
+            "All source information had to be compressed into a single fixed-size vector",
+            "The vocabulary was too large",
+            "Sentences were too short"
+          ],
+          "correctAnswer": "All source information had to be compressed into a single fixed-size vector",
+          "explanation": "In basic seq2seq, the encoder compresses the entire source sentence into one hidden vector. Attention allows the decoder to directly access all encoder states, eliminating the information bottleneck for long sentences.",
+          "questionOrder": 1
+        },
+        {
+          "questionText": "What is the key difference between self-attention and standard attention?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Self-attention is faster",
+            "Self-attention relates positions within the same sequence rather than between two sequences",
+            "Self-attention has fewer parameters",
+            "Self-attention only works for images"
+          ],
+          "correctAnswer": "Self-attention relates positions within the same sequence rather than between two sequences",
+          "explanation": "Standard attention relates encoder and decoder (different sequences). Self-attention relates every position to every other position within the same sequence, allowing the model to capture dependencies regardless of distance.",
+          "questionOrder": 2
+        },
+        {
+          "questionText": "Why does the Transformer use positional encoding?",
+          "questionType": "multiple_choice",
+          "options": [
+            "To reduce memory usage",
+            "Because self-attention has no inherent notion of position",
+            "To speed up training",
+            "To handle longer sequences"
+          ],
+          "correctAnswer": "Because self-attention has no inherent notion of position",
+          "explanation": "Self-attention treats input as a set—'dog bites man' and 'man bites dog' would produce identical attention patterns without position information. Positional encodings inject position information so the model can distinguish word order.",
+          "questionOrder": 3
+        },
+        {
+          "questionText": "What is the purpose of multi-head attention?",
+          "questionType": "multiple_choice",
+          "options": [
+            "To reduce computation time",
+            "To allow the model to attend to multiple types of relationships simultaneously",
+            "To eliminate the need for feedforward layers",
+            "To process multiple sentences at once"
+          ],
+          "correctAnswer": "To allow the model to attend to multiple types of relationships simultaneously",
+          "explanation": "Different heads can learn different attention patterns—one might focus on syntactic relationships, another on semantic similarity, another on proximity. This provides richer representations than single-head attention.",
+          "questionOrder": 4
+        },
+        {
+          "questionText": "What is the main difference between BERT and GPT pretraining approaches?",
+          "questionType": "multiple_choice",
+          "options": [
+            "BERT uses more data",
+            "BERT uses bidirectional context via masked language modeling; GPT uses autoregressive (left-to-right) prediction",
+            "GPT has more layers",
+            "BERT can only do classification"
+          ],
+          "correctAnswer": "BERT uses bidirectional context via masked language modeling; GPT uses autoregressive (left-to-right) prediction",
+          "explanation": "BERT sees the full sequence and predicts masked tokens, using context from both directions. GPT predicts the next token given only previous tokens. BERT excels at understanding tasks; GPT excels at generation.",
+          "questionOrder": 5
+        },
+        {
+          "questionText": "What training paradigm did BERT and GPT establish for NLP?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Train from scratch for each task",
+            "Pretrain on large text corpus, then fine-tune on specific tasks",
+            "Use only rule-based systems",
+            "Train only on labeled data"
+          ],
+          "correctAnswer": "Pretrain on large text corpus, then fine-tune on specific tasks",
+          "explanation": "BERT and GPT established the pretrain-then-finetune paradigm: train once on massive unlabeled text (learning general language understanding), then quickly adapt to specific tasks with relatively small labeled datasets.",
+          "questionOrder": 6
+        }
+      ]
+    },
+    {
+      "topicSlug": "gans-generative",
+      "title": "GANs & Generative Models Knowledge Check",
+      "passingScore": 70,
+      "isGate": true,
+      "questions": [
+        {
+          "questionText": "What is the fundamental difference between discriminative and generative models?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Discriminative models are faster",
+            "Discriminative models learn P(y|x); generative models learn P(x)",
+            "Generative models require more data",
+            "Discriminative models can only do classification"
+          ],
+          "correctAnswer": "Discriminative models learn P(y|x); generative models learn P(x)",
+          "explanation": "Discriminative models classify inputs by learning decision boundaries. Generative models model the underlying data distribution itself, enabling generation of new samples that resemble the training data.",
+          "questionOrder": 1
+        },
+        {
+          "questionText": "In a GAN, what are the roles of the generator and discriminator?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Both try to generate realistic images",
+            "Generator creates samples; discriminator classifies real vs. fake",
+            "Discriminator generates samples; generator classifies them",
+            "Both try to classify images"
+          ],
+          "correctAnswer": "Generator creates samples; discriminator classifies real vs. fake",
+          "explanation": "The generator takes random noise and produces samples trying to fool the discriminator. The discriminator tries to distinguish real training data from generated fakes. This adversarial game drives both to improve.",
+          "questionOrder": 2
+        },
+        {
+          "questionText": "What is mode collapse in GANs?",
+          "questionType": "multiple_choice",
+          "options": [
+            "The generator becomes too slow",
+            "The generator produces only a limited variety of outputs",
+            "The discriminator stops learning",
+            "Training requires too much memory"
+          ],
+          "correctAnswer": "The generator produces only a limited variety of outputs",
+          "explanation": "Mode collapse occurs when the generator finds a few outputs that consistently fool the discriminator and produces only those. For faces, it might generate only young female faces instead of diverse outputs.",
+          "questionOrder": 3
+        },
+        {
+          "questionText": "What was DCGAN's main contribution to GAN architectures?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Using recurrent networks",
+            "Establishing convolutional architecture guidelines for stable training",
+            "Eliminating the discriminator",
+            "Using reinforcement learning"
+          ],
+          "correctAnswer": "Establishing convolutional architecture guidelines for stable training",
+          "explanation": "DCGAN introduced architectural guidelines that became standard: strided convolutions instead of pooling, batch normalization, no fully connected layers, ReLU in generator, LeakyReLU in discriminator. These made GAN training much more stable.",
+          "questionOrder": 4
+        },
+        {
+          "questionText": "What innovation did StyleGAN introduce for controlling generated outputs?",
+          "questionType": "multiple_choice",
+          "options": [
+            "Using larger images",
+            "Injecting style information at multiple resolutions through an intermediate latent space",
+            "Training without a discriminator",
+            "Using only convolutional layers"
+          ],
+          "correctAnswer": "Injecting style information at multiple resolutions through an intermediate latent space",
+          "explanation": "StyleGAN maps latent code z to an intermediate space w, then injects this 'style' at different layers. Early layers control coarse features (pose), later layers control fine details (color). This enables fine-grained control over generation.",
+          "questionOrder": 5
+        },
+        {
+          "questionText": "What is the main ethical concern with deepfake technology?",
+          "questionType": "multiple_choice",
+          "options": [
+            "It uses too much electricity",
+            "It can create realistic fake media of real people without consent",
+            "It's too expensive",
+            "It requires specialized hardware"
+          ],
+          "correctAnswer": "It can create realistic fake media of real people without consent",
+          "explanation": "Deepfakes can generate photorealistic videos of real people doing or saying things they never did. This enables political manipulation, non-consensual intimate imagery, fraud, and erodes trust in authentic media.",
+          "questionOrder": 6
+        }
+      ]
+    }
+  ]
+}

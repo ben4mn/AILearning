@@ -1,0 +1,126 @@
+{
+  "era": 5,
+  "title": "Modern AI (2020s)",
+  "connections": [
+    {
+      "id": "conn-e5-1",
+      "source": "large-language-models",
+      "target": "tokenization-embeddings",
+      "type": "requires",
+      "label": "Fundamental to",
+      "description": "Tokenization and embeddings are the foundational layer that converts text into the numerical representations LLMs process. Understanding tokens and embeddings is essential to understanding how LLMs work."
+    },
+    {
+      "id": "conn-e5-2",
+      "source": "large-language-models",
+      "target": "prompt-engineering",
+      "type": "enabled",
+      "label": "Enables",
+      "description": "LLMs created the need for prompt engineering as a discipline. The way you communicate with LLMs through prompts determines the quality and usefulness of their outputs."
+    },
+    {
+      "id": "conn-e5-3",
+      "source": "large-language-models",
+      "target": "rag-retrieval",
+      "type": "enabled",
+      "label": "Enables",
+      "description": "LLMs provide the generation capability in RAG systems. Their ability to synthesize and reason over retrieved documents makes RAG practical and powerful."
+    },
+    {
+      "id": "conn-e5-4",
+      "source": "large-language-models",
+      "target": "ai-agents",
+      "type": "enabled",
+      "label": "Enables",
+      "description": "LLMs provide the reasoning and language understanding that makes modern AI agents possible. Their ability to plan, use tools, and communicate in natural language is the foundation of agent architectures."
+    },
+    {
+      "id": "conn-e5-5",
+      "source": "large-language-models",
+      "target": "ai-safety-alignment",
+      "type": "requires",
+      "label": "Critical for",
+      "description": "As LLMs become more capable, ensuring they're aligned with human values becomes increasingly important. Safety and alignment research directly addresses risks from powerful language models."
+    },
+    {
+      "id": "conn-e5-6",
+      "source": "tokenization-embeddings",
+      "target": "prompt-engineering",
+      "type": "influences",
+      "label": "Influences",
+      "description": "Understanding tokenization helps prompt engineers optimize their prompts for efficiency and understand why certain phrasings work better. Token limits and costs shape prompt design strategies."
+    },
+    {
+      "id": "conn-e5-7",
+      "source": "tokenization-embeddings",
+      "target": "rag-retrieval",
+      "type": "foundation_for",
+      "label": "Foundation for",
+      "description": "Embeddings are the core technology enabling semantic search in RAG systems. Vector databases store and search these embeddings to find relevant documents."
+    },
+    {
+      "id": "conn-e5-8",
+      "source": "prompt-engineering",
+      "target": "ai-agents",
+      "type": "foundation_for",
+      "label": "Foundation for",
+      "description": "Agent architectures like ReAct are essentially sophisticated prompting patterns. Prompt engineering techniques power how agents reason, plan, and use tools."
+    },
+    {
+      "id": "conn-e5-9",
+      "source": "rag-retrieval",
+      "target": "ai-agents",
+      "type": "enables",
+      "label": "Knowledge access",
+      "description": "RAG provides agents with access to external knowledge, enabling them to answer questions and complete tasks that require up-to-date or specialized information beyond the base model's training."
+    },
+    {
+      "id": "conn-e5-10",
+      "source": "ai-agents",
+      "target": "ai-safety-alignment",
+      "type": "requires",
+      "label": "Requires",
+      "description": "Autonomous agents raise heightened safety concerns because they can take actions in the world. Agent reliability and controllability are active areas of safety research."
+    },
+    {
+      "id": "conn-e5-11",
+      "source": "transformers-attention",
+      "target": "large-language-models",
+      "type": "leads_to",
+      "label": "Leads to",
+      "description": "The transformer architecture, with its attention mechanism, is the foundation of all modern LLMs. GPT, BERT, and their successors are all transformers scaled up massively."
+    },
+    {
+      "id": "conn-e5-12",
+      "source": "turing-test",
+      "target": "large-language-models",
+      "type": "conceptual_link",
+      "label": "Finally approaching?",
+      "description": "Turing proposed a test of machine intelligence based on conversation. Modern LLMs can engage in sophisticated dialogue that sometimes passes for human, bringing us closer to Turing's vision than ever before."
+    },
+    {
+      "id": "conn-e5-13",
+      "source": "early-nlp",
+      "target": "large-language-models",
+      "type": "preceded",
+      "label": "The dream realized",
+      "description": "Early NLP researchers dreamed of machines that could understand and generate natural language. While those early systems used rules and limited statistics, LLMs have realized capabilities that seemed like science fiction to pioneers like Chomsky and Winograd."
+    },
+    {
+      "id": "conn-e5-14",
+      "source": "word-embeddings",
+      "target": "tokenization-embeddings",
+      "type": "preceded",
+      "label": "Evolved into",
+      "description": "Word2Vec and GloVe pioneered the idea of representing words as vectors. Modern transformer embeddings build on this foundation with contextual representations and subword tokenization."
+    },
+    {
+      "id": "conn-e5-15",
+      "source": "backpropagation-revival",
+      "target": "large-language-models",
+      "type": "foundation_for",
+      "label": "Foundation for",
+      "description": "The revival of backpropagation and deep learning enabled the training of the massive neural networks that power LLMs. Without efficient gradient-based training, modern LLMs would be impossible."
+    }
+  ]
+}

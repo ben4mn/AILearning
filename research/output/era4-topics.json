@@ -1,0 +1,237 @@
+{
+  "era": "deep-learning",
+  "eraName": "Deep Learning Revolution (2010s)",
+  "eraDescription": "Neural networks finally deliver on their promise",
+  "eraColor": "#F59E0B",
+  "eraOrder": 4,
+  "topics": [
+    {
+      "slug": "deep-learning-breakthrough",
+      "title": "The Deep Learning Breakthrough",
+      "description": "The confluence of algorithmic advances, GPU computing, and big data that finally made deep neural networks work. From vanishing gradients solved to the 2012 ImageNet moment.",
+      "linearOrder": 16,
+      "icon": "zap",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "why-deep-learning-works",
+          "title": "Why Deep Learning Works",
+          "contentPath": "deep-learning/deep-learning-breakthrough/01-why-deep-learning-works.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "gpu-revolution",
+          "title": "The GPU Revolution",
+          "contentPath": "deep-learning/deep-learning-breakthrough/02-gpu-revolution.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "big-data-era",
+          "title": "The Big Data Era",
+          "contentPath": "deep-learning/deep-learning-breakthrough/03-big-data-era.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "hinton-ng-lecun",
+          "title": "Hinton, Ng, LeCun: The Pioneers",
+          "contentPath": "deep-learning/deep-learning-breakthrough/04-hinton-ng-lecun.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ]
+    },
+    {
+      "slug": "cnns-imagenet",
+      "title": "CNNs & ImageNet",
+      "description": "Convolutional neural networks revolutionize computer vision. From AlexNet's breakthrough to ResNet's skip connections, the architecture evolution that enabled unprecedented image understanding.",
+      "linearOrder": 17,
+      "icon": "image",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "convolutional-networks-explained",
+          "title": "Convolutional Networks Explained",
+          "contentPath": "deep-learning/cnns-imagenet/01-convolutional-networks-explained.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "alexnet-moment",
+          "title": "The AlexNet Moment",
+          "contentPath": "deep-learning/cnns-imagenet/02-alexnet-moment.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "architecture-evolution",
+          "title": "Architecture Evolution: From VGG to ResNet",
+          "contentPath": "deep-learning/cnns-imagenet/03-architecture-evolution.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "transfer-learning",
+          "title": "Transfer Learning: Pretrained Models for Everyone",
+          "contentPath": "deep-learning/cnns-imagenet/04-transfer-learning.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ]
+    },
+    {
+      "slug": "rnns-lstms",
+      "title": "RNNs & LSTMs",
+      "description": "Processing sequences with recurrent neural networks. From the vanishing gradient problem to LSTM gates, and the applications that transformed speech and language.",
+      "linearOrder": 18,
+      "icon": "repeat",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "sequence-modeling",
+          "title": "Sequence Modeling and Recurrent Networks",
+          "contentPath": "deep-learning/rnns-lstms/01-sequence-modeling.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "the-vanishing-gradient",
+          "title": "The Vanishing Gradient Problem in RNNs",
+          "contentPath": "deep-learning/rnns-lstms/02-the-vanishing-gradient.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "lstm-architecture",
+          "title": "LSTM Architecture: Gates, Cells, and Memory",
+          "contentPath": "deep-learning/rnns-lstms/03-lstm-architecture.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "applications-and-limitations",
+          "title": "RNN Applications and Limitations",
+          "contentPath": "deep-learning/rnns-lstms/04-applications-and-limitations.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ]
+    },
+    {
+      "slug": "word-embeddings",
+      "title": "Word Embeddings (Word2Vec, GloVe)",
+      "description": "From sparse one-hot vectors to dense semantic representations. How Word2Vec learned that king - man + woman = queen, and why this changed NLP.",
+      "linearOrder": 19,
+      "icon": "type",
+      "estimatedMinutes": 40,
+      "lessons": [
+        {
+          "slug": "from-sparse-to-dense",
+          "title": "From Sparse to Dense: The Representation Revolution",
+          "contentPath": "deep-learning/word-embeddings/01-from-sparse-to-dense.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "word2vec",
+          "title": "Word2Vec: The Embedding Revolution",
+          "contentPath": "deep-learning/word-embeddings/02-word2vec.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "glove-and-fasttext",
+          "title": "GloVe and FastText: Extending Word Embeddings",
+          "contentPath": "deep-learning/word-embeddings/03-glove-and-fasttext.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "embeddings-in-practice",
+          "title": "Embeddings in Practice: Applications and Challenges",
+          "contentPath": "deep-learning/word-embeddings/04-embeddings-in-practice.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ]
+    },
+    {
+      "slug": "transformers-attention",
+      "title": "Transformers & Attention",
+      "description": "The architecture that changed everything. From attention mechanisms to 'Attention Is All You Need' to BERT and GPT—the foundation of modern AI.",
+      "linearOrder": 20,
+      "icon": "box",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "attention-mechanism",
+          "title": "The Attention Mechanism",
+          "contentPath": "deep-learning/transformers-attention/01-attention-mechanism.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "attention-is-all-you-need",
+          "title": "Attention Is All You Need: The Transformer Paper",
+          "contentPath": "deep-learning/transformers-attention/02-attention-is-all-you-need.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "transformer-architecture",
+          "title": "Transformer Architecture Deep Dive",
+          "contentPath": "deep-learning/transformers-attention/03-transformer-architecture.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "bert-and-gpt",
+          "title": "BERT and GPT: The Pretraining Revolution",
+          "contentPath": "deep-learning/transformers-attention/04-bert-and-gpt.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ]
+    },
+    {
+      "slug": "gans-generative",
+      "title": "GANs & Generative Models",
+      "description": "When neural networks learned to create. From the adversarial framework to StyleGAN photorealism, plus the ethical challenges of synthetic media.",
+      "linearOrder": 21,
+      "icon": "edit-3",
+      "estimatedMinutes": 45,
+      "lessons": [
+        {
+          "slug": "generative-models-overview",
+          "title": "Generative Models Overview",
+          "contentPath": "deep-learning/gans-generative/01-generative-models-overview.md",
+          "lessonOrder": 1,
+          "lessonType": "content"
+        },
+        {
+          "slug": "the-gan-framework",
+          "title": "The GAN Framework: Generator vs Discriminator",
+          "contentPath": "deep-learning/gans-generative/02-the-gan-framework.md",
+          "lessonOrder": 2,
+          "lessonType": "content"
+        },
+        {
+          "slug": "gan-variants",
+          "title": "GAN Variants: From DCGAN to StyleGAN",
+          "contentPath": "deep-learning/gans-generative/03-gan-variants.md",
+          "lessonOrder": 3,
+          "lessonType": "content"
+        },
+        {
+          "slug": "applications-and-ethics",
+          "title": "GAN Applications and Ethical Concerns",
+          "contentPath": "deep-learning/gans-generative/04-applications-and-ethics.md",
+          "lessonOrder": 4,
+          "lessonType": "content"
+        }
+      ]
+    }
+  ]
+}

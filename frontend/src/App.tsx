@@ -1,11 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Header } from '@/components/layout/Header';
-import { ProtectedRoute } from '@/components/auth/ProtectedRoute';
-import { Home } from '@/pages/Home';
-import { Login } from '@/pages/Login';
-import { Register } from '@/pages/Register';
-import { Learn } from '@/pages/Learn';
+import { Home, Login, Register, Learn, Topic, Lesson, Quiz } from '@/pages';
 import { useAuthStore } from '@/stores/authStore';
 
 function App() {
@@ -26,14 +22,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/learn"
-            element={
-              <ProtectedRoute>
-                <Learn />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/learn" element={<Learn />} />
+          <Route path="/learn/:topicSlug" element={<Topic />} />
+          <Route path="/learn/:topicSlug/:lessonId" element={<Lesson />} />
+          <Route path="/learn/:topicSlug/quiz" element={<Quiz />} />
         </Routes>
       </div>
     </BrowserRouter>

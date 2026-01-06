@@ -1,7 +1,27 @@
 import axios, { AxiosError } from 'axios';
-import type { ApiResponse, ApiError, AuthResponse, LoginCredentials, RegisterCredentials, User } from '@/types';
+import type {
+  ApiResponse,
+  ApiError,
+  AuthResponse,
+  LoginCredentials,
+  RegisterCredentials,
+  User,
+  Topic,
+  TopicListItem,
+  TopicWithLessons,
+  TopicConnection,
+  LessonContent,
+  QuizWithQuestions,
+  QuizResult,
+  QuizSubmission,
+  ProgressStats,
+  TopicProgress,
+  ProgressOverviewItem,
+} from '@/types';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3050';
+// In production, use relative URL to go through nginx proxy
+// In development (with Vite), use localhost:3050 directly
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:3050' : '');
 
 const client = axios.create({
   baseURL: API_URL,
@@ -47,6 +67,87 @@ export const authApi = {
   getMe: async (): Promise<User> => {
     const response = await client.get<ApiResponse<{ user: User }>>('/api/auth/me');
     return response.data.data.user;
+  },
+};
+
+// Topics API
+export const topicsApi = {
+  getAll: async (): Promise<Topic[]> => {
+    const response = await client.get<ApiResponse<Topic[]>>('/api/topics');
+    return response.data.data;
+  },
+
+  getLinear: async (): Promise<TopicListItem[]> => {
+    const response = await client.get<ApiResponse<TopicListItem[]>>('/api/topics/linear');
+    return response.data.data;
+  },
+
+  getBySlug: async (slug: string): Promise<TopicWithLessons> => {
+    const response = await client.get<ApiResponse<TopicWithLessons>>(`/api/topics/${slug}`);
+    return response.data.data;
+  },
+
+  getConnections: async (): Promise<TopicConnection[]> => {
+    const response = await client.get<ApiResponse<TopicConnection[]>>('/api/topics/connections');
+    return response.data.data;
+  },
+
+  getByEra: async (): Promise<Record<string, TopicListItem[]>> => {
+    const response = await client.get<ApiResponse<Record<string, TopicListItem[]>>>('/api/topics/by-era');
+    return response.data.data;
+  },
+};
+
+// Lessons API
+export const lessonsApi = {
+  getContent: async (lessonId: number): Promise<LessonContent> => {
+    const response = await client.get<ApiResponse<LessonContent>>(`/api/lessons/${lessonId}/content`);
+    return response.data.data;
+  },
+};
+
+// Quiz API
+export const quizApi = {
+  getByTopicSlug: async (topicSlug: string): Promise<QuizWithQuestions> => {
+    const response = await client.get<ApiResponse<QuizWithQuestions>>(`/api/quiz/${topicSlug}`);
+    return response.data.data;
+  },
+
+  submit: async (quizId: number, submission: QuizSubmission): Promise<QuizResult> => {
+    const response = await client.post<ApiResponse<QuizResult>>(`/api/quiz/${quizId}/submit`, submission);
+    return response.data.data;
+  },
+
+  getReview: async (quizId: number): Promise<QuizWithQuestions & { bestScore: number }> => {
+    const response = await client.get<ApiResponse<QuizWithQuestions & { bestScore: number }>>(`/api/quiz/${quizId}/review`);
+    return response.data.data;
+  },
+};
+
+// Progress API
+export const progressApi = {
+  getStats: async (): Promise<ProgressStats> => {
+    const response = await client.get<ApiResponse<ProgressStats>>('/api/progress');
+    return response.data.data;
+  },
+
+  getOverview: async (): Promise<ProgressOverviewItem[]> => {
+    const response = await client.get<ApiResponse<ProgressOverviewItem[]>>('/api/progress/overview');
+    return response.data.data;
+  },
+
+  getByTopic: async (topicSlug: string): Promise<TopicProgress> => {
+    const response = await client.get<ApiResponse<TopicProgress>>(`/api/progress/topic/${topicSlug}`);
+    return response.data.data;
+  },
+
+  completeLesson: async (lessonId: number, timeSpentSeconds?: number): Promise<void> => {
+    await client.post(`/api/progress/lesson/${lessonId}/complete`, { timeSpentSeconds });
+  },
+
+  getCompleted: async (): Promise<{ completedLessons: number[]; passedQuizzes: number[] }> => {
+    const response = await client.get<ApiResponse<{ completedLessons: number[]; passedQuizzes: number[] }>>('/api/progress/completed');
+    return response.data.data;
   },
 };
 
